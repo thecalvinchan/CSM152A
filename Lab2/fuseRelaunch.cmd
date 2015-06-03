@@ -1,0 +1,1 @@
+-intstyle "ise" -incremental -lib "unisims_ver" -lib "unimacro_ver" -lib "xilinxcorelib_ver" -lib "secureip" -o "C:/Users/152/Documents/MeghaCalvin/Lab2/test_sign_magnitude_converter_isim_beh.exe" -prj "C:/Users/152/Documents/MeghaCalvin/Lab2/test_sign_magnitude_converter_beh.prj" "work.test_sign_magnitude_converter" "work.glbl" 

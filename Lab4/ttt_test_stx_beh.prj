@@ -1,0 +1,7 @@
+verilog isim_temp "vga.v"
+verilog isim_temp "renderer.v"
+verilog isim_temp "gamecontroller.v"
+verilog isim_temp "clk50.v"
+verilog isim_temp "ttt.v"
+verilog isim_temp "ttt_test.v"
+verilog isim_temp "C:/Xilinx/14.6/ISE_DS/ISE//verilog/src/glbl.v"

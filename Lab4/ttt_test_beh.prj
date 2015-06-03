@@ -1,0 +1,7 @@
+verilog work "vga.v"
+verilog work "renderer.v"
+verilog work "gamecontroller.v"
+verilog work "clk50.v"
+verilog work "ttt.v"
+verilog work "ttt_test.v"
+verilog work "C:/Xilinx/14.6/ISE_DS/ISE//verilog/src/glbl.v"

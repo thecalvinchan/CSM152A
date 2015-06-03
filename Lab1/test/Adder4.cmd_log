@@ -1,0 +1,1 @@
+xst -intstyle ise -ifn "C:/Users/152/Documents/Temp1/test/Adder4.xst" -ofn "C:/Users/152/Documents/Temp1/test/Adder4.syr" 

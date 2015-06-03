@@ -1,0 +1,28 @@
+Command line:
+   test_sign_magnitude_converter_isim_beh.exe
+     -simmode  gui
+     -simrunnum  0
+     -socket  56362
+
+Wed Apr 22 12:26:10 2015
+
+
+ Elaboration Time: 0.0468 sec
+
+ Current Memory Usage: 828.232 Meg
+
+ Total Signals          : 17
+ Total Nets             : 33
+ Total Signal Drivers   : 9
+ Total Blocks           : 3
+ Total Primitive Blocks : 2
+ Total Processes        : 12
+ Total Traceable Variables  : 25
+ Total Scalar Nets and Variables : 150
+
+ Total Simulation Time: 0.0468 sec
+
+ Current Memory Usage: 1142.8 Meg
+
+Wed Apr 22 12:27:00 2015
+

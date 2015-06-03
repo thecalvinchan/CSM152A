@@ -1,0 +1,5 @@
+verilog work "vga.v"
+verilog work "renderer.v"
+verilog work "gamecontroller.v"
+verilog work "clk50.v"
+verilog work "ttt.v"

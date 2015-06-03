@@ -1,0 +1,142 @@
+--------------------------------------------------------------------------------
+Release 14.6 Trace  (nt64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+
+C:\Xilinx\14.6\ISE_DS\ISE\bin\nt64\unwrapped\trce.exe -intstyle ise -v 3 -s 3
+-n 3 -fastpaths -xml sign_magnitude_converter.twx sign_magnitude_converter.ncd
+-o sign_magnitude_converter.twr sign_magnitude_converter.pcf
+
+Design file:              sign_magnitude_converter.ncd
+Physical constraint file: sign_magnitude_converter.pcf
+Device,package,speed:     xc6slx16,csg324,C,-3 (PRODUCTION 1.23 2013-06-08)
+Report level:             verbose report
+
+Environment Variable      Effect 
+--------------------      ------ 
+NONE                      No environment variables were set
+--------------------------------------------------------------------------------
+
+INFO:Timing:2698 - No timing constraints found, doing default enumeration.
+INFO:Timing:3412 - To improve timing, see the Timing Closure User Guide (UG612).
+INFO:Timing:2752 - To get complete path coverage, use the unconstrained paths 
+   option. All paths that are not constrained will be reported in the 
+   unconstrained paths section(s) of the report.
+INFO:Timing:3339 - The clock-to-out numbers in this timing report are based on 
+   a 50 Ohm transmission line loading model.  For the details of this model, 
+   and for more information on accounting for different loading conditions, 
+   please see the device datasheet.
+
+
+
+Data Sheet report:
+-----------------
+All values displayed in nanoseconds (ns)
+
+Pad to Pad
+---------------+---------------+---------+
+Source Pad     |Destination Pad|  Delay  |
+---------------+---------------+---------+
+D<0>           |magnitude<0>   |    7.644|
+D<0>           |magnitude<1>   |    7.552|
+D<0>           |magnitude<2>   |    8.033|
+D<0>           |magnitude<3>   |    7.381|
+D<0>           |magnitude<4>   |    7.898|
+D<0>           |magnitude<5>   |    8.089|
+D<0>           |magnitude<6>   |    8.283|
+D<0>           |magnitude<7>   |    8.094|
+D<0>           |magnitude<8>   |    7.901|
+D<0>           |magnitude<9>   |    8.003|
+D<0>           |magnitude<10>  |    8.833|
+D<0>           |magnitude<11>  |    8.419|
+D<1>           |magnitude<1>   |    7.291|
+D<1>           |magnitude<2>   |    7.817|
+D<1>           |magnitude<3>   |    7.171|
+D<1>           |magnitude<4>   |    7.681|
+D<1>           |magnitude<5>   |    7.872|
+D<1>           |magnitude<6>   |    8.066|
+D<1>           |magnitude<7>   |    7.877|
+D<1>           |magnitude<8>   |    7.684|
+D<1>           |magnitude<9>   |    7.786|
+D<1>           |magnitude<10>  |    8.616|
+D<1>           |magnitude<11>  |    8.202|
+D<2>           |magnitude<2>   |    8.029|
+D<2>           |magnitude<3>   |    7.379|
+D<2>           |magnitude<4>   |    7.935|
+D<2>           |magnitude<5>   |    8.126|
+D<2>           |magnitude<6>   |    8.320|
+D<2>           |magnitude<7>   |    8.131|
+D<2>           |magnitude<8>   |    7.938|
+D<2>           |magnitude<9>   |    8.040|
+D<2>           |magnitude<10>  |    8.870|
+D<2>           |magnitude<11>  |    8.456|
+D<3>           |magnitude<3>   |    7.125|
+D<3>           |magnitude<4>   |    7.683|
+D<3>           |magnitude<5>   |    7.874|
+D<3>           |magnitude<6>   |    8.068|
+D<3>           |magnitude<7>   |    7.879|
+D<3>           |magnitude<8>   |    7.686|
+D<3>           |magnitude<9>   |    7.788|
+D<3>           |magnitude<10>  |    8.618|
+D<3>           |magnitude<11>  |    8.204|
+D<4>           |magnitude<4>   |    7.865|
+D<4>           |magnitude<5>   |    8.028|
+D<4>           |magnitude<6>   |    8.311|
+D<4>           |magnitude<7>   |    8.139|
+D<4>           |magnitude<8>   |    7.987|
+D<4>           |magnitude<9>   |    8.089|
+D<4>           |magnitude<10>  |    8.919|
+D<4>           |magnitude<11>  |    8.505|
+D<5>           |magnitude<5>   |    7.866|
+D<5>           |magnitude<6>   |    8.194|
+D<5>           |magnitude<7>   |    8.028|
+D<5>           |magnitude<8>   |    7.869|
+D<5>           |magnitude<9>   |    7.971|
+D<5>           |magnitude<10>  |    8.801|
+D<5>           |magnitude<11>  |    8.387|
+D<6>           |magnitude<6>   |    7.791|
+D<6>           |magnitude<7>   |    7.621|
+D<6>           |magnitude<8>   |    7.508|
+D<6>           |magnitude<9>   |    7.610|
+D<6>           |magnitude<10>  |    8.440|
+D<6>           |magnitude<11>  |    8.026|
+D<7>           |magnitude<7>   |    7.632|
+D<7>           |magnitude<8>   |    7.521|
+D<7>           |magnitude<9>   |    7.623|
+D<7>           |magnitude<10>  |    8.453|
+D<7>           |magnitude<11>  |    8.039|
+D<8>           |magnitude<8>   |    7.630|
+D<8>           |magnitude<9>   |    7.704|
+D<8>           |magnitude<10>  |    8.623|
+D<8>           |magnitude<11>  |    8.226|
+D<9>           |magnitude<9>   |    7.858|
+D<9>           |magnitude<10>  |    8.822|
+D<9>           |magnitude<11>  |    8.431|
+D<10>          |magnitude<10>  |    8.667|
+D<10>          |magnitude<11>  |    8.272|
+D<11>          |S              |    5.788|
+D<11>          |magnitude<0>   |    7.370|
+D<11>          |magnitude<1>   |    6.615|
+D<11>          |magnitude<2>   |    6.721|
+D<11>          |magnitude<3>   |    6.422|
+D<11>          |magnitude<4>   |    6.934|
+D<11>          |magnitude<5>   |    6.913|
+D<11>          |magnitude<6>   |    7.859|
+D<11>          |magnitude<7>   |    7.286|
+D<11>          |magnitude<8>   |    7.032|
+D<11>          |magnitude<9>   |    7.604|
+D<11>          |magnitude<10>  |    7.666|
+D<11>          |magnitude<11>  |    8.688|
+---------------+---------------+---------+
+
+
+Analysis completed Mon Apr 20 11:32:02 2015 
+--------------------------------------------------------------------------------
+
+Trace Settings:
+-------------------------
+Trace Settings 
+
+Peak Memory Usage: 218 MB
+
+
+

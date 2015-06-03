@@ -1,0 +1,405 @@
+xst -intstyle ise -ifn "C:/Users/152/Documents/MeghaCalvin/Lab4/ttt.xst" -ofn "C:/Users/152/Documents/MeghaCalvin/Lab4/ttt.syr" 
+xst -intstyle ise -ifn "C:/Users/152/Documents/MeghaCalvin/Lab4/ttt.xst" -ofn "C:/Users/152/Documents/MeghaCalvin/Lab4/ttt.syr" 
+xst -intstyle ise -ifn "C:/Users/152/Documents/MeghaCalvin/Lab4/ttt.xst" -ofn "C:/Users/152/Documents/MeghaCalvin/Lab4/ttt.syr" 
+xst -intstyle ise -ifn "C:/Users/152/Documents/MeghaCalvin/Lab4/ttt.xst" -ofn "C:/Users/152/Documents/MeghaCalvin/Lab4/ttt.syr" 
+xst -intstyle ise -ifn "C:/Users/152/Documents/MeghaCalvin/Lab4/ttt.xst" -ofn "C:/Users/152/Documents/MeghaCalvin/Lab4/ttt.syr" 
+xst -intstyle ise -ifn "C:/Users/152/Documents/MeghaCalvin/Lab4/ttt.xst" -ofn "C:/Users/152/Documents/MeghaCalvin/Lab4/ttt.syr" 
+xst -intstyle ise -ifn "C:/Users/152/Documents/MeghaCalvin/Lab4/ttt.xst" -ofn "C:/Users/152/Documents/MeghaCalvin/Lab4/ttt.syr" 
+xst -intstyle ise -ifn "C:/Users/152/Documents/MeghaCalvin/Lab4/ttt.xst" -ofn "C:/Users/152/Documents/MeghaCalvin/Lab4/ttt.syr" 
+xst -intstyle ise -ifn "C:/Users/152/Documents/MeghaCalvin/Lab4/ttt.xst" -ofn "C:/Users/152/Documents/MeghaCalvin/Lab4/ttt.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -i -p xc6slx16-csg324-3 ttt.ngc ttt.ngd  
+map -intstyle ise -p xc6slx16-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o ttt_map.ncd ttt.ngd ttt.pcf 
+par -w -intstyle ise -ol high -mt off ttt_map.ncd ttt.ncd ttt.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml ttt.twx ttt.ncd -o ttt.twr ttt.pcf 
+bitgen -intstyle ise -f ttt.ut ttt.ncd 
+xst -intstyle ise -ifn "C:/Users/152/Documents/MeghaCalvin/Lab4/ttt.xst" -ofn "C:/Users/152/Documents/MeghaCalvin/Lab4/ttt.syr" 
+xst -intstyle ise -ifn "C:/Users/152/Documents/MeghaCalvin/Lab4/ttt.xst" -ofn "C:/Users/152/Documents/MeghaCalvin/Lab4/ttt.syr" 
+xst -intstyle ise -ifn "C:/Users/152/Documents/MeghaCalvin/Lab4/ttt.xst" -ofn "C:/Users/152/Documents/MeghaCalvin/Lab4/ttt.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc nexys3.ucf -p xc6slx16-csg324-3 ttt.ngc ttt.ngd  
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc nexys3.ucf -p xc6slx16-csg324-3 ttt.ngc ttt.ngd  
+map -intstyle ise -p xc6slx16-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o ttt_map.ncd ttt.ngd ttt.pcf 
+par -w -intstyle ise -ol high -mt off ttt_map.ncd ttt.ncd ttt.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml ttt.twx ttt.ncd -o ttt.twr ttt.pcf -ucf nexys3.ucf 
+bitgen -intstyle ise -f ttt.ut ttt.ncd 
+xst -intstyle ise -ifn "C:/Users/152/Documents/MeghaCalvin/Lab4/ttt.xst" -ofn "C:/Users/152/Documents/MeghaCalvin/Lab4/ttt.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc nexys3.ucf -p xc6slx16-csg324-3 ttt.ngc ttt.ngd  
+map -intstyle ise -p xc6slx16-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o ttt_map.ncd ttt.ngd ttt.pcf 
+par -w -intstyle ise -ol high -mt off ttt_map.ncd ttt.ncd ttt.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml ttt.twx ttt.ncd -o ttt.twr ttt.pcf -ucf nexys3.ucf 
+bitgen -intstyle ise -f ttt.ut ttt.ncd 
+xst -intstyle ise -ifn "C:/Users/152/Documents/MeghaCalvin/Lab4/ttt.xst" -ofn "C:/Users/152/Documents/MeghaCalvin/Lab4/ttt.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc nexys3.ucf -p xc6slx16-csg324-3 ttt.ngc ttt.ngd  
+map -intstyle ise -p xc6slx16-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o ttt_map.ncd ttt.ngd ttt.pcf 
+par -w -intstyle ise -ol high -mt off ttt_map.ncd ttt.ncd ttt.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml ttt.twx ttt.ncd -o ttt.twr ttt.pcf -ucf nexys3.ucf 
+bitgen -intstyle ise -f ttt.ut ttt.ncd 
+xst -intstyle ise -ifn "C:/Users/152/Documents/MeghaCalvin/Lab4/ttt.xst" -ofn "C:/Users/152/Documents/MeghaCalvin/Lab4/ttt.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc nexys3.ucf -p xc6slx16-csg324-3 ttt.ngc ttt.ngd  
+map -intstyle ise -p xc6slx16-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o ttt_map.ncd ttt.ngd ttt.pcf 
+par -w -intstyle ise -ol high -mt off ttt_map.ncd ttt.ncd ttt.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml ttt.twx ttt.ncd -o ttt.twr ttt.pcf -ucf nexys3.ucf 
+bitgen -intstyle ise -f ttt.ut ttt.ncd 
+xst -intstyle ise -ifn "C:/Users/152/Documents/MeghaCalvin/Lab4/ttt.xst" -ofn "C:/Users/152/Documents/MeghaCalvin/Lab4/ttt.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc nexys3.ucf -p xc6slx16-csg324-3 ttt.ngc ttt.ngd  
+map -intstyle ise -p xc6slx16-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o ttt_map.ncd ttt.ngd ttt.pcf 
+par -w -intstyle ise -ol high -mt off ttt_map.ncd ttt.ncd ttt.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml ttt.twx ttt.ncd -o ttt.twr ttt.pcf -ucf nexys3.ucf 
+bitgen -intstyle ise -f ttt.ut ttt.ncd 
+xst -intstyle ise -ifn "C:/Users/152/Documents/MeghaCalvin/Lab4/ttt.xst" -ofn "C:/Users/152/Documents/MeghaCalvin/Lab4/ttt.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc nexys3.ucf -p xc6slx16-csg324-3 ttt.ngc ttt.ngd  
+map -intstyle ise -p xc6slx16-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o ttt_map.ncd ttt.ngd ttt.pcf 
+par -w -intstyle ise -ol high -mt off ttt_map.ncd ttt.ncd ttt.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml ttt.twx ttt.ncd -o ttt.twr ttt.pcf -ucf nexys3.ucf 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc nexys3.ucf -p xc6slx16-csg324-3 ttt.ngc ttt.ngd  
+map -intstyle ise -p xc6slx16-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o ttt_map.ncd ttt.ngd ttt.pcf 
+par -w -intstyle ise -ol high -mt off ttt_map.ncd ttt.ncd ttt.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml ttt.twx ttt.ncd -o ttt.twr ttt.pcf -ucf nexys3.ucf 
+bitgen -intstyle ise -f ttt.ut ttt.ncd 
+xst -intstyle ise -ifn "C:/Users/152/Documents/MeghaCalvin/Lab4/ttt.xst" -ofn "C:/Users/152/Documents/MeghaCalvin/Lab4/ttt.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc nexys3.ucf -p xc6slx16-csg324-3 ttt.ngc ttt.ngd  
+map -intstyle ise -p xc6slx16-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o ttt_map.ncd ttt.ngd ttt.pcf 
+par -w -intstyle ise -ol high -mt off ttt_map.ncd ttt.ncd ttt.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml ttt.twx ttt.ncd -o ttt.twr ttt.pcf -ucf nexys3.ucf 
+xst -intstyle ise -ifn "C:/Users/152/Documents/MeghaCalvin/Lab4/ttt.xst" -ofn "C:/Users/152/Documents/MeghaCalvin/Lab4/ttt.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc nexys3.ucf -p xc6slx16-csg324-3 ttt.ngc ttt.ngd  
+map -intstyle ise -p xc6slx16-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o ttt_map.ncd ttt.ngd ttt.pcf 
+par -w -intstyle ise -ol high -mt off ttt_map.ncd ttt.ncd ttt.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml ttt.twx ttt.ncd -o ttt.twr ttt.pcf -ucf nexys3.ucf 
+xst -intstyle ise -ifn "C:/Users/152/Documents/MeghaCalvin/Lab4/ttt.xst" -ofn "C:/Users/152/Documents/MeghaCalvin/Lab4/ttt.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc nexys3.ucf -p xc6slx16-csg324-3 ttt.ngc ttt.ngd  
+map -intstyle ise -p xc6slx16-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o ttt_map.ncd ttt.ngd ttt.pcf 
+par -w -intstyle ise -ol high -mt off ttt_map.ncd ttt.ncd ttt.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml ttt.twx ttt.ncd -o ttt.twr ttt.pcf -ucf nexys3.ucf 
+bitgen -intstyle ise -f ttt.ut ttt.ncd 
+xst -intstyle ise -ifn "C:/Users/152/Documents/MeghaCalvin/Lab4/ttt.xst" -ofn "C:/Users/152/Documents/MeghaCalvin/Lab4/ttt.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc nexys3.ucf -p xc6slx16-csg324-3 ttt.ngc ttt.ngd  
+map -intstyle ise -p xc6slx16-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o ttt_map.ncd ttt.ngd ttt.pcf 
+par -w -intstyle ise -ol high -mt off ttt_map.ncd ttt.ncd ttt.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml ttt.twx ttt.ncd -o ttt.twr ttt.pcf -ucf nexys3.ucf 
+bitgen -intstyle ise -f ttt.ut ttt.ncd 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc nexys3.ucf -p xc6slx16-csg324-3 ttt.ngc ttt.ngd  
+map -intstyle ise -p xc6slx16-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o ttt_map.ncd ttt.ngd ttt.pcf 
+par -w -intstyle ise -ol high -mt off ttt_map.ncd ttt.ncd ttt.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml ttt.twx ttt.ncd -o ttt.twr ttt.pcf -ucf nexys3.ucf 
+xst -intstyle ise -ifn "C:/Users/152/Documents/MeghaCalvin/Lab4/ttt.xst" -ofn "C:/Users/152/Documents/MeghaCalvin/Lab4/ttt.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc nexys3.ucf -p xc6slx16-csg324-3 ttt.ngc ttt.ngd  
+map -intstyle ise -p xc6slx16-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o ttt_map.ncd ttt.ngd ttt.pcf 
+par -w -intstyle ise -ol high -mt off ttt_map.ncd ttt.ncd ttt.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml ttt.twx ttt.ncd -o ttt.twr ttt.pcf -ucf nexys3.ucf 
+xst -intstyle ise -ifn "C:/Users/152/Documents/MeghaCalvin/Lab4/ttt.xst" -ofn "C:/Users/152/Documents/MeghaCalvin/Lab4/ttt.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc nexys3.ucf -p xc6slx16-csg324-3 ttt.ngc ttt.ngd  
+map -intstyle ise -p xc6slx16-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o ttt_map.ncd ttt.ngd ttt.pcf 
+par -w -intstyle ise -ol high -mt off ttt_map.ncd ttt.ncd ttt.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml ttt.twx ttt.ncd -o ttt.twr ttt.pcf -ucf nexys3.ucf 
+bitgen -intstyle ise -f ttt.ut ttt.ncd 
+xst -intstyle ise -ifn "C:/Users/152/Documents/MeghaCalvin/Lab4/ttt.xst" -ofn "C:/Users/152/Documents/MeghaCalvin/Lab4/ttt.syr" 
+xst -intstyle ise -ifn "C:/Users/152/Documents/MeghaCalvin/Lab4/ttt.xst" -ofn "C:/Users/152/Documents/MeghaCalvin/Lab4/ttt.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc nexys3.ucf -p xc6slx16-csg324-3 ttt.ngc ttt.ngd  
+map -intstyle ise -p xc6slx16-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o ttt_map.ncd ttt.ngd ttt.pcf 
+par -w -intstyle ise -ol high -mt off ttt_map.ncd ttt.ncd ttt.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml ttt.twx ttt.ncd -o ttt.twr ttt.pcf -ucf nexys3.ucf 
+bitgen -intstyle ise -f ttt.ut ttt.ncd 
+xst -intstyle ise -ifn "C:/Users/152/Documents/MeghaCalvin/Lab4/ttt.xst" -ofn "C:/Users/152/Documents/MeghaCalvin/Lab4/ttt.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc nexys3.ucf -p xc6slx16-csg324-3 ttt.ngc ttt.ngd  
+map -intstyle ise -p xc6slx16-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o ttt_map.ncd ttt.ngd ttt.pcf 
+par -w -intstyle ise -ol high -mt off ttt_map.ncd ttt.ncd ttt.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml ttt.twx ttt.ncd -o ttt.twr ttt.pcf -ucf nexys3.ucf 
+bitgen -intstyle ise -f ttt.ut ttt.ncd 
+xst -intstyle ise -ifn "C:/Users/152/Documents/MeghaCalvin/Lab4/ttt.xst" -ofn "C:/Users/152/Documents/MeghaCalvin/Lab4/ttt.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc nexys3.ucf -p xc6slx16-csg324-3 ttt.ngc ttt.ngd  
+map -intstyle ise -p xc6slx16-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o ttt_map.ncd ttt.ngd ttt.pcf 
+par -w -intstyle ise -ol high -mt off ttt_map.ncd ttt.ncd ttt.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml ttt.twx ttt.ncd -o ttt.twr ttt.pcf -ucf nexys3.ucf 
+bitgen -intstyle ise -f ttt.ut ttt.ncd 
+xst -intstyle ise -ifn "C:/Users/152/Documents/MeghaCalvin/Lab4/ttt.xst" -ofn "C:/Users/152/Documents/MeghaCalvin/Lab4/ttt.syr" 
+xst -intstyle ise -ifn "C:/Users/152/Documents/MeghaCalvin/Lab4/ttt.xst" -ofn "C:/Users/152/Documents/MeghaCalvin/Lab4/ttt.syr" 
+xst -intstyle ise -ifn "C:/Users/152/Documents/MeghaCalvin/Lab4/ttt.xst" -ofn "C:/Users/152/Documents/MeghaCalvin/Lab4/ttt.syr" 
+xst -intstyle ise -ifn "C:/Users/152/Documents/MeghaCalvin/Lab4/ttt.xst" -ofn "C:/Users/152/Documents/MeghaCalvin/Lab4/ttt.syr" 
+xst -intstyle ise -ifn "C:/Users/152/Documents/MeghaCalvin/Lab4/ttt.xst" -ofn "C:/Users/152/Documents/MeghaCalvin/Lab4/ttt.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc nexys3.ucf -p xc6slx16-csg324-3 ttt.ngc ttt.ngd  
+map -intstyle ise -p xc6slx16-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o ttt_map.ncd ttt.ngd ttt.pcf 
+par -w -intstyle ise -ol high -mt off ttt_map.ncd ttt.ncd ttt.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml ttt.twx ttt.ncd -o ttt.twr ttt.pcf -ucf nexys3.ucf 
+bitgen -intstyle ise -f ttt.ut ttt.ncd 
+xst -intstyle ise -ifn "C:/Users/152/Documents/MeghaCalvin/Lab4/ttt.xst" -ofn "C:/Users/152/Documents/MeghaCalvin/Lab4/ttt.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc nexys3.ucf -p xc6slx16-csg324-3 ttt.ngc ttt.ngd  
+map -intstyle ise -p xc6slx16-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o ttt_map.ncd ttt.ngd ttt.pcf 
+par -w -intstyle ise -ol high -mt off ttt_map.ncd ttt.ncd ttt.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml ttt.twx ttt.ncd -o ttt.twr ttt.pcf -ucf nexys3.ucf 
+bitgen -intstyle ise -f ttt.ut ttt.ncd 
+xst -intstyle ise -ifn "C:/Users/152/Documents/MeghaCalvin/Lab4/ttt.xst" -ofn "C:/Users/152/Documents/MeghaCalvin/Lab4/ttt.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc nexys3.ucf -p xc6slx16-csg324-3 ttt.ngc ttt.ngd  
+map -intstyle ise -p xc6slx16-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o ttt_map.ncd ttt.ngd ttt.pcf 
+par -w -intstyle ise -ol high -mt off ttt_map.ncd ttt.ncd ttt.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml ttt.twx ttt.ncd -o ttt.twr ttt.pcf -ucf nexys3.ucf 
+bitgen -intstyle ise -f ttt.ut ttt.ncd 
+xst -intstyle ise -ifn "C:/Users/152/Documents/MeghaCalvin/Lab4/ttt.xst" -ofn "C:/Users/152/Documents/MeghaCalvin/Lab4/ttt.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc nexys3.ucf -p xc6slx16-csg324-3 ttt.ngc ttt.ngd  
+map -intstyle ise -p xc6slx16-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o ttt_map.ncd ttt.ngd ttt.pcf 
+par -w -intstyle ise -ol high -mt off ttt_map.ncd ttt.ncd ttt.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml ttt.twx ttt.ncd -o ttt.twr ttt.pcf -ucf nexys3.ucf 
+bitgen -intstyle ise -f ttt.ut ttt.ncd 
+xst -intstyle ise -ifn "C:/Users/152/Documents/MeghaCalvin/Lab4/ttt.xst" -ofn "C:/Users/152/Documents/MeghaCalvin/Lab4/ttt.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc nexys3.ucf -p xc6slx16-csg324-3 ttt.ngc ttt.ngd  
+map -intstyle ise -p xc6slx16-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o ttt_map.ncd ttt.ngd ttt.pcf 
+par -w -intstyle ise -ol high -mt off ttt_map.ncd ttt.ncd ttt.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml ttt.twx ttt.ncd -o ttt.twr ttt.pcf -ucf nexys3.ucf 
+bitgen -intstyle ise -f ttt.ut ttt.ncd 
+xst -intstyle ise -ifn "C:/Users/152/Documents/MeghaCalvin/Lab4/ttt.xst" -ofn "C:/Users/152/Documents/MeghaCalvin/Lab4/ttt.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc nexys3.ucf -p xc6slx16-csg324-3 ttt.ngc ttt.ngd  
+map -intstyle ise -p xc6slx16-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o ttt_map.ncd ttt.ngd ttt.pcf 
+par -w -intstyle ise -ol high -mt off ttt_map.ncd ttt.ncd ttt.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml ttt.twx ttt.ncd -o ttt.twr ttt.pcf -ucf nexys3.ucf 
+xst -intstyle ise -ifn "C:/Users/152/Documents/MeghaCalvin/Lab4/ttt.xst" -ofn "C:/Users/152/Documents/MeghaCalvin/Lab4/ttt.syr" 
+xst -intstyle ise -ifn "C:/Users/152/Documents/MeghaCalvin/Lab4/ttt.xst" -ofn "C:/Users/152/Documents/MeghaCalvin/Lab4/ttt.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc nexys3.ucf -p xc6slx16-csg324-3 ttt.ngc ttt.ngd  
+map -intstyle ise -p xc6slx16-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o ttt_map.ncd ttt.ngd ttt.pcf 
+par -w -intstyle ise -ol high -mt off ttt_map.ncd ttt.ncd ttt.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml ttt.twx ttt.ncd -o ttt.twr ttt.pcf -ucf nexys3.ucf 
+bitgen -intstyle ise -f ttt.ut ttt.ncd 
+xst -intstyle ise -ifn "C:/Users/152/Documents/MeghaCalvin/Lab4/ttt.xst" -ofn "C:/Users/152/Documents/MeghaCalvin/Lab4/ttt.syr" 
+xst -intstyle ise -ifn "C:/Users/152/Documents/MeghaCalvin/Lab4/ttt.xst" -ofn "C:/Users/152/Documents/MeghaCalvin/Lab4/ttt.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc nexys3.ucf -p xc6slx16-csg324-3 ttt.ngc ttt.ngd  
+map -intstyle ise -p xc6slx16-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o ttt_map.ncd ttt.ngd ttt.pcf 
+par -w -intstyle ise -ol high -mt off ttt_map.ncd ttt.ncd ttt.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml ttt.twx ttt.ncd -o ttt.twr ttt.pcf -ucf nexys3.ucf 
+bitgen -intstyle ise -f ttt.ut ttt.ncd 
+xst -intstyle ise -ifn "C:/Users/152/Documents/MeghaCalvin/Lab4/ttt.xst" -ofn "C:/Users/152/Documents/MeghaCalvin/Lab4/ttt.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc nexys3.ucf -p xc6slx16-csg324-3 ttt.ngc ttt.ngd  
+map -intstyle ise -p xc6slx16-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o ttt_map.ncd ttt.ngd ttt.pcf 
+par -w -intstyle ise -ol high -mt off ttt_map.ncd ttt.ncd ttt.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml ttt.twx ttt.ncd -o ttt.twr ttt.pcf -ucf nexys3.ucf 
+bitgen -intstyle ise -f ttt.ut ttt.ncd 
+xst -intstyle ise -ifn "C:/Users/152/Documents/MeghaCalvin/Lab4/ttt.xst" -ofn "C:/Users/152/Documents/MeghaCalvin/Lab4/ttt.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc nexys3.ucf -p xc6slx16-csg324-3 ttt.ngc ttt.ngd  
+map -intstyle ise -p xc6slx16-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o ttt_map.ncd ttt.ngd ttt.pcf 
+par -w -intstyle ise -ol high -mt off ttt_map.ncd ttt.ncd ttt.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml ttt.twx ttt.ncd -o ttt.twr ttt.pcf -ucf nexys3.ucf 
+bitgen -intstyle ise -f ttt.ut ttt.ncd 
+xst -intstyle ise -ifn "C:/Users/152/Documents/MeghaCalvin/Lab4/ttt.xst" -ofn "C:/Users/152/Documents/MeghaCalvin/Lab4/ttt.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc nexys3.ucf -p xc6slx16-csg324-3 ttt.ngc ttt.ngd  
+map -intstyle ise -p xc6slx16-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o ttt_map.ncd ttt.ngd ttt.pcf 
+par -w -intstyle ise -ol high -mt off ttt_map.ncd ttt.ncd ttt.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml ttt.twx ttt.ncd -o ttt.twr ttt.pcf -ucf nexys3.ucf 
+bitgen -intstyle ise -f ttt.ut ttt.ncd 
+xst -intstyle ise -ifn "C:/Users/152/Documents/MeghaCalvin/Lab4/ttt.xst" -ofn "C:/Users/152/Documents/MeghaCalvin/Lab4/ttt.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc nexys3.ucf -p xc6slx16-csg324-3 ttt.ngc ttt.ngd  
+map -intstyle ise -p xc6slx16-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o ttt_map.ncd ttt.ngd ttt.pcf 
+par -w -intstyle ise -ol high -mt off ttt_map.ncd ttt.ncd ttt.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml ttt.twx ttt.ncd -o ttt.twr ttt.pcf -ucf nexys3.ucf 
+bitgen -intstyle ise -f ttt.ut ttt.ncd 
+xst -intstyle ise -ifn "C:/Users/152/Documents/MeghaCalvin/Lab4/ttt.xst" -ofn "C:/Users/152/Documents/MeghaCalvin/Lab4/ttt.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc nexys3.ucf -p xc6slx16-csg324-3 ttt.ngc ttt.ngd  
+map -intstyle ise -p xc6slx16-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o ttt_map.ncd ttt.ngd ttt.pcf 
+par -w -intstyle ise -ol high -mt off ttt_map.ncd ttt.ncd ttt.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml ttt.twx ttt.ncd -o ttt.twr ttt.pcf -ucf nexys3.ucf 
+bitgen -intstyle ise -f ttt.ut ttt.ncd 
+xst -intstyle ise -ifn "C:/Users/152/Documents/MeghaCalvin/Lab4/ttt.xst" -ofn "C:/Users/152/Documents/MeghaCalvin/Lab4/ttt.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc nexys3.ucf -p xc6slx16-csg324-3 ttt.ngc ttt.ngd  
+map -intstyle ise -p xc6slx16-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o ttt_map.ncd ttt.ngd ttt.pcf 
+par -w -intstyle ise -ol high -mt off ttt_map.ncd ttt.ncd ttt.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml ttt.twx ttt.ncd -o ttt.twr ttt.pcf -ucf nexys3.ucf 
+bitgen -intstyle ise -f ttt.ut ttt.ncd 
+xst -intstyle ise -ifn "C:/Users/152/Documents/MeghaCalvin/Lab4/ttt.xst" -ofn "C:/Users/152/Documents/MeghaCalvin/Lab4/ttt.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc nexys3.ucf -p xc6slx16-csg324-3 ttt.ngc ttt.ngd  
+map -intstyle ise -p xc6slx16-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o ttt_map.ncd ttt.ngd ttt.pcf 
+par -w -intstyle ise -ol high -mt off ttt_map.ncd ttt.ncd ttt.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml ttt.twx ttt.ncd -o ttt.twr ttt.pcf -ucf nexys3.ucf 
+bitgen -intstyle ise -f ttt.ut ttt.ncd 
+xst -intstyle ise -ifn "C:/Users/152/Documents/MeghaCalvin/Lab4/ttt.xst" -ofn "C:/Users/152/Documents/MeghaCalvin/Lab4/ttt.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc nexys3.ucf -p xc6slx16-csg324-3 ttt.ngc ttt.ngd  
+map -intstyle ise -p xc6slx16-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o ttt_map.ncd ttt.ngd ttt.pcf 
+par -w -intstyle ise -ol high -mt off ttt_map.ncd ttt.ncd ttt.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml ttt.twx ttt.ncd -o ttt.twr ttt.pcf -ucf nexys3.ucf 
+bitgen -intstyle ise -f ttt.ut ttt.ncd 
+xst -intstyle ise -ifn "C:/Users/152/Documents/MeghaCalvin/Lab4/ttt.xst" -ofn "C:/Users/152/Documents/MeghaCalvin/Lab4/ttt.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc nexys3.ucf -p xc6slx16-csg324-3 ttt.ngc ttt.ngd  
+map -intstyle ise -p xc6slx16-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o ttt_map.ncd ttt.ngd ttt.pcf 
+par -w -intstyle ise -ol high -mt off ttt_map.ncd ttt.ncd ttt.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml ttt.twx ttt.ncd -o ttt.twr ttt.pcf -ucf nexys3.ucf 
+bitgen -intstyle ise -f ttt.ut ttt.ncd 
+xst -intstyle ise -ifn "C:/Users/152/Documents/MeghaCalvin/Lab4/ttt.xst" -ofn "C:/Users/152/Documents/MeghaCalvin/Lab4/ttt.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc nexys3.ucf -p xc6slx16-csg324-3 ttt.ngc ttt.ngd  
+map -intstyle ise -p xc6slx16-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o ttt_map.ncd ttt.ngd ttt.pcf 
+par -w -intstyle ise -ol high -mt off ttt_map.ncd ttt.ncd ttt.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml ttt.twx ttt.ncd -o ttt.twr ttt.pcf -ucf nexys3.ucf 
+bitgen -intstyle ise -f ttt.ut ttt.ncd 
+xst -intstyle ise -ifn "C:/Users/152/Documents/MeghaCalvin/Lab4/ttt.xst" -ofn "C:/Users/152/Documents/MeghaCalvin/Lab4/ttt.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc nexys3.ucf -p xc6slx16-csg324-3 ttt.ngc ttt.ngd  
+map -intstyle ise -p xc6slx16-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o ttt_map.ncd ttt.ngd ttt.pcf 
+par -w -intstyle ise -ol high -mt off ttt_map.ncd ttt.ncd ttt.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml ttt.twx ttt.ncd -o ttt.twr ttt.pcf -ucf nexys3.ucf 
+bitgen -intstyle ise -f ttt.ut ttt.ncd 
+xst -intstyle ise -ifn "C:/Users/152/Documents/MeghaCalvin/Lab4/ttt.xst" -ofn "C:/Users/152/Documents/MeghaCalvin/Lab4/ttt.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc nexys3.ucf -p xc6slx16-csg324-3 ttt.ngc ttt.ngd  
+map -intstyle ise -p xc6slx16-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o ttt_map.ncd ttt.ngd ttt.pcf 
+par -w -intstyle ise -ol high -mt off ttt_map.ncd ttt.ncd ttt.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml ttt.twx ttt.ncd -o ttt.twr ttt.pcf -ucf nexys3.ucf 
+bitgen -intstyle ise -f ttt.ut ttt.ncd 
+xst -intstyle ise -ifn "C:/Users/152/Documents/MeghaCalvin/Lab4/ttt.xst" -ofn "C:/Users/152/Documents/MeghaCalvin/Lab4/ttt.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc nexys3.ucf -p xc6slx16-csg324-3 ttt.ngc ttt.ngd  
+map -intstyle ise -p xc6slx16-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o ttt_map.ncd ttt.ngd ttt.pcf 
+par -w -intstyle ise -ol high -mt off ttt_map.ncd ttt.ncd ttt.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml ttt.twx ttt.ncd -o ttt.twr ttt.pcf -ucf nexys3.ucf 
+bitgen -intstyle ise -f ttt.ut ttt.ncd 
+xst -intstyle ise -ifn "C:/Users/152/Documents/MeghaCalvin/Lab4/ttt.xst" -ofn "C:/Users/152/Documents/MeghaCalvin/Lab4/ttt.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc nexys3.ucf -p xc6slx16-csg324-3 ttt.ngc ttt.ngd  
+map -intstyle ise -p xc6slx16-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o ttt_map.ncd ttt.ngd ttt.pcf 
+par -w -intstyle ise -ol high -mt off ttt_map.ncd ttt.ncd ttt.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml ttt.twx ttt.ncd -o ttt.twr ttt.pcf -ucf nexys3.ucf 
+bitgen -intstyle ise -f ttt.ut ttt.ncd 
+xst -intstyle ise -ifn "C:/Users/152/Documents/MeghaCalvin/Lab4/ttt.xst" -ofn "C:/Users/152/Documents/MeghaCalvin/Lab4/ttt.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc nexys3.ucf -p xc6slx16-csg324-3 ttt.ngc ttt.ngd  
+map -intstyle ise -p xc6slx16-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o ttt_map.ncd ttt.ngd ttt.pcf 
+par -w -intstyle ise -ol high -mt off ttt_map.ncd ttt.ncd ttt.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml ttt.twx ttt.ncd -o ttt.twr ttt.pcf -ucf nexys3.ucf 
+bitgen -intstyle ise -f ttt.ut ttt.ncd 
+xst -intstyle ise -ifn "C:/Users/152/Documents/MeghaCalvin/Lab4/ttt.xst" -ofn "C:/Users/152/Documents/MeghaCalvin/Lab4/ttt.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc nexys3.ucf -p xc6slx16-csg324-3 ttt.ngc ttt.ngd  
+map -intstyle ise -p xc6slx16-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o ttt_map.ncd ttt.ngd ttt.pcf 
+par -w -intstyle ise -ol high -mt off ttt_map.ncd ttt.ncd ttt.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml ttt.twx ttt.ncd -o ttt.twr ttt.pcf -ucf nexys3.ucf 
+bitgen -intstyle ise -f ttt.ut ttt.ncd 
+xst -intstyle ise -ifn "C:/Users/152/Documents/MeghaCalvin/Lab4/ttt.xst" -ofn "C:/Users/152/Documents/MeghaCalvin/Lab4/ttt.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc nexys3.ucf -p xc6slx16-csg324-3 ttt.ngc ttt.ngd  
+map -intstyle ise -p xc6slx16-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o ttt_map.ncd ttt.ngd ttt.pcf 
+par -w -intstyle ise -ol high -mt off ttt_map.ncd ttt.ncd ttt.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml ttt.twx ttt.ncd -o ttt.twr ttt.pcf -ucf nexys3.ucf 
+bitgen -intstyle ise -f ttt.ut ttt.ncd 
+xst -intstyle ise -ifn "C:/Users/152/Documents/MeghaCalvin/Lab4/ttt.xst" -ofn "C:/Users/152/Documents/MeghaCalvin/Lab4/ttt.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc nexys3.ucf -p xc6slx16-csg324-3 ttt.ngc ttt.ngd  
+map -intstyle ise -p xc6slx16-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o ttt_map.ncd ttt.ngd ttt.pcf 
+par -w -intstyle ise -ol high -mt off ttt_map.ncd ttt.ncd ttt.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml ttt.twx ttt.ncd -o ttt.twr ttt.pcf -ucf nexys3.ucf 
+bitgen -intstyle ise -f ttt.ut ttt.ncd 
+xst -intstyle ise -ifn "C:/Users/152/Documents/MeghaCalvin/Lab4/ttt.xst" -ofn "C:/Users/152/Documents/MeghaCalvin/Lab4/ttt.syr" 
+xst -intstyle ise -ifn "C:/Users/152/Documents/MeghaCalvin/Lab4/ttt.xst" -ofn "C:/Users/152/Documents/MeghaCalvin/Lab4/ttt.syr" 
+xst -intstyle ise -ifn "C:/Users/152/Documents/MeghaCalvin/Lab4/ttt.xst" -ofn "C:/Users/152/Documents/MeghaCalvin/Lab4/ttt.syr" 
+xst -intstyle ise -ifn "C:/Users/152/Documents/MeghaCalvin/Lab4/ttt.xst" -ofn "C:/Users/152/Documents/MeghaCalvin/Lab4/ttt.syr" 
+xst -intstyle ise -ifn "C:/Users/152/Documents/MeghaCalvin/Lab4/ttt.xst" -ofn "C:/Users/152/Documents/MeghaCalvin/Lab4/ttt.syr" 
+xst -intstyle ise -ifn "C:/Users/152/Documents/MeghaCalvin/Lab4/ttt.xst" -ofn "C:/Users/152/Documents/MeghaCalvin/Lab4/ttt.syr" 
+xst -intstyle ise -ifn "C:/Users/152/Documents/MeghaCalvin/Lab4/ttt.xst" -ofn "C:/Users/152/Documents/MeghaCalvin/Lab4/ttt.syr" 
+xst -intstyle ise -ifn "C:/Users/152/Documents/MeghaCalvin/Lab4/ttt.xst" -ofn "C:/Users/152/Documents/MeghaCalvin/Lab4/ttt.syr" 
+xst -intstyle ise -ifn "C:/Users/152/Documents/MeghaCalvin/Lab4/ttt.xst" -ofn "C:/Users/152/Documents/MeghaCalvin/Lab4/ttt.syr" 
+xst -intstyle ise -ifn "C:/Users/152/Documents/MeghaCalvin/Lab4/ttt.xst" -ofn "C:/Users/152/Documents/MeghaCalvin/Lab4/ttt.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc nexys3.ucf -p xc6slx16-csg324-3 ttt.ngc ttt.ngd  
+map -intstyle ise -p xc6slx16-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o ttt_map.ncd ttt.ngd ttt.pcf 
+par -w -intstyle ise -ol high -mt off ttt_map.ncd ttt.ncd ttt.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml ttt.twx ttt.ncd -o ttt.twr ttt.pcf -ucf nexys3.ucf 
+bitgen -intstyle ise -f ttt.ut ttt.ncd 
+xst -intstyle ise -ifn "C:/Users/152/Documents/MeghaCalvin/Lab4/ttt.xst" -ofn "C:/Users/152/Documents/MeghaCalvin/Lab4/ttt.syr" 
+xst -intstyle ise -ifn "C:/Users/152/Documents/MeghaCalvin/Lab4/ttt.xst" -ofn "C:/Users/152/Documents/MeghaCalvin/Lab4/ttt.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc nexys3.ucf -p xc6slx16-csg324-3 ttt.ngc ttt.ngd  
+map -intstyle ise -p xc6slx16-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o ttt_map.ncd ttt.ngd ttt.pcf 
+par -w -intstyle ise -ol high -mt off ttt_map.ncd ttt.ncd ttt.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml ttt.twx ttt.ncd -o ttt.twr ttt.pcf -ucf nexys3.ucf 
+bitgen -intstyle ise -f ttt.ut ttt.ncd 
+xst -intstyle ise -ifn "C:/Users/152/Documents/MeghaCalvin/Lab4/ttt.xst" -ofn "C:/Users/152/Documents/MeghaCalvin/Lab4/ttt.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc nexys3.ucf -p xc6slx16-csg324-3 ttt.ngc ttt.ngd  
+map -intstyle ise -p xc6slx16-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o ttt_map.ncd ttt.ngd ttt.pcf 
+par -w -intstyle ise -ol high -mt off ttt_map.ncd ttt.ncd ttt.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml ttt.twx ttt.ncd -o ttt.twr ttt.pcf -ucf nexys3.ucf 
+bitgen -intstyle ise -f ttt.ut ttt.ncd 
+xst -intstyle ise -ifn "C:/Users/152/Documents/MeghaCalvin/Lab4/ttt.xst" -ofn "C:/Users/152/Documents/MeghaCalvin/Lab4/ttt.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc nexys3.ucf -p xc6slx16-csg324-3 ttt.ngc ttt.ngd  
+map -intstyle ise -p xc6slx16-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o ttt_map.ncd ttt.ngd ttt.pcf 
+par -w -intstyle ise -ol high -mt off ttt_map.ncd ttt.ncd ttt.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml ttt.twx ttt.ncd -o ttt.twr ttt.pcf -ucf nexys3.ucf 
+bitgen -intstyle ise -f ttt.ut ttt.ncd 
+xst -intstyle ise -ifn "C:/Users/152/Documents/MeghaCalvin/Lab4/ttt.xst" -ofn "C:/Users/152/Documents/MeghaCalvin/Lab4/ttt.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc nexys3.ucf -p xc6slx16-csg324-3 ttt.ngc ttt.ngd  
+map -intstyle ise -p xc6slx16-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o ttt_map.ncd ttt.ngd ttt.pcf 
+par -w -intstyle ise -ol high -mt off ttt_map.ncd ttt.ncd ttt.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml ttt.twx ttt.ncd -o ttt.twr ttt.pcf -ucf nexys3.ucf 
+bitgen -intstyle ise -f ttt.ut ttt.ncd 
+xst -intstyle ise -ifn "C:/Users/152/Documents/MeghaCalvin/Lab4/ttt.xst" -ofn "C:/Users/152/Documents/MeghaCalvin/Lab4/ttt.syr" 
+xst -intstyle ise -ifn "C:/Users/152/Documents/MeghaCalvin/Lab4/ttt.xst" -ofn "C:/Users/152/Documents/MeghaCalvin/Lab4/ttt.syr" 
+xst -intstyle ise -ifn "C:/Users/152/Documents/MeghaCalvin/Lab4/ttt.xst" -ofn "C:/Users/152/Documents/MeghaCalvin/Lab4/ttt.syr" 
+xst -intstyle ise -ifn "C:/Users/152/Documents/MeghaCalvin/Lab4/ttt.xst" -ofn "C:/Users/152/Documents/MeghaCalvin/Lab4/ttt.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc nexys3.ucf -p xc6slx16-csg324-3 ttt.ngc ttt.ngd  
+map -intstyle ise -p xc6slx16-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o ttt_map.ncd ttt.ngd ttt.pcf 
+par -w -intstyle ise -ol high -mt off ttt_map.ncd ttt.ncd ttt.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml ttt.twx ttt.ncd -o ttt.twr ttt.pcf -ucf nexys3.ucf 
+bitgen -intstyle ise -f ttt.ut ttt.ncd 
+xst -intstyle ise -ifn "C:/Users/152/Documents/MeghaCalvin/Lab4/ttt.xst" -ofn "C:/Users/152/Documents/MeghaCalvin/Lab4/ttt.syr" 
+xst -intstyle ise -ifn "C:/Users/152/Documents/MeghaCalvin/Lab4/ttt.xst" -ofn "C:/Users/152/Documents/MeghaCalvin/Lab4/ttt.syr" 
+xst -intstyle ise -ifn "C:/Users/152/Documents/MeghaCalvin/Lab4/ttt.xst" -ofn "C:/Users/152/Documents/MeghaCalvin/Lab4/ttt.syr" 
+xst -intstyle ise -ifn "C:/Users/152/Documents/MeghaCalvin/Lab4/ttt.xst" -ofn "C:/Users/152/Documents/MeghaCalvin/Lab4/ttt.syr" 
+xst -intstyle ise -ifn "C:/Users/152/Documents/MeghaCalvin/Lab4/ttt.xst" -ofn "C:/Users/152/Documents/MeghaCalvin/Lab4/ttt.syr" 
+xst -intstyle ise -ifn "C:/Users/152/Documents/MeghaCalvin/Lab4/ttt.xst" -ofn "C:/Users/152/Documents/MeghaCalvin/Lab4/ttt.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc nexys3.ucf -p xc6slx16-csg324-3 ttt.ngc ttt.ngd  
+map -intstyle ise -p xc6slx16-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o ttt_map.ncd ttt.ngd ttt.pcf 
+xst -intstyle ise -ifn "C:/Users/152/Documents/MeghaCalvin/Lab4/ttt.xst" -ofn "C:/Users/152/Documents/MeghaCalvin/Lab4/ttt.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc nexys3.ucf -p xc6slx16-csg324-3 ttt.ngc ttt.ngd  
+map -intstyle ise -p xc6slx16-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o ttt_map.ncd ttt.ngd ttt.pcf 
+xst -intstyle ise -ifn "C:/Users/152/Documents/MeghaCalvin/Lab4/ttt.xst" -ofn "C:/Users/152/Documents/MeghaCalvin/Lab4/ttt.syr" 
+xst -intstyle ise -ifn "C:/Users/152/Documents/MeghaCalvin/Lab4/ttt.xst" -ofn "C:/Users/152/Documents/MeghaCalvin/Lab4/ttt.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc nexys3.ucf -p xc6slx16-csg324-3 ttt.ngc ttt.ngd  
+map -intstyle ise -p xc6slx16-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o ttt_map.ncd ttt.ngd ttt.pcf 
+par -w -intstyle ise -ol high -mt off ttt_map.ncd ttt.ncd ttt.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml ttt.twx ttt.ncd -o ttt.twr ttt.pcf -ucf nexys3.ucf 
+bitgen -intstyle ise -f ttt.ut ttt.ncd 
+xst -intstyle ise -ifn "C:/Users/152/Documents/MeghaCalvin/Lab4/ttt.xst" -ofn "C:/Users/152/Documents/MeghaCalvin/Lab4/ttt.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc nexys3.ucf -p xc6slx16-csg324-3 ttt.ngc ttt.ngd  
+map -intstyle ise -p xc6slx16-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o ttt_map.ncd ttt.ngd ttt.pcf 
+par -w -intstyle ise -ol high -mt off ttt_map.ncd ttt.ncd ttt.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml ttt.twx ttt.ncd -o ttt.twr ttt.pcf -ucf nexys3.ucf 
+bitgen -intstyle ise -f ttt.ut ttt.ncd 
+xst -intstyle ise -ifn "C:/Users/152/Documents/MeghaCalvin/Lab4/ttt.xst" -ofn "C:/Users/152/Documents/MeghaCalvin/Lab4/ttt.syr" 
+xst -intstyle ise -ifn "C:/Users/152/Documents/MeghaCalvin/Lab4/ttt.xst" -ofn "C:/Users/152/Documents/MeghaCalvin/Lab4/ttt.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc nexys3.ucf -p xc6slx16-csg324-3 ttt.ngc ttt.ngd  
+map -intstyle ise -p xc6slx16-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o ttt_map.ncd ttt.ngd ttt.pcf 
+par -w -intstyle ise -ol high -mt off ttt_map.ncd ttt.ncd ttt.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml ttt.twx ttt.ncd -o ttt.twr ttt.pcf -ucf nexys3.ucf 
+bitgen -intstyle ise -f ttt.ut ttt.ncd 
+xst -intstyle ise -ifn "C:/Users/152/Documents/MeghaCalvin/Lab4/ttt.xst" -ofn "C:/Users/152/Documents/MeghaCalvin/Lab4/ttt.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc nexys3.ucf -p xc6slx16-csg324-3 ttt.ngc ttt.ngd  
+map -intstyle ise -p xc6slx16-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o ttt_map.ncd ttt.ngd ttt.pcf 
+xst -intstyle ise -ifn "C:/Users/152/Documents/MeghaCalvin/Lab4/ttt.xst" -ofn "C:/Users/152/Documents/MeghaCalvin/Lab4/ttt.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc nexys3.ucf -p xc6slx16-csg324-3 ttt.ngc ttt.ngd  
+map -intstyle ise -p xc6slx16-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o ttt_map.ncd ttt.ngd ttt.pcf 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc nexys3.ucf -p xc6slx16-csg324-3 ttt.ngc ttt.ngd  
+map -intstyle ise -p xc6slx16-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o ttt_map.ncd ttt.ngd ttt.pcf 
+par -w -intstyle ise -ol high -mt off ttt_map.ncd ttt.ncd ttt.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml ttt.twx ttt.ncd -o ttt.twr ttt.pcf -ucf nexys3.ucf 
+bitgen -intstyle ise -f ttt.ut ttt.ncd 
+xst -intstyle ise -ifn "C:/Users/152/Documents/MeghaCalvin/Lab4/ttt.xst" -ofn "C:/Users/152/Documents/MeghaCalvin/Lab4/ttt.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc nexys3.ucf -p xc6slx16-csg324-3 ttt.ngc ttt.ngd  
+map -intstyle ise -p xc6slx16-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o ttt_map.ncd ttt.ngd ttt.pcf 
+par -w -intstyle ise -ol high -mt off ttt_map.ncd ttt.ncd ttt.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml ttt.twx ttt.ncd -o ttt.twr ttt.pcf -ucf nexys3.ucf 
+bitgen -intstyle ise -f ttt.ut ttt.ncd 
+xst -intstyle ise -ifn "C:/Users/152/Documents/MeghaCalvin/Lab4/ttt.xst" -ofn "C:/Users/152/Documents/MeghaCalvin/Lab4/ttt.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc nexys3.ucf -p xc6slx16-csg324-3 ttt.ngc ttt.ngd  
+map -intstyle ise -p xc6slx16-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o ttt_map.ncd ttt.ngd ttt.pcf 
+par -w -intstyle ise -ol high -mt off ttt_map.ncd ttt.ncd ttt.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml ttt.twx ttt.ncd -o ttt.twr ttt.pcf -ucf nexys3.ucf 
+bitgen -intstyle ise -f ttt.ut ttt.ncd 
+xst -intstyle ise -ifn "C:/Users/152/Documents/MeghaCalvin/Lab4/ttt.xst" -ofn "C:/Users/152/Documents/MeghaCalvin/Lab4/ttt.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc nexys3.ucf -p xc6slx16-csg324-3 ttt.ngc ttt.ngd  
+map -intstyle ise -p xc6slx16-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o ttt_map.ncd ttt.ngd ttt.pcf 
+par -w -intstyle ise -ol high -mt off ttt_map.ncd ttt.ncd ttt.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml ttt.twx ttt.ncd -o ttt.twr ttt.pcf -ucf nexys3.ucf 
+bitgen -intstyle ise -f ttt.ut ttt.ncd 
+xst -intstyle ise -ifn "C:/Users/152/Documents/MeghaCalvin/Lab4/ttt.xst" -ofn "C:/Users/152/Documents/MeghaCalvin/Lab4/ttt.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc nexys3.ucf -p xc6slx16-csg324-3 ttt.ngc ttt.ngd  
+map -intstyle ise -p xc6slx16-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o ttt_map.ncd ttt.ngd ttt.pcf 
+par -w -intstyle ise -ol high -mt off ttt_map.ncd ttt.ncd ttt.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml ttt.twx ttt.ncd -o ttt.twr ttt.pcf -ucf nexys3.ucf 
+bitgen -intstyle ise -f ttt.ut ttt.ncd 
+xst -intstyle ise -ifn "C:/Users/152/Documents/MeghaCalvin/Lab4/ttt.xst" -ofn "C:/Users/152/Documents/MeghaCalvin/Lab4/ttt.syr" 
+xst -intstyle ise -ifn "C:/Users/152/Documents/MeghaCalvin/Lab4/ttt.xst" -ofn "C:/Users/152/Documents/MeghaCalvin/Lab4/ttt.syr" 
+xst -intstyle ise -ifn "C:/Users/152/Documents/MeghaCalvin/Lab4/ttt.xst" -ofn "C:/Users/152/Documents/MeghaCalvin/Lab4/ttt.syr" 
+xst -intstyle ise -ifn "C:/Users/152/Documents/MeghaCalvin/Lab4/ttt.xst" -ofn "C:/Users/152/Documents/MeghaCalvin/Lab4/ttt.syr" 
+xst -intstyle ise -ifn "C:/Users/152/Documents/MeghaCalvin/Lab4/ttt.xst" -ofn "C:/Users/152/Documents/MeghaCalvin/Lab4/ttt.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc nexys3.ucf -p xc6slx16-csg324-3 ttt.ngc ttt.ngd  
+map -intstyle ise -p xc6slx16-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o ttt_map.ncd ttt.ngd ttt.pcf 
+par -w -intstyle ise -ol high -mt off ttt_map.ncd ttt.ncd ttt.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml ttt.twx ttt.ncd -o ttt.twr ttt.pcf -ucf nexys3.ucf 
+bitgen -intstyle ise -f ttt.ut ttt.ncd 
+xst -intstyle ise -ifn "C:/Users/152/Documents/MeghaCalvin/Lab4/ttt.xst" -ofn "C:/Users/152/Documents/MeghaCalvin/Lab4/ttt.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc nexys3.ucf -p xc6slx16-csg324-3 ttt.ngc ttt.ngd  
+map -intstyle ise -p xc6slx16-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o ttt_map.ncd ttt.ngd ttt.pcf 
+par -w -intstyle ise -ol high -mt off ttt_map.ncd ttt.ncd ttt.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml ttt.twx ttt.ncd -o ttt.twr ttt.pcf -ucf nexys3.ucf 
+bitgen -intstyle ise -f ttt.ut ttt.ncd 

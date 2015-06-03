@@ -1,0 +1,43 @@
+//! **************************************************************************
+// Written by: Map P.68d on Fri May 08 14:50:39 2015
+//! **************************************************************************
+
+SCHEMATIC START;
+COMP "adj" LOCATE = SITE "T10" LEVEL 1;
+COMP "clk" LOCATE = SITE "V10" LEVEL 1;
+COMP "led" LOCATE = SITE "U16" LEVEL 1;
+COMP "sel" LOCATE = SITE "T9" LEVEL 1;
+COMP "an<0>" LOCATE = SITE "N16" LEVEL 1;
+COMP "an<1>" LOCATE = SITE "N15" LEVEL 1;
+COMP "an<2>" LOCATE = SITE "P18" LEVEL 1;
+COMP "an<3>" LOCATE = SITE "P17" LEVEL 1;
+COMP "pause_button" LOCATE = SITE "B8" LEVEL 1;
+COMP "rst_button" LOCATE = SITE "D9" LEVEL 1;
+COMP "seg<0>" LOCATE = SITE "T17" LEVEL 1;
+COMP "seg<1>" LOCATE = SITE "T18" LEVEL 1;
+COMP "seg<2>" LOCATE = SITE "U17" LEVEL 1;
+COMP "seg<3>" LOCATE = SITE "U18" LEVEL 1;
+COMP "seg<4>" LOCATE = SITE "M14" LEVEL 1;
+COMP "seg<5>" LOCATE = SITE "N14" LEVEL 1;
+COMP "seg<6>" LOCATE = SITE "L14" LEVEL 1;
+COMP "seg<7>" LOCATE = SITE "M13" LEVEL 1;
+TIMEGRP sys_clk_pin = BEL "clock_module/count_28" BEL "clock_module/count_27"
+        BEL "clock_module/count_26" BEL "clock_module/count_25" BEL
+        "clock_module/count_24" BEL "clock_module/count_23" BEL
+        "clock_module/count_22" BEL "clock_module/count_21" BEL
+        "clock_module/count_20" BEL "clock_module/count_19" BEL
+        "clock_module/count_18" BEL "clock_module/count_17" BEL
+        "clock_module/count_16" BEL "clock_module/count_15" BEL
+        "clock_module/count_14" BEL "clock_module/count_13" BEL
+        "clock_module/count_12" BEL "clock_module/count_11" BEL
+        "clock_module/count_10" BEL "clock_module/count_9" BEL
+        "clock_module/count_8" BEL "clock_module/count_7" BEL
+        "clock_module/count_6" BEL "clock_module/count_5" BEL
+        "clock_module/count_4" BEL "clock_module/count_3" BEL
+        "clock_module/count_2" BEL "clock_module/count_1" BEL
+        "clock_module/count_0" BEL "clock_module/clk_blink" BEL
+        "clock_module/clk_faster" BEL "clock_module/clk_2hz" BEL
+        "clk_BUFGP/BUFG";
+TS_sys_clk_pin = PERIOD TIMEGRP "sys_clk_pin" 100 MHz HIGH 50%;
+SCHEMATIC END;
+

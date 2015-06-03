@@ -1,0 +1,39 @@
+Release 14.6 - ngc2edif P.68d (nt64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+Reading design Timer.ngc ...
+WARNING:NetListWriters:298 - No output is written to Timer.xncf, ignored.
+Processing design ...
+   Preping design's networks ...
+   Preping design's macros ...
+WARNING:NetListWriters:306 - Signal bus
+   clock_module/count[28]_PWR_2_o_mod_8/Madd_a[28]_GND_5_o_add_59_OUT_Madd_Madd_
+   lut[25 : 9] on block Timer is not reconstructed, because there are some
+   missing bus signals.
+WARNING:NetListWriters:306 - Signal bus
+   clock_module/count[28]_PWR_2_o_mod_2/Madd_a[28]_GND_3_o_add_59_OUT_Madd_lut[2
+   4 : 7] on block Timer is not reconstructed, because there are some missing
+   bus signals.
+WARNING:NetListWriters:306 - Signal bus
+   clock_module/count[28]_PWR_2_o_mod_8/Madd_a[28]_GND_5_o_add_57_OUT_Madd_lut[2
+   8 : 10] on block Timer is not reconstructed, because there are some missing
+   bus signals.
+WARNING:NetListWriters:306 - Signal bus
+   clock_module/count[28]_PWR_2_o_mod_2/Madd_a[28]_GND_3_o_add_57_OUT_lut[28 :
+   8] on block Timer is not reconstructed, because there are some missing bus
+   signals.
+WARNING:NetListWriters:306 - Signal bus
+   clock_module/count[28]_PWR_2_o_mod_8/Madd_a[28]_b[26]_add_55_OUT_Madd_lut[27
+   : 11] on block Timer is not reconstructed, because there are some missing bus
+   signals.
+WARNING:NetListWriters:306 - Signal bus
+   clock_module/count[28]_PWR_2_o_mod_2/Madd_a[28]_GND_3_o_add_55_OUT_lut[28 :
+   9] on block Timer is not reconstructed, because there are some missing bus
+   signals.
+WARNING:NetListWriters:306 - Signal bus
+   clock_module/count[28]_PWR_2_o_mod_2/Madd_a[28]_b[25]_add_53_OUT_lut[27 : 10]
+   on block Timer is not reconstructed, because there are some missing bus
+   signals.
+  finished :Prep
+Writing EDIF netlist file Timer.edif ...
+ngc2edif: Total memory usage is 79436 kilobytes
+

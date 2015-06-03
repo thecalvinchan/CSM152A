@@ -1,0 +1,41 @@
+xst -intstyle ise -ifn "C:/Users/152/Documents/MeghaCalvin/Lab2/sign_magnitude_converter.xst" -ofn "C:/Users/152/Documents/MeghaCalvin/Lab2/sign_magnitude_converter.syr" 
+xst -intstyle ise -ifn "C:/Users/152/Documents/MeghaCalvin/Lab2/sign_magnitude_converter.xst" -ofn "C:/Users/152/Documents/MeghaCalvin/Lab2/sign_magnitude_converter.syr" 
+xst -intstyle ise -ifn "C:/Users/152/Documents/MeghaCalvin/Lab2/sign_magnitude_converter.xst" -ofn "C:/Users/152/Documents/MeghaCalvin/Lab2/sign_magnitude_converter.syr" 
+xst -intstyle ise -ifn "C:/Users/152/Documents/MeghaCalvin/Lab2/sign_magnitude_converter.xst" -ofn "C:/Users/152/Documents/MeghaCalvin/Lab2/sign_magnitude_converter.syr" 
+xst -intstyle ise -ifn "C:/Users/152/Documents/MeghaCalvin/Lab2/sign_magnitude_converter.xst" -ofn "C:/Users/152/Documents/MeghaCalvin/Lab2/sign_magnitude_converter.syr" 
+xst -intstyle ise -ifn "C:/Users/152/Documents/MeghaCalvin/Lab2/sign_magnitude_converter.xst" -ofn "C:/Users/152/Documents/MeghaCalvin/Lab2/sign_magnitude_converter.syr" 
+xst -intstyle ise -ifn "C:/Users/152/Documents/MeghaCalvin/Lab2/sign_magnitude_converter.xst" -ofn "C:/Users/152/Documents/MeghaCalvin/Lab2/sign_magnitude_converter.syr" 
+xst -intstyle ise -ifn "C:/Users/152/Documents/MeghaCalvin/Lab2/sign_magnitude_converter.xst" -ofn "C:/Users/152/Documents/MeghaCalvin/Lab2/sign_magnitude_converter.syr" 
+xst -intstyle ise -ifn "C:/Users/152/Documents/MeghaCalvin/Lab2/sign_magnitude_converter.xst" -ofn "C:/Users/152/Documents/MeghaCalvin/Lab2/sign_magnitude_converter.syr" 
+xst -intstyle ise -ifn "C:/Users/152/Documents/MeghaCalvin/Lab2/sign_magnitude_converter.xst" -ofn "C:/Users/152/Documents/MeghaCalvin/Lab2/sign_magnitude_converter.syr" 
+xst -intstyle ise -ifn "C:/Users/152/Documents/MeghaCalvin/Lab2/sign_magnitude_converter.xst" -ofn "C:/Users/152/Documents/MeghaCalvin/Lab2/sign_magnitude_converter.syr" 
+xst -intstyle ise -ifn "C:/Users/152/Documents/MeghaCalvin/Lab2/sign_magnitude_converter.xst" -ofn "C:/Users/152/Documents/MeghaCalvin/Lab2/sign_magnitude_converter.syr" 
+xst -intstyle ise -ifn "C:/Users/152/Documents/MeghaCalvin/Lab2/sign_magnitude_converter.xst" -ofn "C:/Users/152/Documents/MeghaCalvin/Lab2/sign_magnitude_converter.syr" 
+xst -intstyle ise -ifn "C:/Users/152/Documents/MeghaCalvin/Lab2/sign_magnitude_converter.xst" -ofn "C:/Users/152/Documents/MeghaCalvin/Lab2/sign_magnitude_converter.syr" 
+xst -intstyle ise -ifn "C:/Users/152/Documents/MeghaCalvin/Lab2/sign_magnitude_converter.xst" -ofn "C:/Users/152/Documents/MeghaCalvin/Lab2/sign_magnitude_converter.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -i -p xc6slx16-csg324-3 sign_magnitude_converter.ngc sign_magnitude_converter.ngd  
+map -intstyle ise -p xc6slx16-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o sign_magnitude_converter_map.ncd sign_magnitude_converter.ngd sign_magnitude_converter.pcf 
+par -w -intstyle ise -ol high -mt off sign_magnitude_converter_map.ncd sign_magnitude_converter.ncd sign_magnitude_converter.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml sign_magnitude_converter.twx sign_magnitude_converter.ncd -o sign_magnitude_converter.twr sign_magnitude_converter.pcf 
+xst -intstyle ise -ifn "C:/Users/152/Documents/MeghaCalvin/Lab2/sign_magnitude_converter.xst" -ofn "C:/Users/152/Documents/MeghaCalvin/Lab2/sign_magnitude_converter.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -i -p xc6slx16-csg324-3 sign_magnitude_converter.ngc sign_magnitude_converter.ngd  
+map -intstyle ise -p xc6slx16-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o sign_magnitude_converter_map.ncd sign_magnitude_converter.ngd sign_magnitude_converter.pcf 
+par -w -intstyle ise -ol high -mt off sign_magnitude_converter_map.ncd sign_magnitude_converter.ncd sign_magnitude_converter.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml sign_magnitude_converter.twx sign_magnitude_converter.ncd -o sign_magnitude_converter.twr sign_magnitude_converter.pcf 
+xst -intstyle ise -ifn "C:/Users/152/Documents/MeghaCalvin/Lab2/sign_magnitude_converter.xst" -ofn "C:/Users/152/Documents/MeghaCalvin/Lab2/sign_magnitude_converter.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -i -p xc6slx16-csg324-3 sign_magnitude_converter.ngc sign_magnitude_converter.ngd  
+map -intstyle ise -p xc6slx16-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o sign_magnitude_converter_map.ncd sign_magnitude_converter.ngd sign_magnitude_converter.pcf 
+par -w -intstyle ise -ol high -mt off sign_magnitude_converter_map.ncd sign_magnitude_converter.ncd sign_magnitude_converter.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml sign_magnitude_converter.twx sign_magnitude_converter.ncd -o sign_magnitude_converter.twr sign_magnitude_converter.pcf 
+xst -intstyle ise -ifn "C:/Users/152/Documents/MeghaCalvin/Lab2/sign_magnitude_converter.xst" -ofn "C:/Users/152/Documents/MeghaCalvin/Lab2/sign_magnitude_converter.syr" 
+xst -intstyle ise -ifn "C:/Users/152/Documents/MeghaCalvin/Lab2/sign_magnitude_converter.xst" -ofn "C:/Users/152/Documents/MeghaCalvin/Lab2/sign_magnitude_converter.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -i -p xc6slx16-csg324-3 sign_magnitude_converter.ngc sign_magnitude_converter.ngd  
+map -intstyle ise -p xc6slx16-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o sign_magnitude_converter_map.ncd sign_magnitude_converter.ngd sign_magnitude_converter.pcf 
+par -w -intstyle ise -ol high -mt off sign_magnitude_converter_map.ncd sign_magnitude_converter.ncd sign_magnitude_converter.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml sign_magnitude_converter.twx sign_magnitude_converter.ncd -o sign_magnitude_converter.twr sign_magnitude_converter.pcf 
+xst -intstyle ise -ifn "C:/Users/152/Documents/MeghaCalvin/Lab2/sign_magnitude_converter.xst" -ofn "C:/Users/152/Documents/MeghaCalvin/Lab2/sign_magnitude_converter.syr" 
+xst -intstyle ise -ifn "C:/Users/152/Documents/MeghaCalvin/Lab2/sign_magnitude_converter.xst" -ofn "C:/Users/152/Documents/MeghaCalvin/Lab2/sign_magnitude_converter.syr" 
+xst -intstyle ise -ifn "C:/Users/152/Documents/MeghaCalvin/Lab2/sign_magnitude_converter.xst" -ofn "C:/Users/152/Documents/MeghaCalvin/Lab2/sign_magnitude_converter.syr" 
+xst -intstyle ise -ifn "C:/Users/152/Documents/MeghaCalvin/Lab2/sign_magnitude_converter.xst" -ofn "C:/Users/152/Documents/MeghaCalvin/Lab2/sign_magnitude_converter.syr" 
+xst -intstyle ise -ifn "C:/Users/152/Documents/MeghaCalvin/Lab2/sign_magnitude_converter.xst" -ofn "C:/Users/152/Documents/MeghaCalvin/Lab2/sign_magnitude_converter.syr" 
+xst -intstyle ise -ifn "C:/Users/152/Documents/MeghaCalvin/Lab2/sign_magnitude_converter.xst" -ofn "C:/Users/152/Documents/MeghaCalvin/Lab2/sign_magnitude_converter.syr" 

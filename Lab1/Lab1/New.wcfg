@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wave_config>
+   <wave_state>
+   </wave_state>
+   <db_ref_list>
+      <db_ref path="C:/Users/152/Documents/Temp1/Lab1/tb_isim_beh.wdb" id="1" type="auto">
+         <top_modules>
+            <top_module name="glbl" />
+            <top_module name="tb" />
+         </top_modules>
+      </db_ref>
+   </db_ref_list>
+   <WVObjectSize size="10" />
+   <wvobject fp_name="/tb/RsRx" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">RsRx</obj_property>
+      <obj_property name="ObjectShortName">RsRx</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb/RsTx" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">RsTx</obj_property>
+      <obj_property name="ObjectShortName">RsTx</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb/led" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">led[7:0]</obj_property>
+      <obj_property name="ObjectShortName">led[7:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb/sw" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">sw[7:0]</obj_property>
+      <obj_property name="ObjectShortName">sw[7:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb/clk" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">clk</obj_property>
+      <obj_property name="ObjectShortName">clk</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb/btnS" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">btnS</obj_property>
+      <obj_property name="ObjectShortName">btnS</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb/btnR" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">btnR</obj_property>
+      <obj_property name="ObjectShortName">btnR</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb/i" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">i[31:0]</obj_property>
+      <obj_property name="ObjectShortName">i[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb/uut_/inst_wd" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">inst_wd[7:0]</obj_property>
+      <obj_property name="ObjectShortName">inst_wd[7:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb/uut_/inst_vld" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">inst_vld</obj_property>
+      <obj_property name="ObjectShortName">inst_vld</obj_property>
+   </wvobject>
+</wave_config>

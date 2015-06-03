@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- IMPORTANT: This is an internal file that has been generated
+     by the Xilinx ISE software.  Any direct editing or
+     changes made to this file may result in unpredictable
+     behavior or data corruption.  It is strongly advised that
+     users do not edit the contents of this file. -->
+<messages>
+<msg type="warning" file="HDLCompiler" num="413" delta="old" >"C:\Users\152\Desktop\calvin_megha_lab3\Lab3\clk_module.v" Line 42: Result of <arg fmt="%d" index="1">30</arg>-bit expression is truncated to fit in <arg fmt="%d" index="2">29</arg>-bit target.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="1127" delta="old" >"C:\Users\152\Desktop\calvin_megha_lab3\Lab3\Timer.v" Line 42: Assignment to <arg fmt="%s" index="1">clk_1hz</arg> ignored, since the identifier is never used
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="1127" delta="old" >"C:\Users\152\Desktop\calvin_megha_lab3\Lab3\counter.v" Line 57: Assignment to <arg fmt="%s" index="1">clk</arg> ignored, since the identifier is never used
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="413" delta="old" >"C:\Users\152\Desktop\calvin_megha_lab3\Lab3\counter.v" Line 84: Result of <arg fmt="%d" index="1">3</arg>-bit expression is truncated to fit in <arg fmt="%d" index="2">2</arg>-bit target.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="413" delta="new" >"C:\Users\152\Desktop\calvin_megha_lab3\Lab3\counter.v" Line 101: Result of <arg fmt="%d" index="1">7</arg>-bit expression is truncated to fit in <arg fmt="%d" index="2">6</arg>-bit target.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="413" delta="new" >"C:\Users\152\Desktop\calvin_megha_lab3\Lab3\counter.v" Line 105: Result of <arg fmt="%d" index="1">7</arg>-bit expression is truncated to fit in <arg fmt="%d" index="2">6</arg>-bit target.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="413" delta="new" >"C:\Users\152\Desktop\calvin_megha_lab3\Lab3\counter.v" Line 114: Result of <arg fmt="%d" index="1">7</arg>-bit expression is truncated to fit in <arg fmt="%d" index="2">6</arg>-bit target.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="413" delta="new" >"C:\Users\152\Desktop\calvin_megha_lab3\Lab3\counter.v" Line 115: Result of <arg fmt="%d" index="1">7</arg>-bit expression is truncated to fit in <arg fmt="%d" index="2">6</arg>-bit target.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="413" delta="old" >"C:\Users\152\Desktop\calvin_megha_lab3\Lab3\display.v" Line 37: Result of <arg fmt="%d" index="1">3</arg>-bit expression is truncated to fit in <arg fmt="%d" index="2">2</arg>-bit target.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="91" delta="old" >"C:\Users\152\Desktop\calvin_megha_lab3\Lab3\display.v" Line 55: Signal &lt;<arg fmt="%s" index="1">minutes</arg>&gt; missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="413" delta="old" >"C:\Users\152\Desktop\calvin_megha_lab3\Lab3\display.v" Line 55: Result of <arg fmt="%d" index="1">6</arg>-bit expression is truncated to fit in <arg fmt="%d" index="2">4</arg>-bit target.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="91" delta="old" >"C:\Users\152\Desktop\calvin_megha_lab3\Lab3\display.v" Line 56: Signal &lt;<arg fmt="%s" index="1">minutes</arg>&gt; missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="91" delta="old" >"C:\Users\152\Desktop\calvin_megha_lab3\Lab3\display.v" Line 57: Signal &lt;<arg fmt="%s" index="1">seconds</arg>&gt; missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="413" delta="old" >"C:\Users\152\Desktop\calvin_megha_lab3\Lab3\display.v" Line 57: Result of <arg fmt="%d" index="1">6</arg>-bit expression is truncated to fit in <arg fmt="%d" index="2">4</arg>-bit target.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="91" delta="old" >"C:\Users\152\Desktop\calvin_megha_lab3\Lab3\display.v" Line 58: Signal &lt;<arg fmt="%s" index="1">seconds</arg>&gt; missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+</msg>
+
+<msg type="info" file="Xst" num="3210" delta="new" >&quot;<arg fmt="%s" index="1">C:\Users\152\Desktop\calvin_megha_lab3\Lab3\Timer.v</arg>&quot; line <arg fmt="%s" index="2">39</arg>: Output port &lt;<arg fmt="%s" index="3">clk_1hz</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">clock_module</arg>&gt; is unconnected or connected to loadless signal.
+</msg>
+
+<msg type="warning" file="Xst" num="1290" delta="new" >Hierarchical block &lt;<arg fmt="%s" index="1">count[28]_PWR_2_o_mod_8</arg>&gt; is unconnected in block &lt;<arg fmt="%s" index="2">clock_module</arg>&gt;.
+It will be removed from the design.
+</msg>
+
+<msg type="info" file="Xst" num="3218" delta="new" >HDL ADVISOR - The RAM &lt;<arg fmt="%s" index="1">Mram_cathodes</arg>&gt; will be implemented on LUTs either because you have described an asynchronous read or because of currently unsupported block RAM features. If you have described an asynchronous read, making it synchronous would allow you to take advantage of available block RAM resources, for optimized device usage and improved timings. Please refer to your documentation for coding guidelines.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">clk_count_1</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">counter</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">clock_module/clk_1hz</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">Timer</arg>&gt;.
+</msg>
+
+<msg type="info" file="Xst" num="2169" delta="new" >HDL ADVISOR - Some clock signals were not automatically buffered by XST with BUFG/BUFR resources. Please use the buffer_type constraint in order to insert these buffers to the clock signals to help prevent skew problems.
+</msg>
+
+</messages>
+

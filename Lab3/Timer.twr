@@ -1,0 +1,1410 @@
+--------------------------------------------------------------------------------
+Release 14.6 Trace  (nt64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+
+C:\Xilinx\14.6\ISE_DS\ISE\bin\nt64\unwrapped\trce.exe -intstyle ise -v 3 -s 3
+-n 3 -fastpaths -xml Timer.twx Timer.ncd -o Timer.twr Timer.pcf -ucf Timer.ucf
+
+Design file:              Timer.ncd
+Physical constraint file: Timer.pcf
+Device,package,speed:     xc6slx16,csg324,C,-3 (PRODUCTION 1.23 2013-06-08)
+Report level:             verbose report
+
+Environment Variable      Effect 
+--------------------      ------ 
+NONE                      No environment variables were set
+--------------------------------------------------------------------------------
+
+INFO:Timing:3412 - To improve timing, see the Timing Closure User Guide (UG612).
+INFO:Timing:2752 - To get complete path coverage, use the unconstrained paths 
+   option. All paths that are not constrained will be reported in the 
+   unconstrained paths section(s) of the report.
+INFO:Timing:3339 - The clock-to-out numbers in this timing report are based on 
+   a 50 Ohm transmission line loading model.  For the details of this model, 
+   and for more information on accounting for different loading conditions, 
+   please see the device datasheet.
+
+================================================================================
+Timing constraint: TS_sys_clk_pin = PERIOD TIMEGRP "sys_clk_pin" 100 MHz HIGH 
+50%;
+For more information, see Period Analysis in the Timing Closure User Guide (UG612).
+
+ 2167778194698104600 paths analyzed, 141 endpoints analyzed, 13 failing endpoints
+ 13 timing errors detected. (13 setup errors, 0 hold errors, 0 component switching limit errors)
+ Minimum period is  28.379ns.
+--------------------------------------------------------------------------------
+
+Paths for end point clock_module/clk_faster (SLICE_X21Y17.D5), 897278623214087550 paths
+--------------------------------------------------------------------------------
+Slack (setup path):     -18.379ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               clock_module/count_1 (FF)
+  Destination:          clock_module/clk_faster (FF)
+  Requirement:          10.000ns
+  Data Path Delay:      28.331ns (Levels of Logic = 33)
+  Clock Path Skew:      -0.013ns (0.249 - 0.262)
+  Source Clock:         clk_BUFGP rising at 0.000ns
+  Destination Clock:    clk_BUFGP rising at 10.000ns
+  Clock Uncertainty:    0.035ns
+
+  Clock Uncertainty:          0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Total Input Jitter (TIJ):   0.000ns
+    Discrete Jitter (DJ):       0.000ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path at Slow Process Corner: clock_module/count_1 to clock_module/clk_faster
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X20Y29.BQ      Tcko                  0.408   clock_module/count<3>
+                                                       clock_module/count_1
+    SLICE_X22Y27.B4      net (fanout=2)        0.651   clock_module/count<1>
+    SLICE_X22Y27.COUT    Topcyb                0.380   clock_module/Madd__n0026_cy<3>
+                                                       clock_module/count<1>_rt
+                                                       clock_module/Madd__n0026_cy<3>
+    SLICE_X22Y28.CIN     net (fanout=1)        0.003   clock_module/Madd__n0026_cy<3>
+    SLICE_X22Y28.COUT    Tbyp                  0.076   clock_module/Madd__n0026_cy<7>
+                                                       clock_module/Madd__n0026_cy<7>
+    SLICE_X22Y29.CIN     net (fanout=1)        0.003   clock_module/Madd__n0026_cy<7>
+    SLICE_X22Y29.COUT    Tbyp                  0.076   clock_module/Madd__n0026_cy<11>
+                                                       clock_module/Madd__n0026_cy<11>
+    SLICE_X22Y30.CIN     net (fanout=1)        0.003   clock_module/Madd__n0026_cy<11>
+    SLICE_X22Y30.COUT    Tbyp                  0.076   clock_module/Madd__n0026_cy<15>
+                                                       clock_module/Madd__n0026_cy<15>
+    SLICE_X22Y31.CIN     net (fanout=1)        0.003   clock_module/Madd__n0026_cy<15>
+    SLICE_X22Y31.BMUX    Tcinb                 0.292   clock_module/Madd__n0026_cy<19>
+                                                       clock_module/Madd__n0026_cy<19>
+    SLICE_X29Y34.C1      net (fanout=22)       1.205   clock_module/_n0026<11>
+    SLICE_X29Y34.C       Tilo                  0.259   clock_module/count[28]_PWR_2_o_mod_4/a[28]_a[28]_MUX_3049_o
+                                                       clock_module/count[28]_PWR_2_o_mod_4/BUS_0019_INV_1964_o11_2
+    SLICE_X30Y31.B3      net (fanout=7)        1.047   clock_module/count[28]_PWR_2_o_mod_4/BUS_0019_INV_1964_o112
+    SLICE_X30Y31.CMUX    Topbc                 0.526   clock_module/count[28]_PWR_2_o_mod_4/Madd_a[28]_GND_4_o_add_39_OUT_cy<19>
+                                                       clock_module/count[28]_PWR_2_o_mod_4/Madd_a[28]_GND_4_o_add_39_OUT_lut<17>
+                                                       clock_module/count[28]_PWR_2_o_mod_4/Madd_a[28]_GND_4_o_add_39_OUT_cy<19>
+    SLICE_X27Y33.D4      net (fanout=7)        0.789   clock_module/count[28]_PWR_2_o_mod_4/a[28]_GND_4_o_add_39_OUT<18>
+    SLICE_X27Y33.D       Tilo                  0.259   N649
+                                                       clock_module/count[28]_PWR_2_o_mod_4/Mmux_a[18]_a[28]_MUX_3088_o11_SW0_SW1
+    SLICE_X27Y33.C6      net (fanout=5)        0.139   N649
+    SLICE_X27Y33.C       Tilo                  0.259   N649
+                                                       clock_module/count[28]_PWR_2_o_mod_4/Mmux_a[18]_a[28]_MUX_3088_o11
+    SLICE_X29Y31.A3      net (fanout=6)        0.740   clock_module/count[28]_PWR_2_o_mod_4/a[18]_a[28]_MUX_3088_o
+    SLICE_X29Y31.A       Tilo                  0.259   clock_module/count[28]_PWR_2_o_mod_4/Mmux_a[23]_a[28]_MUX_3141_o111
+                                                       clock_module/count[28]_PWR_2_o_mod_4/BUS_0021_INV_2024_o22_1
+    SLICE_X31Y32.D6      net (fanout=5)        0.601   clock_module/count[28]_PWR_2_o_mod_4/BUS_0021_INV_2024_o22
+    SLICE_X31Y32.D       Tilo                  0.259   clock_module/count[28]_PWR_2_o_mod_4/a[17]_a[28]_MUX_3118_o
+                                                       clock_module/count[28]_PWR_2_o_mod_4/Mmux_a[0]_a[28]_MUX_3135_o181
+    SLICE_X31Y31.C2      net (fanout=9)        0.654   clock_module/count[28]_PWR_2_o_mod_4/a[17]_a[28]_MUX_3118_o
+    SLICE_X31Y31.C       Tilo                  0.259   clock_module/count[28]_PWR_2_o_mod_4/a[16]_a[28]_MUX_3119_o
+                                                       clock_module/count[28]_PWR_2_o_mod_4/BUS_0022_INV_2054_o23_1
+    SLICE_X25Y30.C6      net (fanout=1)        0.574   clock_module/count[28]_PWR_2_o_mod_4/BUS_0022_INV_2054_o23
+    SLICE_X25Y30.C       Tilo                  0.259   clock_module/count[28]_PWR_2_o_mod_4/BUS_0023_INV_2084_o2
+                                                       clock_module/count[28]_PWR_2_o_mod_4/BUS_0022_INV_2054_o24_1
+    SLICE_X19Y34.D6      net (fanout=5)        0.781   clock_module/count[28]_PWR_2_o_mod_4/BUS_0022_INV_2054_o24
+    SLICE_X19Y34.D       Tilo                  0.259   clock_module/count[28]_PWR_2_o_mod_4/BUS_0023_INV_2084_o221
+                                                       clock_module/count[28]_PWR_2_o_mod_4/BUS_0023_INV_2084_o22_1
+    SLICE_X27Y29.A5      net (fanout=2)        0.869   clock_module/count[28]_PWR_2_o_mod_4/BUS_0023_INV_2084_o221
+    SLICE_X27Y29.A       Tilo                  0.259   clock_module/count[28]_PWR_2_o_mod_4/a[24]_a[28]_MUX_3169_o
+                                                       clock_module/count[28]_PWR_2_o_mod_4/BUS_0023_INV_2084_o24_1
+    SLICE_X29Y28.B6      net (fanout=3)        0.339   clock_module/count[28]_PWR_2_o_mod_4/BUS_0023_INV_2084_o24
+    SLICE_X29Y28.B       Tilo                  0.259   N11
+                                                       clock_module/count[28]_PWR_2_o_mod_4/BUS_0024_INV_2114_o23
+    SLICE_X27Y28.D5      net (fanout=20)       0.477   clock_module/count[28]_PWR_2_o_mod_4/BUS_0024_INV_2114_o22
+    SLICE_X27Y28.D       Tilo                  0.259   N385
+                                                       clock_module/count[28]_PWR_2_o_mod_4/Mmux_a[28]_a[28]_MUX_3194_o11_SW0
+    SLICE_X29Y29.D6      net (fanout=15)       0.388   N385
+    SLICE_X29Y29.D       Tilo                  0.259   clock_module/count[28]_PWR_2_o_mod_4/a[27]_a[28]_MUX_3195_o
+                                                       clock_module/count[28]_PWR_2_o_mod_4/Mmux_a[27]_a[28]_MUX_3195_o11
+    SLICE_X29Y25.A1      net (fanout=4)        0.959   clock_module/count[28]_PWR_2_o_mod_4/a[27]_a[28]_MUX_3195_o
+    SLICE_X29Y25.A       Tilo                  0.259   N1005
+                                                       clock_module/count[28]_PWR_2_o_mod_4/BUS_0025_INV_2144_o21_2
+    SLICE_X28Y22.B3      net (fanout=12)       0.790   clock_module/count[28]_PWR_2_o_mod_4/BUS_0025_INV_2144_o212
+    SLICE_X28Y22.DMUX    Topbd                 0.537   clock_module/count[28]_PWR_2_o_mod_4/Madd_a[28]_GND_4_o_add_51_OUT_cy<13>
+                                                       clock_module/count[28]_PWR_2_o_mod_4/Madd_a[28]_GND_4_o_add_51_OUT_lut<11>
+                                                       clock_module/count[28]_PWR_2_o_mod_4/Madd_a[28]_GND_4_o_add_51_OUT_cy<13>
+    SLICE_X27Y25.D4      net (fanout=3)        0.729   clock_module/count[28]_PWR_2_o_mod_4/a[28]_GND_4_o_add_51_OUT<13>
+    SLICE_X27Y25.D       Tilo                  0.259   N996
+                                                       clock_module/count[28]_PWR_2_o_mod_4/Mmux_a[0]_a[28]_MUX_3280_o141_SW0_SW0
+    SLICE_X27Y22.A5      net (fanout=2)        0.585   N996
+    SLICE_X27Y22.A       Tilo                  0.259   N1144
+                                                       clock_module/count[28]_PWR_2_o_mod_4/Mmux_a[0]_a[28]_MUX_3280_o141
+    SLICE_X21Y23.A4      net (fanout=5)        0.720   clock_module/count[28]_PWR_2_o_mod_4/a[13]_a[28]_MUX_3267_o
+    SLICE_X21Y23.A       Tilo                  0.259   clock_module/count[28]_PWR_2_o_mod_4/BUS_0027_INV_2204_o31_SW1
+                                                       clock_module/count[28]_PWR_2_o_mod_4/BUS_0027_INV_2204_o34_1
+    SLICE_X19Y26.C3      net (fanout=19)       0.777   clock_module/count[28]_PWR_2_o_mod_4/BUS_0027_INV_2204_o34
+    SLICE_X19Y26.C       Tilo                  0.259   clock_module/count[28]_PWR_2_o_mod_4/a[27]_a[28]_MUX_3340_o
+                                                       clock_module/count[28]_PWR_2_o_mod_4/Mmux_a[27]_a[28]_MUX_3282_o11
+    SLICE_X18Y19.D2      net (fanout=2)        1.038   clock_module/count[28]_PWR_2_o_mod_4/a[27]_a[28]_MUX_3282_o
+    SLICE_X18Y19.COUT    Topcyd                0.274   clock_module/count[28]_PWR_2_o_mod_4/Mcompar_BUS_0028_INV_2234_o_cy<3>
+                                                       clock_module/count[28]_PWR_2_o_mod_4/Mcompar_BUS_0028_INV_2234_o_lutdi3
+                                                       clock_module/count[28]_PWR_2_o_mod_4/Mcompar_BUS_0028_INV_2234_o_cy<3>
+    SLICE_X18Y20.CIN     net (fanout=1)        0.003   clock_module/count[28]_PWR_2_o_mod_4/Mcompar_BUS_0028_INV_2234_o_cy<3>
+    SLICE_X18Y20.AMUX    Tcina                 0.212   clock_module/count[28]_PWR_2_o_mod_4/a[24]_a[28]_MUX_3314_o
+                                                       clock_module/count[28]_PWR_2_o_mod_4/Mcompar_BUS_0028_INV_2234_o_cy<4>
+    SLICE_X23Y22.A4      net (fanout=72)       0.841   clock_module/count[28]_PWR_2_o_mod_4/BUS_0028_INV_2234_o
+    SLICE_X23Y22.A       Tilo                  0.259   N1360
+                                                       clock_module/count[28]_PWR_2_o_mod_4/Mmux_a[0]_a[28]_MUX_3338_o1171
+    SLICE_X20Y17.A2      net (fanout=4)        0.850   clock_module/count[28]_PWR_2_o_mod_4/a[9]_a[28]_MUX_3329_o
+    SLICE_X20Y17.COUT    Topcya                0.409   clock_module/count[28]_PWR_2_o_mod_4/Mcompar_BUS_0029_INV_2264_o_cy<3>
+                                                       clock_module/count[28]_PWR_2_o_mod_4/Mcompar_BUS_0029_INV_2264_o_lutdi
+                                                       clock_module/count[28]_PWR_2_o_mod_4/Mcompar_BUS_0029_INV_2264_o_cy<3>
+    SLICE_X20Y18.CIN     net (fanout=1)        0.003   clock_module/count[28]_PWR_2_o_mod_4/Mcompar_BUS_0029_INV_2264_o_cy<3>
+    SLICE_X20Y18.AMUX    Tcina                 0.194   clock_module/count[28]_PWR_2_o_mod_4/a[14]_a[28]_MUX_3353_o
+                                                       clock_module/count[28]_PWR_2_o_mod_4/Mcompar_BUS_0029_INV_2264_o_cy<4>
+    SLICE_X23Y20.B6      net (fanout=34)       0.590   clock_module/count[28]_PWR_2_o_mod_4/BUS_0029_INV_2264_o
+    SLICE_X23Y20.B       Tilo                  0.259   clock_module/count[28]_PWR_2_o_mod_4/a[17]_a[28]_MUX_3350_o
+                                                       clock_module/count[28]_PWR_2_o_mod_4/Mmux_a[0]_a[28]_MUX_3367_o1161
+    SLICE_X20Y26.A2      net (fanout=1)        1.004   clock_module/count[28]_PWR_2_o_mod_4/a[8]_a[28]_MUX_3359_o
+    SLICE_X20Y26.COUT    Topcya                0.409   clock_module/count[28]_PWR_2_o_mod_4/Mcompar_BUS_0030_INV_2294_o_cy<3>
+                                                       clock_module/count[28]_PWR_2_o_mod_4/Mcompar_BUS_0030_INV_2294_o_lutdi
+                                                       clock_module/count[28]_PWR_2_o_mod_4/Mcompar_BUS_0030_INV_2294_o_cy<3>
+    SLICE_X20Y27.CIN     net (fanout=1)        0.003   clock_module/count[28]_PWR_2_o_mod_4/Mcompar_BUS_0030_INV_2294_o_cy<3>
+    SLICE_X20Y27.AMUX    Tcina                 0.194   N1026
+                                                       clock_module/count[28]_PWR_2_o_mod_4/Mcompar_BUS_0030_INV_2294_o_cy<4>
+    SLICE_X21Y17.D5      net (fanout=1)        0.867   clock_module/count[28]_PWR_2_o_mod_4/BUS_0030_INV_2294_o
+    SLICE_X21Y17.CLK     Tas                   0.322   clock_module/clk_faster
+                                                       clock_module/count[28]_reduce_nor_6_o6
+                                                       clock_module/clk_faster
+    -------------------------------------------------  ---------------------------
+    Total                                     28.331ns (9.306ns logic, 19.025ns route)
+                                                       (32.8% logic, 67.2% route)
+
+--------------------------------------------------------------------------------
+Slack (setup path):     -18.375ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               clock_module/count_1 (FF)
+  Destination:          clock_module/clk_faster (FF)
+  Requirement:          10.000ns
+  Data Path Delay:      28.327ns (Levels of Logic = 33)
+  Clock Path Skew:      -0.013ns (0.249 - 0.262)
+  Source Clock:         clk_BUFGP rising at 0.000ns
+  Destination Clock:    clk_BUFGP rising at 10.000ns
+  Clock Uncertainty:    0.035ns
+
+  Clock Uncertainty:          0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Total Input Jitter (TIJ):   0.000ns
+    Discrete Jitter (DJ):       0.000ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path at Slow Process Corner: clock_module/count_1 to clock_module/clk_faster
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X20Y29.BQ      Tcko                  0.408   clock_module/count<3>
+                                                       clock_module/count_1
+    SLICE_X22Y27.B4      net (fanout=2)        0.651   clock_module/count<1>
+    SLICE_X22Y27.COUT    Topcyb                0.380   clock_module/Madd__n0026_cy<3>
+                                                       clock_module/count<1>_rt
+                                                       clock_module/Madd__n0026_cy<3>
+    SLICE_X22Y28.CIN     net (fanout=1)        0.003   clock_module/Madd__n0026_cy<3>
+    SLICE_X22Y28.COUT    Tbyp                  0.076   clock_module/Madd__n0026_cy<7>
+                                                       clock_module/Madd__n0026_cy<7>
+    SLICE_X22Y29.CIN     net (fanout=1)        0.003   clock_module/Madd__n0026_cy<7>
+    SLICE_X22Y29.COUT    Tbyp                  0.076   clock_module/Madd__n0026_cy<11>
+                                                       clock_module/Madd__n0026_cy<11>
+    SLICE_X22Y30.CIN     net (fanout=1)        0.003   clock_module/Madd__n0026_cy<11>
+    SLICE_X22Y30.COUT    Tbyp                  0.076   clock_module/Madd__n0026_cy<15>
+                                                       clock_module/Madd__n0026_cy<15>
+    SLICE_X22Y31.CIN     net (fanout=1)        0.003   clock_module/Madd__n0026_cy<15>
+    SLICE_X22Y31.BMUX    Tcinb                 0.292   clock_module/Madd__n0026_cy<19>
+                                                       clock_module/Madd__n0026_cy<19>
+    SLICE_X29Y34.C1      net (fanout=22)       1.205   clock_module/_n0026<11>
+    SLICE_X29Y34.C       Tilo                  0.259   clock_module/count[28]_PWR_2_o_mod_4/a[28]_a[28]_MUX_3049_o
+                                                       clock_module/count[28]_PWR_2_o_mod_4/BUS_0019_INV_1964_o11_2
+    SLICE_X30Y31.B3      net (fanout=7)        1.047   clock_module/count[28]_PWR_2_o_mod_4/BUS_0019_INV_1964_o112
+    SLICE_X30Y31.CMUX    Topbc                 0.526   clock_module/count[28]_PWR_2_o_mod_4/Madd_a[28]_GND_4_o_add_39_OUT_cy<19>
+                                                       clock_module/count[28]_PWR_2_o_mod_4/Madd_a[28]_GND_4_o_add_39_OUT_lut<17>
+                                                       clock_module/count[28]_PWR_2_o_mod_4/Madd_a[28]_GND_4_o_add_39_OUT_cy<19>
+    SLICE_X27Y33.D4      net (fanout=7)        0.789   clock_module/count[28]_PWR_2_o_mod_4/a[28]_GND_4_o_add_39_OUT<18>
+    SLICE_X27Y33.D       Tilo                  0.259   N649
+                                                       clock_module/count[28]_PWR_2_o_mod_4/Mmux_a[18]_a[28]_MUX_3088_o11_SW0_SW1
+    SLICE_X27Y33.C6      net (fanout=5)        0.139   N649
+    SLICE_X27Y33.C       Tilo                  0.259   N649
+                                                       clock_module/count[28]_PWR_2_o_mod_4/Mmux_a[18]_a[28]_MUX_3088_o11
+    SLICE_X29Y31.A3      net (fanout=6)        0.740   clock_module/count[28]_PWR_2_o_mod_4/a[18]_a[28]_MUX_3088_o
+    SLICE_X29Y31.A       Tilo                  0.259   clock_module/count[28]_PWR_2_o_mod_4/Mmux_a[23]_a[28]_MUX_3141_o111
+                                                       clock_module/count[28]_PWR_2_o_mod_4/BUS_0021_INV_2024_o22_1
+    SLICE_X31Y32.D6      net (fanout=5)        0.601   clock_module/count[28]_PWR_2_o_mod_4/BUS_0021_INV_2024_o22
+    SLICE_X31Y32.D       Tilo                  0.259   clock_module/count[28]_PWR_2_o_mod_4/a[17]_a[28]_MUX_3118_o
+                                                       clock_module/count[28]_PWR_2_o_mod_4/Mmux_a[0]_a[28]_MUX_3135_o181
+    SLICE_X31Y31.C2      net (fanout=9)        0.654   clock_module/count[28]_PWR_2_o_mod_4/a[17]_a[28]_MUX_3118_o
+    SLICE_X31Y31.C       Tilo                  0.259   clock_module/count[28]_PWR_2_o_mod_4/a[16]_a[28]_MUX_3119_o
+                                                       clock_module/count[28]_PWR_2_o_mod_4/BUS_0022_INV_2054_o23_1
+    SLICE_X25Y30.C6      net (fanout=1)        0.574   clock_module/count[28]_PWR_2_o_mod_4/BUS_0022_INV_2054_o23
+    SLICE_X25Y30.C       Tilo                  0.259   clock_module/count[28]_PWR_2_o_mod_4/BUS_0023_INV_2084_o2
+                                                       clock_module/count[28]_PWR_2_o_mod_4/BUS_0022_INV_2054_o24_1
+    SLICE_X19Y34.D6      net (fanout=5)        0.781   clock_module/count[28]_PWR_2_o_mod_4/BUS_0022_INV_2054_o24
+    SLICE_X19Y34.D       Tilo                  0.259   clock_module/count[28]_PWR_2_o_mod_4/BUS_0023_INV_2084_o221
+                                                       clock_module/count[28]_PWR_2_o_mod_4/BUS_0023_INV_2084_o22_1
+    SLICE_X27Y29.A5      net (fanout=2)        0.869   clock_module/count[28]_PWR_2_o_mod_4/BUS_0023_INV_2084_o221
+    SLICE_X27Y29.A       Tilo                  0.259   clock_module/count[28]_PWR_2_o_mod_4/a[24]_a[28]_MUX_3169_o
+                                                       clock_module/count[28]_PWR_2_o_mod_4/BUS_0023_INV_2084_o24_1
+    SLICE_X29Y28.B6      net (fanout=3)        0.339   clock_module/count[28]_PWR_2_o_mod_4/BUS_0023_INV_2084_o24
+    SLICE_X29Y28.B       Tilo                  0.259   N11
+                                                       clock_module/count[28]_PWR_2_o_mod_4/BUS_0024_INV_2114_o23
+    SLICE_X27Y28.D5      net (fanout=20)       0.477   clock_module/count[28]_PWR_2_o_mod_4/BUS_0024_INV_2114_o22
+    SLICE_X27Y28.D       Tilo                  0.259   N385
+                                                       clock_module/count[28]_PWR_2_o_mod_4/Mmux_a[28]_a[28]_MUX_3194_o11_SW0
+    SLICE_X29Y29.D6      net (fanout=15)       0.388   N385
+    SLICE_X29Y29.D       Tilo                  0.259   clock_module/count[28]_PWR_2_o_mod_4/a[27]_a[28]_MUX_3195_o
+                                                       clock_module/count[28]_PWR_2_o_mod_4/Mmux_a[27]_a[28]_MUX_3195_o11
+    SLICE_X29Y25.A1      net (fanout=4)        0.959   clock_module/count[28]_PWR_2_o_mod_4/a[27]_a[28]_MUX_3195_o
+    SLICE_X29Y25.A       Tilo                  0.259   N1005
+                                                       clock_module/count[28]_PWR_2_o_mod_4/BUS_0025_INV_2144_o21_2
+    SLICE_X28Y22.B3      net (fanout=12)       0.790   clock_module/count[28]_PWR_2_o_mod_4/BUS_0025_INV_2144_o212
+    SLICE_X28Y22.DMUX    Topbd                 0.537   clock_module/count[28]_PWR_2_o_mod_4/Madd_a[28]_GND_4_o_add_51_OUT_cy<13>
+                                                       clock_module/count[28]_PWR_2_o_mod_4/Madd_a[28]_GND_4_o_add_51_OUT_lut<11>
+                                                       clock_module/count[28]_PWR_2_o_mod_4/Madd_a[28]_GND_4_o_add_51_OUT_cy<13>
+    SLICE_X27Y25.D4      net (fanout=3)        0.729   clock_module/count[28]_PWR_2_o_mod_4/a[28]_GND_4_o_add_51_OUT<13>
+    SLICE_X27Y25.D       Tilo                  0.259   N996
+                                                       clock_module/count[28]_PWR_2_o_mod_4/Mmux_a[0]_a[28]_MUX_3280_o141_SW0_SW0
+    SLICE_X27Y22.A5      net (fanout=2)        0.585   N996
+    SLICE_X27Y22.A       Tilo                  0.259   N1144
+                                                       clock_module/count[28]_PWR_2_o_mod_4/Mmux_a[0]_a[28]_MUX_3280_o141
+    SLICE_X21Y23.A4      net (fanout=5)        0.720   clock_module/count[28]_PWR_2_o_mod_4/a[13]_a[28]_MUX_3267_o
+    SLICE_X21Y23.A       Tilo                  0.259   clock_module/count[28]_PWR_2_o_mod_4/BUS_0027_INV_2204_o31_SW1
+                                                       clock_module/count[28]_PWR_2_o_mod_4/BUS_0027_INV_2204_o34_1
+    SLICE_X19Y26.C3      net (fanout=19)       0.777   clock_module/count[28]_PWR_2_o_mod_4/BUS_0027_INV_2204_o34
+    SLICE_X19Y26.C       Tilo                  0.259   clock_module/count[28]_PWR_2_o_mod_4/a[27]_a[28]_MUX_3340_o
+                                                       clock_module/count[28]_PWR_2_o_mod_4/Mmux_a[27]_a[28]_MUX_3282_o11
+    SLICE_X18Y19.D2      net (fanout=2)        1.038   clock_module/count[28]_PWR_2_o_mod_4/a[27]_a[28]_MUX_3282_o
+    SLICE_X18Y19.COUT    Topcyd                0.274   clock_module/count[28]_PWR_2_o_mod_4/Mcompar_BUS_0028_INV_2234_o_cy<3>
+                                                       clock_module/count[28]_PWR_2_o_mod_4/Mcompar_BUS_0028_INV_2234_o_lutdi3
+                                                       clock_module/count[28]_PWR_2_o_mod_4/Mcompar_BUS_0028_INV_2234_o_cy<3>
+    SLICE_X18Y20.CIN     net (fanout=1)        0.003   clock_module/count[28]_PWR_2_o_mod_4/Mcompar_BUS_0028_INV_2234_o_cy<3>
+    SLICE_X18Y20.AMUX    Tcina                 0.212   clock_module/count[28]_PWR_2_o_mod_4/a[24]_a[28]_MUX_3314_o
+                                                       clock_module/count[28]_PWR_2_o_mod_4/Mcompar_BUS_0028_INV_2234_o_cy<4>
+    SLICE_X23Y22.A4      net (fanout=72)       0.841   clock_module/count[28]_PWR_2_o_mod_4/BUS_0028_INV_2234_o
+    SLICE_X23Y22.A       Tilo                  0.259   N1360
+                                                       clock_module/count[28]_PWR_2_o_mod_4/Mmux_a[0]_a[28]_MUX_3338_o1171
+    SLICE_X20Y17.A2      net (fanout=4)        0.850   clock_module/count[28]_PWR_2_o_mod_4/a[9]_a[28]_MUX_3329_o
+    SLICE_X20Y17.COUT    Topcya                0.409   clock_module/count[28]_PWR_2_o_mod_4/Mcompar_BUS_0029_INV_2264_o_cy<3>
+                                                       clock_module/count[28]_PWR_2_o_mod_4/Mcompar_BUS_0029_INV_2264_o_lutdi
+                                                       clock_module/count[28]_PWR_2_o_mod_4/Mcompar_BUS_0029_INV_2264_o_cy<3>
+    SLICE_X20Y18.CIN     net (fanout=1)        0.003   clock_module/count[28]_PWR_2_o_mod_4/Mcompar_BUS_0029_INV_2264_o_cy<3>
+    SLICE_X20Y18.AMUX    Tcina                 0.194   clock_module/count[28]_PWR_2_o_mod_4/a[14]_a[28]_MUX_3353_o
+                                                       clock_module/count[28]_PWR_2_o_mod_4/Mcompar_BUS_0029_INV_2264_o_cy<4>
+    SLICE_X23Y20.A5      net (fanout=34)       0.659   clock_module/count[28]_PWR_2_o_mod_4/BUS_0029_INV_2264_o
+    SLICE_X23Y20.A       Tilo                  0.259   clock_module/count[28]_PWR_2_o_mod_4/a[17]_a[28]_MUX_3350_o
+                                                       clock_module/count[28]_PWR_2_o_mod_4/Mmux_a[18]_a[28]_MUX_3349_o11
+    SLICE_X20Y26.C1      net (fanout=1)        1.045   clock_module/count[28]_PWR_2_o_mod_4/a[18]_a[28]_MUX_3349_o
+    SLICE_X20Y26.COUT    Topcyc                0.295   clock_module/count[28]_PWR_2_o_mod_4/Mcompar_BUS_0030_INV_2294_o_cy<3>
+                                                       clock_module/count[28]_PWR_2_o_mod_4/Mcompar_BUS_0030_INV_2294_o_lut<2>
+                                                       clock_module/count[28]_PWR_2_o_mod_4/Mcompar_BUS_0030_INV_2294_o_cy<3>
+    SLICE_X20Y27.CIN     net (fanout=1)        0.003   clock_module/count[28]_PWR_2_o_mod_4/Mcompar_BUS_0030_INV_2294_o_cy<3>
+    SLICE_X20Y27.AMUX    Tcina                 0.194   N1026
+                                                       clock_module/count[28]_PWR_2_o_mod_4/Mcompar_BUS_0030_INV_2294_o_cy<4>
+    SLICE_X21Y17.D5      net (fanout=1)        0.867   clock_module/count[28]_PWR_2_o_mod_4/BUS_0030_INV_2294_o
+    SLICE_X21Y17.CLK     Tas                   0.322   clock_module/clk_faster
+                                                       clock_module/count[28]_reduce_nor_6_o6
+                                                       clock_module/clk_faster
+    -------------------------------------------------  ---------------------------
+    Total                                     28.327ns (9.192ns logic, 19.135ns route)
+                                                       (32.4% logic, 67.6% route)
+
+--------------------------------------------------------------------------------
+Slack (setup path):     -18.374ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               clock_module/count_1 (FF)
+  Destination:          clock_module/clk_faster (FF)
+  Requirement:          10.000ns
+  Data Path Delay:      28.326ns (Levels of Logic = 33)
+  Clock Path Skew:      -0.013ns (0.249 - 0.262)
+  Source Clock:         clk_BUFGP rising at 0.000ns
+  Destination Clock:    clk_BUFGP rising at 10.000ns
+  Clock Uncertainty:    0.035ns
+
+  Clock Uncertainty:          0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Total Input Jitter (TIJ):   0.000ns
+    Discrete Jitter (DJ):       0.000ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path at Slow Process Corner: clock_module/count_1 to clock_module/clk_faster
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X20Y29.BQ      Tcko                  0.408   clock_module/count<3>
+                                                       clock_module/count_1
+    SLICE_X22Y27.B4      net (fanout=2)        0.651   clock_module/count<1>
+    SLICE_X22Y27.COUT    Topcyb                0.380   clock_module/Madd__n0026_cy<3>
+                                                       clock_module/count<1>_rt
+                                                       clock_module/Madd__n0026_cy<3>
+    SLICE_X22Y28.CIN     net (fanout=1)        0.003   clock_module/Madd__n0026_cy<3>
+    SLICE_X22Y28.COUT    Tbyp                  0.076   clock_module/Madd__n0026_cy<7>
+                                                       clock_module/Madd__n0026_cy<7>
+    SLICE_X22Y29.CIN     net (fanout=1)        0.003   clock_module/Madd__n0026_cy<7>
+    SLICE_X22Y29.COUT    Tbyp                  0.076   clock_module/Madd__n0026_cy<11>
+                                                       clock_module/Madd__n0026_cy<11>
+    SLICE_X22Y30.CIN     net (fanout=1)        0.003   clock_module/Madd__n0026_cy<11>
+    SLICE_X22Y30.COUT    Tbyp                  0.076   clock_module/Madd__n0026_cy<15>
+                                                       clock_module/Madd__n0026_cy<15>
+    SLICE_X22Y31.CIN     net (fanout=1)        0.003   clock_module/Madd__n0026_cy<15>
+    SLICE_X22Y31.BMUX    Tcinb                 0.292   clock_module/Madd__n0026_cy<19>
+                                                       clock_module/Madd__n0026_cy<19>
+    SLICE_X29Y34.C1      net (fanout=22)       1.205   clock_module/_n0026<11>
+    SLICE_X29Y34.C       Tilo                  0.259   clock_module/count[28]_PWR_2_o_mod_4/a[28]_a[28]_MUX_3049_o
+                                                       clock_module/count[28]_PWR_2_o_mod_4/BUS_0019_INV_1964_o11_2
+    SLICE_X30Y31.B3      net (fanout=7)        1.047   clock_module/count[28]_PWR_2_o_mod_4/BUS_0019_INV_1964_o112
+    SLICE_X30Y31.CMUX    Topbc                 0.526   clock_module/count[28]_PWR_2_o_mod_4/Madd_a[28]_GND_4_o_add_39_OUT_cy<19>
+                                                       clock_module/count[28]_PWR_2_o_mod_4/Madd_a[28]_GND_4_o_add_39_OUT_lut<17>
+                                                       clock_module/count[28]_PWR_2_o_mod_4/Madd_a[28]_GND_4_o_add_39_OUT_cy<19>
+    SLICE_X27Y33.D4      net (fanout=7)        0.789   clock_module/count[28]_PWR_2_o_mod_4/a[28]_GND_4_o_add_39_OUT<18>
+    SLICE_X27Y33.D       Tilo                  0.259   N649
+                                                       clock_module/count[28]_PWR_2_o_mod_4/Mmux_a[18]_a[28]_MUX_3088_o11_SW0_SW1
+    SLICE_X27Y33.C6      net (fanout=5)        0.139   N649
+    SLICE_X27Y33.C       Tilo                  0.259   N649
+                                                       clock_module/count[28]_PWR_2_o_mod_4/Mmux_a[18]_a[28]_MUX_3088_o11
+    SLICE_X29Y31.A3      net (fanout=6)        0.740   clock_module/count[28]_PWR_2_o_mod_4/a[18]_a[28]_MUX_3088_o
+    SLICE_X29Y31.A       Tilo                  0.259   clock_module/count[28]_PWR_2_o_mod_4/Mmux_a[23]_a[28]_MUX_3141_o111
+                                                       clock_module/count[28]_PWR_2_o_mod_4/BUS_0021_INV_2024_o22_1
+    SLICE_X31Y32.D6      net (fanout=5)        0.601   clock_module/count[28]_PWR_2_o_mod_4/BUS_0021_INV_2024_o22
+    SLICE_X31Y32.D       Tilo                  0.259   clock_module/count[28]_PWR_2_o_mod_4/a[17]_a[28]_MUX_3118_o
+                                                       clock_module/count[28]_PWR_2_o_mod_4/Mmux_a[0]_a[28]_MUX_3135_o181
+    SLICE_X31Y31.C2      net (fanout=9)        0.654   clock_module/count[28]_PWR_2_o_mod_4/a[17]_a[28]_MUX_3118_o
+    SLICE_X31Y31.C       Tilo                  0.259   clock_module/count[28]_PWR_2_o_mod_4/a[16]_a[28]_MUX_3119_o
+                                                       clock_module/count[28]_PWR_2_o_mod_4/BUS_0022_INV_2054_o23_1
+    SLICE_X25Y30.C6      net (fanout=1)        0.574   clock_module/count[28]_PWR_2_o_mod_4/BUS_0022_INV_2054_o23
+    SLICE_X25Y30.C       Tilo                  0.259   clock_module/count[28]_PWR_2_o_mod_4/BUS_0023_INV_2084_o2
+                                                       clock_module/count[28]_PWR_2_o_mod_4/BUS_0022_INV_2054_o24_1
+    SLICE_X19Y34.D6      net (fanout=5)        0.781   clock_module/count[28]_PWR_2_o_mod_4/BUS_0022_INV_2054_o24
+    SLICE_X19Y34.D       Tilo                  0.259   clock_module/count[28]_PWR_2_o_mod_4/BUS_0023_INV_2084_o221
+                                                       clock_module/count[28]_PWR_2_o_mod_4/BUS_0023_INV_2084_o22_1
+    SLICE_X27Y29.A5      net (fanout=2)        0.869   clock_module/count[28]_PWR_2_o_mod_4/BUS_0023_INV_2084_o221
+    SLICE_X27Y29.A       Tilo                  0.259   clock_module/count[28]_PWR_2_o_mod_4/a[24]_a[28]_MUX_3169_o
+                                                       clock_module/count[28]_PWR_2_o_mod_4/BUS_0023_INV_2084_o24_1
+    SLICE_X29Y28.B6      net (fanout=3)        0.339   clock_module/count[28]_PWR_2_o_mod_4/BUS_0023_INV_2084_o24
+    SLICE_X29Y28.B       Tilo                  0.259   N11
+                                                       clock_module/count[28]_PWR_2_o_mod_4/BUS_0024_INV_2114_o23
+    SLICE_X27Y28.D5      net (fanout=20)       0.477   clock_module/count[28]_PWR_2_o_mod_4/BUS_0024_INV_2114_o22
+    SLICE_X27Y28.D       Tilo                  0.259   N385
+                                                       clock_module/count[28]_PWR_2_o_mod_4/Mmux_a[28]_a[28]_MUX_3194_o11_SW0
+    SLICE_X23Y28.C5      net (fanout=15)       0.598   N385
+    SLICE_X23Y28.C       Tilo                  0.259   clock_module/count[28]_PWR_2_o_mod_4/BUS_0025_INV_2144_o221
+                                                       clock_module/count[28]_PWR_2_o_mod_4/Mmux_a[25]_a[28]_MUX_3197_o11
+    SLICE_X29Y25.A4      net (fanout=5)        0.744   clock_module/count[28]_PWR_2_o_mod_4/a[25]_a[28]_MUX_3197_o
+    SLICE_X29Y25.A       Tilo                  0.259   N1005
+                                                       clock_module/count[28]_PWR_2_o_mod_4/BUS_0025_INV_2144_o21_2
+    SLICE_X28Y22.B3      net (fanout=12)       0.790   clock_module/count[28]_PWR_2_o_mod_4/BUS_0025_INV_2144_o212
+    SLICE_X28Y22.DMUX    Topbd                 0.537   clock_module/count[28]_PWR_2_o_mod_4/Madd_a[28]_GND_4_o_add_51_OUT_cy<13>
+                                                       clock_module/count[28]_PWR_2_o_mod_4/Madd_a[28]_GND_4_o_add_51_OUT_lut<11>
+                                                       clock_module/count[28]_PWR_2_o_mod_4/Madd_a[28]_GND_4_o_add_51_OUT_cy<13>
+    SLICE_X27Y25.D4      net (fanout=3)        0.729   clock_module/count[28]_PWR_2_o_mod_4/a[28]_GND_4_o_add_51_OUT<13>
+    SLICE_X27Y25.D       Tilo                  0.259   N996
+                                                       clock_module/count[28]_PWR_2_o_mod_4/Mmux_a[0]_a[28]_MUX_3280_o141_SW0_SW0
+    SLICE_X27Y22.A5      net (fanout=2)        0.585   N996
+    SLICE_X27Y22.A       Tilo                  0.259   N1144
+                                                       clock_module/count[28]_PWR_2_o_mod_4/Mmux_a[0]_a[28]_MUX_3280_o141
+    SLICE_X21Y23.A4      net (fanout=5)        0.720   clock_module/count[28]_PWR_2_o_mod_4/a[13]_a[28]_MUX_3267_o
+    SLICE_X21Y23.A       Tilo                  0.259   clock_module/count[28]_PWR_2_o_mod_4/BUS_0027_INV_2204_o31_SW1
+                                                       clock_module/count[28]_PWR_2_o_mod_4/BUS_0027_INV_2204_o34_1
+    SLICE_X19Y26.C3      net (fanout=19)       0.777   clock_module/count[28]_PWR_2_o_mod_4/BUS_0027_INV_2204_o34
+    SLICE_X19Y26.C       Tilo                  0.259   clock_module/count[28]_PWR_2_o_mod_4/a[27]_a[28]_MUX_3340_o
+                                                       clock_module/count[28]_PWR_2_o_mod_4/Mmux_a[27]_a[28]_MUX_3282_o11
+    SLICE_X18Y19.D2      net (fanout=2)        1.038   clock_module/count[28]_PWR_2_o_mod_4/a[27]_a[28]_MUX_3282_o
+    SLICE_X18Y19.COUT    Topcyd                0.274   clock_module/count[28]_PWR_2_o_mod_4/Mcompar_BUS_0028_INV_2234_o_cy<3>
+                                                       clock_module/count[28]_PWR_2_o_mod_4/Mcompar_BUS_0028_INV_2234_o_lutdi3
+                                                       clock_module/count[28]_PWR_2_o_mod_4/Mcompar_BUS_0028_INV_2234_o_cy<3>
+    SLICE_X18Y20.CIN     net (fanout=1)        0.003   clock_module/count[28]_PWR_2_o_mod_4/Mcompar_BUS_0028_INV_2234_o_cy<3>
+    SLICE_X18Y20.AMUX    Tcina                 0.212   clock_module/count[28]_PWR_2_o_mod_4/a[24]_a[28]_MUX_3314_o
+                                                       clock_module/count[28]_PWR_2_o_mod_4/Mcompar_BUS_0028_INV_2234_o_cy<4>
+    SLICE_X23Y22.A4      net (fanout=72)       0.841   clock_module/count[28]_PWR_2_o_mod_4/BUS_0028_INV_2234_o
+    SLICE_X23Y22.A       Tilo                  0.259   N1360
+                                                       clock_module/count[28]_PWR_2_o_mod_4/Mmux_a[0]_a[28]_MUX_3338_o1171
+    SLICE_X20Y17.A2      net (fanout=4)        0.850   clock_module/count[28]_PWR_2_o_mod_4/a[9]_a[28]_MUX_3329_o
+    SLICE_X20Y17.COUT    Topcya                0.409   clock_module/count[28]_PWR_2_o_mod_4/Mcompar_BUS_0029_INV_2264_o_cy<3>
+                                                       clock_module/count[28]_PWR_2_o_mod_4/Mcompar_BUS_0029_INV_2264_o_lutdi
+                                                       clock_module/count[28]_PWR_2_o_mod_4/Mcompar_BUS_0029_INV_2264_o_cy<3>
+    SLICE_X20Y18.CIN     net (fanout=1)        0.003   clock_module/count[28]_PWR_2_o_mod_4/Mcompar_BUS_0029_INV_2264_o_cy<3>
+    SLICE_X20Y18.AMUX    Tcina                 0.194   clock_module/count[28]_PWR_2_o_mod_4/a[14]_a[28]_MUX_3353_o
+                                                       clock_module/count[28]_PWR_2_o_mod_4/Mcompar_BUS_0029_INV_2264_o_cy<4>
+    SLICE_X23Y20.B6      net (fanout=34)       0.590   clock_module/count[28]_PWR_2_o_mod_4/BUS_0029_INV_2264_o
+    SLICE_X23Y20.B       Tilo                  0.259   clock_module/count[28]_PWR_2_o_mod_4/a[17]_a[28]_MUX_3350_o
+                                                       clock_module/count[28]_PWR_2_o_mod_4/Mmux_a[0]_a[28]_MUX_3367_o1161
+    SLICE_X20Y26.A2      net (fanout=1)        1.004   clock_module/count[28]_PWR_2_o_mod_4/a[8]_a[28]_MUX_3359_o
+    SLICE_X20Y26.COUT    Topcya                0.409   clock_module/count[28]_PWR_2_o_mod_4/Mcompar_BUS_0030_INV_2294_o_cy<3>
+                                                       clock_module/count[28]_PWR_2_o_mod_4/Mcompar_BUS_0030_INV_2294_o_lutdi
+                                                       clock_module/count[28]_PWR_2_o_mod_4/Mcompar_BUS_0030_INV_2294_o_cy<3>
+    SLICE_X20Y27.CIN     net (fanout=1)        0.003   clock_module/count[28]_PWR_2_o_mod_4/Mcompar_BUS_0030_INV_2294_o_cy<3>
+    SLICE_X20Y27.AMUX    Tcina                 0.194   N1026
+                                                       clock_module/count[28]_PWR_2_o_mod_4/Mcompar_BUS_0030_INV_2294_o_cy<4>
+    SLICE_X21Y17.D5      net (fanout=1)        0.867   clock_module/count[28]_PWR_2_o_mod_4/BUS_0030_INV_2294_o
+    SLICE_X21Y17.CLK     Tas                   0.322   clock_module/clk_faster
+                                                       clock_module/count[28]_reduce_nor_6_o6
+                                                       clock_module/clk_faster
+    -------------------------------------------------  ---------------------------
+    Total                                     28.326ns (9.306ns logic, 19.020ns route)
+                                                       (32.9% logic, 67.1% route)
+
+--------------------------------------------------------------------------------
+
+Paths for end point clock_module/clk_faster (SLICE_X21Y17.D3), 377800558853277700 paths
+--------------------------------------------------------------------------------
+Slack (setup path):     -17.827ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               clock_module/count_1 (FF)
+  Destination:          clock_module/clk_faster (FF)
+  Requirement:          10.000ns
+  Data Path Delay:      27.779ns (Levels of Logic = 33)
+  Clock Path Skew:      -0.013ns (0.249 - 0.262)
+  Source Clock:         clk_BUFGP rising at 0.000ns
+  Destination Clock:    clk_BUFGP rising at 10.000ns
+  Clock Uncertainty:    0.035ns
+
+  Clock Uncertainty:          0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Total Input Jitter (TIJ):   0.000ns
+    Discrete Jitter (DJ):       0.000ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path at Slow Process Corner: clock_module/count_1 to clock_module/clk_faster
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X20Y29.BQ      Tcko                  0.408   clock_module/count<3>
+                                                       clock_module/count_1
+    SLICE_X22Y27.B4      net (fanout=2)        0.651   clock_module/count<1>
+    SLICE_X22Y27.COUT    Topcyb                0.380   clock_module/Madd__n0026_cy<3>
+                                                       clock_module/count<1>_rt
+                                                       clock_module/Madd__n0026_cy<3>
+    SLICE_X22Y28.CIN     net (fanout=1)        0.003   clock_module/Madd__n0026_cy<3>
+    SLICE_X22Y28.COUT    Tbyp                  0.076   clock_module/Madd__n0026_cy<7>
+                                                       clock_module/Madd__n0026_cy<7>
+    SLICE_X22Y29.CIN     net (fanout=1)        0.003   clock_module/Madd__n0026_cy<7>
+    SLICE_X22Y29.COUT    Tbyp                  0.076   clock_module/Madd__n0026_cy<11>
+                                                       clock_module/Madd__n0026_cy<11>
+    SLICE_X22Y30.CIN     net (fanout=1)        0.003   clock_module/Madd__n0026_cy<11>
+    SLICE_X22Y30.COUT    Tbyp                  0.076   clock_module/Madd__n0026_cy<15>
+                                                       clock_module/Madd__n0026_cy<15>
+    SLICE_X22Y31.CIN     net (fanout=1)        0.003   clock_module/Madd__n0026_cy<15>
+    SLICE_X22Y31.BMUX    Tcinb                 0.292   clock_module/Madd__n0026_cy<19>
+                                                       clock_module/Madd__n0026_cy<19>
+    SLICE_X29Y34.C1      net (fanout=22)       1.205   clock_module/_n0026<11>
+    SLICE_X29Y34.C       Tilo                  0.259   clock_module/count[28]_PWR_2_o_mod_4/a[28]_a[28]_MUX_3049_o
+                                                       clock_module/count[28]_PWR_2_o_mod_4/BUS_0019_INV_1964_o11_2
+    SLICE_X30Y31.B3      net (fanout=7)        1.047   clock_module/count[28]_PWR_2_o_mod_4/BUS_0019_INV_1964_o112
+    SLICE_X30Y31.CMUX    Topbc                 0.526   clock_module/count[28]_PWR_2_o_mod_4/Madd_a[28]_GND_4_o_add_39_OUT_cy<19>
+                                                       clock_module/count[28]_PWR_2_o_mod_4/Madd_a[28]_GND_4_o_add_39_OUT_lut<17>
+                                                       clock_module/count[28]_PWR_2_o_mod_4/Madd_a[28]_GND_4_o_add_39_OUT_cy<19>
+    SLICE_X27Y33.D4      net (fanout=7)        0.789   clock_module/count[28]_PWR_2_o_mod_4/a[28]_GND_4_o_add_39_OUT<18>
+    SLICE_X27Y33.D       Tilo                  0.259   N649
+                                                       clock_module/count[28]_PWR_2_o_mod_4/Mmux_a[18]_a[28]_MUX_3088_o11_SW0_SW1
+    SLICE_X27Y33.C6      net (fanout=5)        0.139   N649
+    SLICE_X27Y33.C       Tilo                  0.259   N649
+                                                       clock_module/count[28]_PWR_2_o_mod_4/Mmux_a[18]_a[28]_MUX_3088_o11
+    SLICE_X29Y31.A3      net (fanout=6)        0.740   clock_module/count[28]_PWR_2_o_mod_4/a[18]_a[28]_MUX_3088_o
+    SLICE_X29Y31.A       Tilo                  0.259   clock_module/count[28]_PWR_2_o_mod_4/Mmux_a[23]_a[28]_MUX_3141_o111
+                                                       clock_module/count[28]_PWR_2_o_mod_4/BUS_0021_INV_2024_o22_1
+    SLICE_X31Y32.D6      net (fanout=5)        0.601   clock_module/count[28]_PWR_2_o_mod_4/BUS_0021_INV_2024_o22
+    SLICE_X31Y32.D       Tilo                  0.259   clock_module/count[28]_PWR_2_o_mod_4/a[17]_a[28]_MUX_3118_o
+                                                       clock_module/count[28]_PWR_2_o_mod_4/Mmux_a[0]_a[28]_MUX_3135_o181
+    SLICE_X31Y31.C2      net (fanout=9)        0.654   clock_module/count[28]_PWR_2_o_mod_4/a[17]_a[28]_MUX_3118_o
+    SLICE_X31Y31.C       Tilo                  0.259   clock_module/count[28]_PWR_2_o_mod_4/a[16]_a[28]_MUX_3119_o
+                                                       clock_module/count[28]_PWR_2_o_mod_4/BUS_0022_INV_2054_o23_1
+    SLICE_X25Y30.C6      net (fanout=1)        0.574   clock_module/count[28]_PWR_2_o_mod_4/BUS_0022_INV_2054_o23
+    SLICE_X25Y30.C       Tilo                  0.259   clock_module/count[28]_PWR_2_o_mod_4/BUS_0023_INV_2084_o2
+                                                       clock_module/count[28]_PWR_2_o_mod_4/BUS_0022_INV_2054_o24_1
+    SLICE_X19Y34.D6      net (fanout=5)        0.781   clock_module/count[28]_PWR_2_o_mod_4/BUS_0022_INV_2054_o24
+    SLICE_X19Y34.D       Tilo                  0.259   clock_module/count[28]_PWR_2_o_mod_4/BUS_0023_INV_2084_o221
+                                                       clock_module/count[28]_PWR_2_o_mod_4/BUS_0023_INV_2084_o22_1
+    SLICE_X27Y29.A5      net (fanout=2)        0.869   clock_module/count[28]_PWR_2_o_mod_4/BUS_0023_INV_2084_o221
+    SLICE_X27Y29.A       Tilo                  0.259   clock_module/count[28]_PWR_2_o_mod_4/a[24]_a[28]_MUX_3169_o
+                                                       clock_module/count[28]_PWR_2_o_mod_4/BUS_0023_INV_2084_o24_1
+    SLICE_X29Y28.B6      net (fanout=3)        0.339   clock_module/count[28]_PWR_2_o_mod_4/BUS_0023_INV_2084_o24
+    SLICE_X29Y28.B       Tilo                  0.259   N11
+                                                       clock_module/count[28]_PWR_2_o_mod_4/BUS_0024_INV_2114_o23
+    SLICE_X27Y28.D5      net (fanout=20)       0.477   clock_module/count[28]_PWR_2_o_mod_4/BUS_0024_INV_2114_o22
+    SLICE_X27Y28.D       Tilo                  0.259   N385
+                                                       clock_module/count[28]_PWR_2_o_mod_4/Mmux_a[28]_a[28]_MUX_3194_o11_SW0
+    SLICE_X29Y29.D6      net (fanout=15)       0.388   N385
+    SLICE_X29Y29.D       Tilo                  0.259   clock_module/count[28]_PWR_2_o_mod_4/a[27]_a[28]_MUX_3195_o
+                                                       clock_module/count[28]_PWR_2_o_mod_4/Mmux_a[27]_a[28]_MUX_3195_o11
+    SLICE_X29Y25.A1      net (fanout=4)        0.959   clock_module/count[28]_PWR_2_o_mod_4/a[27]_a[28]_MUX_3195_o
+    SLICE_X29Y25.A       Tilo                  0.259   N1005
+                                                       clock_module/count[28]_PWR_2_o_mod_4/BUS_0025_INV_2144_o21_2
+    SLICE_X28Y22.B3      net (fanout=12)       0.790   clock_module/count[28]_PWR_2_o_mod_4/BUS_0025_INV_2144_o212
+    SLICE_X28Y22.DMUX    Topbd                 0.537   clock_module/count[28]_PWR_2_o_mod_4/Madd_a[28]_GND_4_o_add_51_OUT_cy<13>
+                                                       clock_module/count[28]_PWR_2_o_mod_4/Madd_a[28]_GND_4_o_add_51_OUT_lut<11>
+                                                       clock_module/count[28]_PWR_2_o_mod_4/Madd_a[28]_GND_4_o_add_51_OUT_cy<13>
+    SLICE_X27Y25.D4      net (fanout=3)        0.729   clock_module/count[28]_PWR_2_o_mod_4/a[28]_GND_4_o_add_51_OUT<13>
+    SLICE_X27Y25.D       Tilo                  0.259   N996
+                                                       clock_module/count[28]_PWR_2_o_mod_4/Mmux_a[0]_a[28]_MUX_3280_o141_SW0_SW0
+    SLICE_X27Y22.A5      net (fanout=2)        0.585   N996
+    SLICE_X27Y22.A       Tilo                  0.259   N1144
+                                                       clock_module/count[28]_PWR_2_o_mod_4/Mmux_a[0]_a[28]_MUX_3280_o141
+    SLICE_X21Y23.A4      net (fanout=5)        0.720   clock_module/count[28]_PWR_2_o_mod_4/a[13]_a[28]_MUX_3267_o
+    SLICE_X21Y23.A       Tilo                  0.259   clock_module/count[28]_PWR_2_o_mod_4/BUS_0027_INV_2204_o31_SW1
+                                                       clock_module/count[28]_PWR_2_o_mod_4/BUS_0027_INV_2204_o34_1
+    SLICE_X19Y26.C3      net (fanout=19)       0.777   clock_module/count[28]_PWR_2_o_mod_4/BUS_0027_INV_2204_o34
+    SLICE_X19Y26.C       Tilo                  0.259   clock_module/count[28]_PWR_2_o_mod_4/a[27]_a[28]_MUX_3340_o
+                                                       clock_module/count[28]_PWR_2_o_mod_4/Mmux_a[27]_a[28]_MUX_3282_o11
+    SLICE_X18Y19.D2      net (fanout=2)        1.038   clock_module/count[28]_PWR_2_o_mod_4/a[27]_a[28]_MUX_3282_o
+    SLICE_X18Y19.COUT    Topcyd                0.274   clock_module/count[28]_PWR_2_o_mod_4/Mcompar_BUS_0028_INV_2234_o_cy<3>
+                                                       clock_module/count[28]_PWR_2_o_mod_4/Mcompar_BUS_0028_INV_2234_o_lutdi3
+                                                       clock_module/count[28]_PWR_2_o_mod_4/Mcompar_BUS_0028_INV_2234_o_cy<3>
+    SLICE_X18Y20.CIN     net (fanout=1)        0.003   clock_module/count[28]_PWR_2_o_mod_4/Mcompar_BUS_0028_INV_2234_o_cy<3>
+    SLICE_X18Y20.AMUX    Tcina                 0.212   clock_module/count[28]_PWR_2_o_mod_4/a[24]_a[28]_MUX_3314_o
+                                                       clock_module/count[28]_PWR_2_o_mod_4/Mcompar_BUS_0028_INV_2234_o_cy<4>
+    SLICE_X23Y22.A4      net (fanout=72)       0.841   clock_module/count[28]_PWR_2_o_mod_4/BUS_0028_INV_2234_o
+    SLICE_X23Y22.A       Tilo                  0.259   N1360
+                                                       clock_module/count[28]_PWR_2_o_mod_4/Mmux_a[0]_a[28]_MUX_3338_o1171
+    SLICE_X20Y17.A2      net (fanout=4)        0.850   clock_module/count[28]_PWR_2_o_mod_4/a[9]_a[28]_MUX_3329_o
+    SLICE_X20Y17.COUT    Topcya                0.409   clock_module/count[28]_PWR_2_o_mod_4/Mcompar_BUS_0029_INV_2264_o_cy<3>
+                                                       clock_module/count[28]_PWR_2_o_mod_4/Mcompar_BUS_0029_INV_2264_o_lutdi
+                                                       clock_module/count[28]_PWR_2_o_mod_4/Mcompar_BUS_0029_INV_2264_o_cy<3>
+    SLICE_X20Y18.CIN     net (fanout=1)        0.003   clock_module/count[28]_PWR_2_o_mod_4/Mcompar_BUS_0029_INV_2264_o_cy<3>
+    SLICE_X20Y18.AMUX    Tcina                 0.194   clock_module/count[28]_PWR_2_o_mod_4/a[14]_a[28]_MUX_3353_o
+                                                       clock_module/count[28]_PWR_2_o_mod_4/Mcompar_BUS_0029_INV_2264_o_cy<4>
+    SLICE_X22Y16.B4      net (fanout=34)       0.803   clock_module/count[28]_PWR_2_o_mod_4/BUS_0029_INV_2264_o
+    SLICE_X22Y16.COUT    Topcyb                0.380   clock_module/count[28]_PWR_2_o_mod_4/Madd_a[28]_GND_4_o_add_59_OUT_Madd_cy<9>
+                                                       clock_module/count[28]_PWR_2_o_mod_4/Madd_a[28]_GND_4_o_add_59_OUT_Madd_lut<7>
+                                                       clock_module/count[28]_PWR_2_o_mod_4/Madd_a[28]_GND_4_o_add_59_OUT_Madd_cy<9>
+    SLICE_X22Y17.CIN     net (fanout=1)        0.003   clock_module/count[28]_PWR_2_o_mod_4/Madd_a[28]_GND_4_o_add_59_OUT_Madd_cy<9>
+    SLICE_X22Y17.CMUX    Tcinc                 0.261   clock_module/count[28]_PWR_2_o_mod_4/Madd_a[28]_GND_4_o_add_59_OUT_Madd_cy<13>
+                                                       clock_module/count[28]_PWR_2_o_mod_4/Madd_a[28]_GND_4_o_add_59_OUT_Madd_cy<13>
+    SLICE_X23Y17.D6      net (fanout=1)        0.566   clock_module/count[28]_PWR_2_o_mod_4/a[28]_GND_4_o_add_59_OUT<12>
+    SLICE_X23Y17.D       Tilo                  0.259   clock_module/count[28]_reduce_nor_6_o4
+                                                       clock_module/count[28]_reduce_nor_6_o4
+    SLICE_X21Y17.D3      net (fanout=1)        0.502   clock_module/count[28]_reduce_nor_6_o4
+    SLICE_X21Y17.CLK     Tas                   0.322   clock_module/clk_faster
+                                                       clock_module/count[28]_reduce_nor_6_o6
+                                                       clock_module/clk_faster
+    -------------------------------------------------  ---------------------------
+    Total                                     27.779ns (9.344ns logic, 18.435ns route)
+                                                       (33.6% logic, 66.4% route)
+
+--------------------------------------------------------------------------------
+Slack (setup path):     -17.822ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               clock_module/count_1 (FF)
+  Destination:          clock_module/clk_faster (FF)
+  Requirement:          10.000ns
+  Data Path Delay:      27.774ns (Levels of Logic = 33)
+  Clock Path Skew:      -0.013ns (0.249 - 0.262)
+  Source Clock:         clk_BUFGP rising at 0.000ns
+  Destination Clock:    clk_BUFGP rising at 10.000ns
+  Clock Uncertainty:    0.035ns
+
+  Clock Uncertainty:          0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Total Input Jitter (TIJ):   0.000ns
+    Discrete Jitter (DJ):       0.000ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path at Slow Process Corner: clock_module/count_1 to clock_module/clk_faster
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X20Y29.BQ      Tcko                  0.408   clock_module/count<3>
+                                                       clock_module/count_1
+    SLICE_X22Y27.B4      net (fanout=2)        0.651   clock_module/count<1>
+    SLICE_X22Y27.COUT    Topcyb                0.380   clock_module/Madd__n0026_cy<3>
+                                                       clock_module/count<1>_rt
+                                                       clock_module/Madd__n0026_cy<3>
+    SLICE_X22Y28.CIN     net (fanout=1)        0.003   clock_module/Madd__n0026_cy<3>
+    SLICE_X22Y28.COUT    Tbyp                  0.076   clock_module/Madd__n0026_cy<7>
+                                                       clock_module/Madd__n0026_cy<7>
+    SLICE_X22Y29.CIN     net (fanout=1)        0.003   clock_module/Madd__n0026_cy<7>
+    SLICE_X22Y29.COUT    Tbyp                  0.076   clock_module/Madd__n0026_cy<11>
+                                                       clock_module/Madd__n0026_cy<11>
+    SLICE_X22Y30.CIN     net (fanout=1)        0.003   clock_module/Madd__n0026_cy<11>
+    SLICE_X22Y30.COUT    Tbyp                  0.076   clock_module/Madd__n0026_cy<15>
+                                                       clock_module/Madd__n0026_cy<15>
+    SLICE_X22Y31.CIN     net (fanout=1)        0.003   clock_module/Madd__n0026_cy<15>
+    SLICE_X22Y31.BMUX    Tcinb                 0.292   clock_module/Madd__n0026_cy<19>
+                                                       clock_module/Madd__n0026_cy<19>
+    SLICE_X29Y34.C1      net (fanout=22)       1.205   clock_module/_n0026<11>
+    SLICE_X29Y34.C       Tilo                  0.259   clock_module/count[28]_PWR_2_o_mod_4/a[28]_a[28]_MUX_3049_o
+                                                       clock_module/count[28]_PWR_2_o_mod_4/BUS_0019_INV_1964_o11_2
+    SLICE_X30Y31.B3      net (fanout=7)        1.047   clock_module/count[28]_PWR_2_o_mod_4/BUS_0019_INV_1964_o112
+    SLICE_X30Y31.CMUX    Topbc                 0.526   clock_module/count[28]_PWR_2_o_mod_4/Madd_a[28]_GND_4_o_add_39_OUT_cy<19>
+                                                       clock_module/count[28]_PWR_2_o_mod_4/Madd_a[28]_GND_4_o_add_39_OUT_lut<17>
+                                                       clock_module/count[28]_PWR_2_o_mod_4/Madd_a[28]_GND_4_o_add_39_OUT_cy<19>
+    SLICE_X27Y33.D4      net (fanout=7)        0.789   clock_module/count[28]_PWR_2_o_mod_4/a[28]_GND_4_o_add_39_OUT<18>
+    SLICE_X27Y33.D       Tilo                  0.259   N649
+                                                       clock_module/count[28]_PWR_2_o_mod_4/Mmux_a[18]_a[28]_MUX_3088_o11_SW0_SW1
+    SLICE_X27Y33.C6      net (fanout=5)        0.139   N649
+    SLICE_X27Y33.C       Tilo                  0.259   N649
+                                                       clock_module/count[28]_PWR_2_o_mod_4/Mmux_a[18]_a[28]_MUX_3088_o11
+    SLICE_X29Y31.A3      net (fanout=6)        0.740   clock_module/count[28]_PWR_2_o_mod_4/a[18]_a[28]_MUX_3088_o
+    SLICE_X29Y31.A       Tilo                  0.259   clock_module/count[28]_PWR_2_o_mod_4/Mmux_a[23]_a[28]_MUX_3141_o111
+                                                       clock_module/count[28]_PWR_2_o_mod_4/BUS_0021_INV_2024_o22_1
+    SLICE_X31Y32.D6      net (fanout=5)        0.601   clock_module/count[28]_PWR_2_o_mod_4/BUS_0021_INV_2024_o22
+    SLICE_X31Y32.D       Tilo                  0.259   clock_module/count[28]_PWR_2_o_mod_4/a[17]_a[28]_MUX_3118_o
+                                                       clock_module/count[28]_PWR_2_o_mod_4/Mmux_a[0]_a[28]_MUX_3135_o181
+    SLICE_X31Y31.C2      net (fanout=9)        0.654   clock_module/count[28]_PWR_2_o_mod_4/a[17]_a[28]_MUX_3118_o
+    SLICE_X31Y31.C       Tilo                  0.259   clock_module/count[28]_PWR_2_o_mod_4/a[16]_a[28]_MUX_3119_o
+                                                       clock_module/count[28]_PWR_2_o_mod_4/BUS_0022_INV_2054_o23_1
+    SLICE_X25Y30.C6      net (fanout=1)        0.574   clock_module/count[28]_PWR_2_o_mod_4/BUS_0022_INV_2054_o23
+    SLICE_X25Y30.C       Tilo                  0.259   clock_module/count[28]_PWR_2_o_mod_4/BUS_0023_INV_2084_o2
+                                                       clock_module/count[28]_PWR_2_o_mod_4/BUS_0022_INV_2054_o24_1
+    SLICE_X19Y34.D6      net (fanout=5)        0.781   clock_module/count[28]_PWR_2_o_mod_4/BUS_0022_INV_2054_o24
+    SLICE_X19Y34.D       Tilo                  0.259   clock_module/count[28]_PWR_2_o_mod_4/BUS_0023_INV_2084_o221
+                                                       clock_module/count[28]_PWR_2_o_mod_4/BUS_0023_INV_2084_o22_1
+    SLICE_X27Y29.A5      net (fanout=2)        0.869   clock_module/count[28]_PWR_2_o_mod_4/BUS_0023_INV_2084_o221
+    SLICE_X27Y29.A       Tilo                  0.259   clock_module/count[28]_PWR_2_o_mod_4/a[24]_a[28]_MUX_3169_o
+                                                       clock_module/count[28]_PWR_2_o_mod_4/BUS_0023_INV_2084_o24_1
+    SLICE_X29Y28.B6      net (fanout=3)        0.339   clock_module/count[28]_PWR_2_o_mod_4/BUS_0023_INV_2084_o24
+    SLICE_X29Y28.B       Tilo                  0.259   N11
+                                                       clock_module/count[28]_PWR_2_o_mod_4/BUS_0024_INV_2114_o23
+    SLICE_X27Y28.D5      net (fanout=20)       0.477   clock_module/count[28]_PWR_2_o_mod_4/BUS_0024_INV_2114_o22
+    SLICE_X27Y28.D       Tilo                  0.259   N385
+                                                       clock_module/count[28]_PWR_2_o_mod_4/Mmux_a[28]_a[28]_MUX_3194_o11_SW0
+    SLICE_X23Y28.C5      net (fanout=15)       0.598   N385
+    SLICE_X23Y28.C       Tilo                  0.259   clock_module/count[28]_PWR_2_o_mod_4/BUS_0025_INV_2144_o221
+                                                       clock_module/count[28]_PWR_2_o_mod_4/Mmux_a[25]_a[28]_MUX_3197_o11
+    SLICE_X29Y25.A4      net (fanout=5)        0.744   clock_module/count[28]_PWR_2_o_mod_4/a[25]_a[28]_MUX_3197_o
+    SLICE_X29Y25.A       Tilo                  0.259   N1005
+                                                       clock_module/count[28]_PWR_2_o_mod_4/BUS_0025_INV_2144_o21_2
+    SLICE_X28Y22.B3      net (fanout=12)       0.790   clock_module/count[28]_PWR_2_o_mod_4/BUS_0025_INV_2144_o212
+    SLICE_X28Y22.DMUX    Topbd                 0.537   clock_module/count[28]_PWR_2_o_mod_4/Madd_a[28]_GND_4_o_add_51_OUT_cy<13>
+                                                       clock_module/count[28]_PWR_2_o_mod_4/Madd_a[28]_GND_4_o_add_51_OUT_lut<11>
+                                                       clock_module/count[28]_PWR_2_o_mod_4/Madd_a[28]_GND_4_o_add_51_OUT_cy<13>
+    SLICE_X27Y25.D4      net (fanout=3)        0.729   clock_module/count[28]_PWR_2_o_mod_4/a[28]_GND_4_o_add_51_OUT<13>
+    SLICE_X27Y25.D       Tilo                  0.259   N996
+                                                       clock_module/count[28]_PWR_2_o_mod_4/Mmux_a[0]_a[28]_MUX_3280_o141_SW0_SW0
+    SLICE_X27Y22.A5      net (fanout=2)        0.585   N996
+    SLICE_X27Y22.A       Tilo                  0.259   N1144
+                                                       clock_module/count[28]_PWR_2_o_mod_4/Mmux_a[0]_a[28]_MUX_3280_o141
+    SLICE_X21Y23.A4      net (fanout=5)        0.720   clock_module/count[28]_PWR_2_o_mod_4/a[13]_a[28]_MUX_3267_o
+    SLICE_X21Y23.A       Tilo                  0.259   clock_module/count[28]_PWR_2_o_mod_4/BUS_0027_INV_2204_o31_SW1
+                                                       clock_module/count[28]_PWR_2_o_mod_4/BUS_0027_INV_2204_o34_1
+    SLICE_X19Y26.C3      net (fanout=19)       0.777   clock_module/count[28]_PWR_2_o_mod_4/BUS_0027_INV_2204_o34
+    SLICE_X19Y26.C       Tilo                  0.259   clock_module/count[28]_PWR_2_o_mod_4/a[27]_a[28]_MUX_3340_o
+                                                       clock_module/count[28]_PWR_2_o_mod_4/Mmux_a[27]_a[28]_MUX_3282_o11
+    SLICE_X18Y19.D2      net (fanout=2)        1.038   clock_module/count[28]_PWR_2_o_mod_4/a[27]_a[28]_MUX_3282_o
+    SLICE_X18Y19.COUT    Topcyd                0.274   clock_module/count[28]_PWR_2_o_mod_4/Mcompar_BUS_0028_INV_2234_o_cy<3>
+                                                       clock_module/count[28]_PWR_2_o_mod_4/Mcompar_BUS_0028_INV_2234_o_lutdi3
+                                                       clock_module/count[28]_PWR_2_o_mod_4/Mcompar_BUS_0028_INV_2234_o_cy<3>
+    SLICE_X18Y20.CIN     net (fanout=1)        0.003   clock_module/count[28]_PWR_2_o_mod_4/Mcompar_BUS_0028_INV_2234_o_cy<3>
+    SLICE_X18Y20.AMUX    Tcina                 0.212   clock_module/count[28]_PWR_2_o_mod_4/a[24]_a[28]_MUX_3314_o
+                                                       clock_module/count[28]_PWR_2_o_mod_4/Mcompar_BUS_0028_INV_2234_o_cy<4>
+    SLICE_X23Y22.A4      net (fanout=72)       0.841   clock_module/count[28]_PWR_2_o_mod_4/BUS_0028_INV_2234_o
+    SLICE_X23Y22.A       Tilo                  0.259   N1360
+                                                       clock_module/count[28]_PWR_2_o_mod_4/Mmux_a[0]_a[28]_MUX_3338_o1171
+    SLICE_X20Y17.A2      net (fanout=4)        0.850   clock_module/count[28]_PWR_2_o_mod_4/a[9]_a[28]_MUX_3329_o
+    SLICE_X20Y17.COUT    Topcya                0.409   clock_module/count[28]_PWR_2_o_mod_4/Mcompar_BUS_0029_INV_2264_o_cy<3>
+                                                       clock_module/count[28]_PWR_2_o_mod_4/Mcompar_BUS_0029_INV_2264_o_lutdi
+                                                       clock_module/count[28]_PWR_2_o_mod_4/Mcompar_BUS_0029_INV_2264_o_cy<3>
+    SLICE_X20Y18.CIN     net (fanout=1)        0.003   clock_module/count[28]_PWR_2_o_mod_4/Mcompar_BUS_0029_INV_2264_o_cy<3>
+    SLICE_X20Y18.AMUX    Tcina                 0.194   clock_module/count[28]_PWR_2_o_mod_4/a[14]_a[28]_MUX_3353_o
+                                                       clock_module/count[28]_PWR_2_o_mod_4/Mcompar_BUS_0029_INV_2264_o_cy<4>
+    SLICE_X22Y16.B4      net (fanout=34)       0.803   clock_module/count[28]_PWR_2_o_mod_4/BUS_0029_INV_2264_o
+    SLICE_X22Y16.COUT    Topcyb                0.380   clock_module/count[28]_PWR_2_o_mod_4/Madd_a[28]_GND_4_o_add_59_OUT_Madd_cy<9>
+                                                       clock_module/count[28]_PWR_2_o_mod_4/Madd_a[28]_GND_4_o_add_59_OUT_Madd_lut<7>
+                                                       clock_module/count[28]_PWR_2_o_mod_4/Madd_a[28]_GND_4_o_add_59_OUT_Madd_cy<9>
+    SLICE_X22Y17.CIN     net (fanout=1)        0.003   clock_module/count[28]_PWR_2_o_mod_4/Madd_a[28]_GND_4_o_add_59_OUT_Madd_cy<9>
+    SLICE_X22Y17.CMUX    Tcinc                 0.261   clock_module/count[28]_PWR_2_o_mod_4/Madd_a[28]_GND_4_o_add_59_OUT_Madd_cy<13>
+                                                       clock_module/count[28]_PWR_2_o_mod_4/Madd_a[28]_GND_4_o_add_59_OUT_Madd_cy<13>
+    SLICE_X23Y17.D6      net (fanout=1)        0.566   clock_module/count[28]_PWR_2_o_mod_4/a[28]_GND_4_o_add_59_OUT<12>
+    SLICE_X23Y17.D       Tilo                  0.259   clock_module/count[28]_reduce_nor_6_o4
+                                                       clock_module/count[28]_reduce_nor_6_o4
+    SLICE_X21Y17.D3      net (fanout=1)        0.502   clock_module/count[28]_reduce_nor_6_o4
+    SLICE_X21Y17.CLK     Tas                   0.322   clock_module/clk_faster
+                                                       clock_module/count[28]_reduce_nor_6_o6
+                                                       clock_module/clk_faster
+    -------------------------------------------------  ---------------------------
+    Total                                     27.774ns (9.344ns logic, 18.430ns route)
+                                                       (33.6% logic, 66.4% route)
+
+--------------------------------------------------------------------------------
+Slack (setup path):     -17.814ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               clock_module/count_1 (FF)
+  Destination:          clock_module/clk_faster (FF)
+  Requirement:          10.000ns
+  Data Path Delay:      27.766ns (Levels of Logic = 33)
+  Clock Path Skew:      -0.013ns (0.249 - 0.262)
+  Source Clock:         clk_BUFGP rising at 0.000ns
+  Destination Clock:    clk_BUFGP rising at 10.000ns
+  Clock Uncertainty:    0.035ns
+
+  Clock Uncertainty:          0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Total Input Jitter (TIJ):   0.000ns
+    Discrete Jitter (DJ):       0.000ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path at Slow Process Corner: clock_module/count_1 to clock_module/clk_faster
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X20Y29.BQ      Tcko                  0.408   clock_module/count<3>
+                                                       clock_module/count_1
+    SLICE_X22Y27.B4      net (fanout=2)        0.651   clock_module/count<1>
+    SLICE_X22Y27.COUT    Topcyb                0.380   clock_module/Madd__n0026_cy<3>
+                                                       clock_module/count<1>_rt
+                                                       clock_module/Madd__n0026_cy<3>
+    SLICE_X22Y28.CIN     net (fanout=1)        0.003   clock_module/Madd__n0026_cy<3>
+    SLICE_X22Y28.COUT    Tbyp                  0.076   clock_module/Madd__n0026_cy<7>
+                                                       clock_module/Madd__n0026_cy<7>
+    SLICE_X22Y29.CIN     net (fanout=1)        0.003   clock_module/Madd__n0026_cy<7>
+    SLICE_X22Y29.COUT    Tbyp                  0.076   clock_module/Madd__n0026_cy<11>
+                                                       clock_module/Madd__n0026_cy<11>
+    SLICE_X22Y30.CIN     net (fanout=1)        0.003   clock_module/Madd__n0026_cy<11>
+    SLICE_X22Y30.COUT    Tbyp                  0.076   clock_module/Madd__n0026_cy<15>
+                                                       clock_module/Madd__n0026_cy<15>
+    SLICE_X22Y31.CIN     net (fanout=1)        0.003   clock_module/Madd__n0026_cy<15>
+    SLICE_X22Y31.BMUX    Tcinb                 0.292   clock_module/Madd__n0026_cy<19>
+                                                       clock_module/Madd__n0026_cy<19>
+    SLICE_X29Y34.C1      net (fanout=22)       1.205   clock_module/_n0026<11>
+    SLICE_X29Y34.C       Tilo                  0.259   clock_module/count[28]_PWR_2_o_mod_4/a[28]_a[28]_MUX_3049_o
+                                                       clock_module/count[28]_PWR_2_o_mod_4/BUS_0019_INV_1964_o11_2
+    SLICE_X30Y31.B3      net (fanout=7)        1.047   clock_module/count[28]_PWR_2_o_mod_4/BUS_0019_INV_1964_o112
+    SLICE_X30Y31.CMUX    Topbc                 0.526   clock_module/count[28]_PWR_2_o_mod_4/Madd_a[28]_GND_4_o_add_39_OUT_cy<19>
+                                                       clock_module/count[28]_PWR_2_o_mod_4/Madd_a[28]_GND_4_o_add_39_OUT_lut<17>
+                                                       clock_module/count[28]_PWR_2_o_mod_4/Madd_a[28]_GND_4_o_add_39_OUT_cy<19>
+    SLICE_X27Y33.D4      net (fanout=7)        0.789   clock_module/count[28]_PWR_2_o_mod_4/a[28]_GND_4_o_add_39_OUT<18>
+    SLICE_X27Y33.D       Tilo                  0.259   N649
+                                                       clock_module/count[28]_PWR_2_o_mod_4/Mmux_a[18]_a[28]_MUX_3088_o11_SW0_SW1
+    SLICE_X27Y33.C6      net (fanout=5)        0.139   N649
+    SLICE_X27Y33.C       Tilo                  0.259   N649
+                                                       clock_module/count[28]_PWR_2_o_mod_4/Mmux_a[18]_a[28]_MUX_3088_o11
+    SLICE_X29Y31.A3      net (fanout=6)        0.740   clock_module/count[28]_PWR_2_o_mod_4/a[18]_a[28]_MUX_3088_o
+    SLICE_X29Y31.A       Tilo                  0.259   clock_module/count[28]_PWR_2_o_mod_4/Mmux_a[23]_a[28]_MUX_3141_o111
+                                                       clock_module/count[28]_PWR_2_o_mod_4/BUS_0021_INV_2024_o22_1
+    SLICE_X31Y32.D6      net (fanout=5)        0.601   clock_module/count[28]_PWR_2_o_mod_4/BUS_0021_INV_2024_o22
+    SLICE_X31Y32.D       Tilo                  0.259   clock_module/count[28]_PWR_2_o_mod_4/a[17]_a[28]_MUX_3118_o
+                                                       clock_module/count[28]_PWR_2_o_mod_4/Mmux_a[0]_a[28]_MUX_3135_o181
+    SLICE_X31Y31.C2      net (fanout=9)        0.654   clock_module/count[28]_PWR_2_o_mod_4/a[17]_a[28]_MUX_3118_o
+    SLICE_X31Y31.C       Tilo                  0.259   clock_module/count[28]_PWR_2_o_mod_4/a[16]_a[28]_MUX_3119_o
+                                                       clock_module/count[28]_PWR_2_o_mod_4/BUS_0022_INV_2054_o23_1
+    SLICE_X25Y30.C6      net (fanout=1)        0.574   clock_module/count[28]_PWR_2_o_mod_4/BUS_0022_INV_2054_o23
+    SLICE_X25Y30.C       Tilo                  0.259   clock_module/count[28]_PWR_2_o_mod_4/BUS_0023_INV_2084_o2
+                                                       clock_module/count[28]_PWR_2_o_mod_4/BUS_0022_INV_2054_o24_1
+    SLICE_X19Y34.D6      net (fanout=5)        0.781   clock_module/count[28]_PWR_2_o_mod_4/BUS_0022_INV_2054_o24
+    SLICE_X19Y34.D       Tilo                  0.259   clock_module/count[28]_PWR_2_o_mod_4/BUS_0023_INV_2084_o221
+                                                       clock_module/count[28]_PWR_2_o_mod_4/BUS_0023_INV_2084_o22_1
+    SLICE_X27Y29.A5      net (fanout=2)        0.869   clock_module/count[28]_PWR_2_o_mod_4/BUS_0023_INV_2084_o221
+    SLICE_X27Y29.A       Tilo                  0.259   clock_module/count[28]_PWR_2_o_mod_4/a[24]_a[28]_MUX_3169_o
+                                                       clock_module/count[28]_PWR_2_o_mod_4/BUS_0023_INV_2084_o24_1
+    SLICE_X29Y28.B6      net (fanout=3)        0.339   clock_module/count[28]_PWR_2_o_mod_4/BUS_0023_INV_2084_o24
+    SLICE_X29Y28.B       Tilo                  0.259   N11
+                                                       clock_module/count[28]_PWR_2_o_mod_4/BUS_0024_INV_2114_o23
+    SLICE_X27Y28.D5      net (fanout=20)       0.477   clock_module/count[28]_PWR_2_o_mod_4/BUS_0024_INV_2114_o22
+    SLICE_X27Y28.D       Tilo                  0.259   N385
+                                                       clock_module/count[28]_PWR_2_o_mod_4/Mmux_a[28]_a[28]_MUX_3194_o11_SW0
+    SLICE_X29Y29.D6      net (fanout=15)       0.388   N385
+    SLICE_X29Y29.D       Tilo                  0.259   clock_module/count[28]_PWR_2_o_mod_4/a[27]_a[28]_MUX_3195_o
+                                                       clock_module/count[28]_PWR_2_o_mod_4/Mmux_a[27]_a[28]_MUX_3195_o11
+    SLICE_X29Y25.A1      net (fanout=4)        0.959   clock_module/count[28]_PWR_2_o_mod_4/a[27]_a[28]_MUX_3195_o
+    SLICE_X29Y25.A       Tilo                  0.259   N1005
+                                                       clock_module/count[28]_PWR_2_o_mod_4/BUS_0025_INV_2144_o21_2
+    SLICE_X28Y22.B3      net (fanout=12)       0.790   clock_module/count[28]_PWR_2_o_mod_4/BUS_0025_INV_2144_o212
+    SLICE_X28Y22.DMUX    Topbd                 0.537   clock_module/count[28]_PWR_2_o_mod_4/Madd_a[28]_GND_4_o_add_51_OUT_cy<13>
+                                                       clock_module/count[28]_PWR_2_o_mod_4/Madd_a[28]_GND_4_o_add_51_OUT_lut<11>
+                                                       clock_module/count[28]_PWR_2_o_mod_4/Madd_a[28]_GND_4_o_add_51_OUT_cy<13>
+    SLICE_X27Y25.D4      net (fanout=3)        0.729   clock_module/count[28]_PWR_2_o_mod_4/a[28]_GND_4_o_add_51_OUT<13>
+    SLICE_X27Y25.D       Tilo                  0.259   N996
+                                                       clock_module/count[28]_PWR_2_o_mod_4/Mmux_a[0]_a[28]_MUX_3280_o141_SW0_SW0
+    SLICE_X27Y22.A5      net (fanout=2)        0.585   N996
+    SLICE_X27Y22.A       Tilo                  0.259   N1144
+                                                       clock_module/count[28]_PWR_2_o_mod_4/Mmux_a[0]_a[28]_MUX_3280_o141
+    SLICE_X21Y23.A4      net (fanout=5)        0.720   clock_module/count[28]_PWR_2_o_mod_4/a[13]_a[28]_MUX_3267_o
+    SLICE_X21Y23.A       Tilo                  0.259   clock_module/count[28]_PWR_2_o_mod_4/BUS_0027_INV_2204_o31_SW1
+                                                       clock_module/count[28]_PWR_2_o_mod_4/BUS_0027_INV_2204_o34_1
+    SLICE_X19Y26.C3      net (fanout=19)       0.777   clock_module/count[28]_PWR_2_o_mod_4/BUS_0027_INV_2204_o34
+    SLICE_X19Y26.C       Tilo                  0.259   clock_module/count[28]_PWR_2_o_mod_4/a[27]_a[28]_MUX_3340_o
+                                                       clock_module/count[28]_PWR_2_o_mod_4/Mmux_a[27]_a[28]_MUX_3282_o11
+    SLICE_X18Y19.D2      net (fanout=2)        1.038   clock_module/count[28]_PWR_2_o_mod_4/a[27]_a[28]_MUX_3282_o
+    SLICE_X18Y19.COUT    Topcyd                0.261   clock_module/count[28]_PWR_2_o_mod_4/Mcompar_BUS_0028_INV_2234_o_cy<3>
+                                                       clock_module/count[28]_PWR_2_o_mod_4/Mcompar_BUS_0028_INV_2234_o_lut<3>
+                                                       clock_module/count[28]_PWR_2_o_mod_4/Mcompar_BUS_0028_INV_2234_o_cy<3>
+    SLICE_X18Y20.CIN     net (fanout=1)        0.003   clock_module/count[28]_PWR_2_o_mod_4/Mcompar_BUS_0028_INV_2234_o_cy<3>
+    SLICE_X18Y20.AMUX    Tcina                 0.212   clock_module/count[28]_PWR_2_o_mod_4/a[24]_a[28]_MUX_3314_o
+                                                       clock_module/count[28]_PWR_2_o_mod_4/Mcompar_BUS_0028_INV_2234_o_cy<4>
+    SLICE_X23Y22.A4      net (fanout=72)       0.841   clock_module/count[28]_PWR_2_o_mod_4/BUS_0028_INV_2234_o
+    SLICE_X23Y22.A       Tilo                  0.259   N1360
+                                                       clock_module/count[28]_PWR_2_o_mod_4/Mmux_a[0]_a[28]_MUX_3338_o1171
+    SLICE_X20Y17.A2      net (fanout=4)        0.850   clock_module/count[28]_PWR_2_o_mod_4/a[9]_a[28]_MUX_3329_o
+    SLICE_X20Y17.COUT    Topcya                0.409   clock_module/count[28]_PWR_2_o_mod_4/Mcompar_BUS_0029_INV_2264_o_cy<3>
+                                                       clock_module/count[28]_PWR_2_o_mod_4/Mcompar_BUS_0029_INV_2264_o_lutdi
+                                                       clock_module/count[28]_PWR_2_o_mod_4/Mcompar_BUS_0029_INV_2264_o_cy<3>
+    SLICE_X20Y18.CIN     net (fanout=1)        0.003   clock_module/count[28]_PWR_2_o_mod_4/Mcompar_BUS_0029_INV_2264_o_cy<3>
+    SLICE_X20Y18.AMUX    Tcina                 0.194   clock_module/count[28]_PWR_2_o_mod_4/a[14]_a[28]_MUX_3353_o
+                                                       clock_module/count[28]_PWR_2_o_mod_4/Mcompar_BUS_0029_INV_2264_o_cy<4>
+    SLICE_X22Y16.B4      net (fanout=34)       0.803   clock_module/count[28]_PWR_2_o_mod_4/BUS_0029_INV_2264_o
+    SLICE_X22Y16.COUT    Topcyb                0.380   clock_module/count[28]_PWR_2_o_mod_4/Madd_a[28]_GND_4_o_add_59_OUT_Madd_cy<9>
+                                                       clock_module/count[28]_PWR_2_o_mod_4/Madd_a[28]_GND_4_o_add_59_OUT_Madd_lut<7>
+                                                       clock_module/count[28]_PWR_2_o_mod_4/Madd_a[28]_GND_4_o_add_59_OUT_Madd_cy<9>
+    SLICE_X22Y17.CIN     net (fanout=1)        0.003   clock_module/count[28]_PWR_2_o_mod_4/Madd_a[28]_GND_4_o_add_59_OUT_Madd_cy<9>
+    SLICE_X22Y17.CMUX    Tcinc                 0.261   clock_module/count[28]_PWR_2_o_mod_4/Madd_a[28]_GND_4_o_add_59_OUT_Madd_cy<13>
+                                                       clock_module/count[28]_PWR_2_o_mod_4/Madd_a[28]_GND_4_o_add_59_OUT_Madd_cy<13>
+    SLICE_X23Y17.D6      net (fanout=1)        0.566   clock_module/count[28]_PWR_2_o_mod_4/a[28]_GND_4_o_add_59_OUT<12>
+    SLICE_X23Y17.D       Tilo                  0.259   clock_module/count[28]_reduce_nor_6_o4
+                                                       clock_module/count[28]_reduce_nor_6_o4
+    SLICE_X21Y17.D3      net (fanout=1)        0.502   clock_module/count[28]_reduce_nor_6_o4
+    SLICE_X21Y17.CLK     Tas                   0.322   clock_module/clk_faster
+                                                       clock_module/count[28]_reduce_nor_6_o6
+                                                       clock_module/clk_faster
+    -------------------------------------------------  ---------------------------
+    Total                                     27.766ns (9.331ns logic, 18.435ns route)
+                                                       (33.6% logic, 66.4% route)
+
+--------------------------------------------------------------------------------
+
+Paths for end point clock_module/clk_faster (SLICE_X21Y17.D6), 449732893509868220 paths
+--------------------------------------------------------------------------------
+Slack (setup path):     -17.597ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               clock_module/count_1 (FF)
+  Destination:          clock_module/clk_faster (FF)
+  Requirement:          10.000ns
+  Data Path Delay:      27.549ns (Levels of Logic = 34)
+  Clock Path Skew:      -0.013ns (0.249 - 0.262)
+  Source Clock:         clk_BUFGP rising at 0.000ns
+  Destination Clock:    clk_BUFGP rising at 10.000ns
+  Clock Uncertainty:    0.035ns
+
+  Clock Uncertainty:          0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Total Input Jitter (TIJ):   0.000ns
+    Discrete Jitter (DJ):       0.000ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path at Slow Process Corner: clock_module/count_1 to clock_module/clk_faster
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X20Y29.BQ      Tcko                  0.408   clock_module/count<3>
+                                                       clock_module/count_1
+    SLICE_X22Y27.B4      net (fanout=2)        0.651   clock_module/count<1>
+    SLICE_X22Y27.COUT    Topcyb                0.380   clock_module/Madd__n0026_cy<3>
+                                                       clock_module/count<1>_rt
+                                                       clock_module/Madd__n0026_cy<3>
+    SLICE_X22Y28.CIN     net (fanout=1)        0.003   clock_module/Madd__n0026_cy<3>
+    SLICE_X22Y28.COUT    Tbyp                  0.076   clock_module/Madd__n0026_cy<7>
+                                                       clock_module/Madd__n0026_cy<7>
+    SLICE_X22Y29.CIN     net (fanout=1)        0.003   clock_module/Madd__n0026_cy<7>
+    SLICE_X22Y29.COUT    Tbyp                  0.076   clock_module/Madd__n0026_cy<11>
+                                                       clock_module/Madd__n0026_cy<11>
+    SLICE_X22Y30.CIN     net (fanout=1)        0.003   clock_module/Madd__n0026_cy<11>
+    SLICE_X22Y30.COUT    Tbyp                  0.076   clock_module/Madd__n0026_cy<15>
+                                                       clock_module/Madd__n0026_cy<15>
+    SLICE_X22Y31.CIN     net (fanout=1)        0.003   clock_module/Madd__n0026_cy<15>
+    SLICE_X22Y31.BMUX    Tcinb                 0.292   clock_module/Madd__n0026_cy<19>
+                                                       clock_module/Madd__n0026_cy<19>
+    SLICE_X29Y34.C1      net (fanout=22)       1.205   clock_module/_n0026<11>
+    SLICE_X29Y34.C       Tilo                  0.259   clock_module/count[28]_PWR_2_o_mod_4/a[28]_a[28]_MUX_3049_o
+                                                       clock_module/count[28]_PWR_2_o_mod_4/BUS_0019_INV_1964_o11_2
+    SLICE_X30Y31.B3      net (fanout=7)        1.047   clock_module/count[28]_PWR_2_o_mod_4/BUS_0019_INV_1964_o112
+    SLICE_X30Y31.CMUX    Topbc                 0.526   clock_module/count[28]_PWR_2_o_mod_4/Madd_a[28]_GND_4_o_add_39_OUT_cy<19>
+                                                       clock_module/count[28]_PWR_2_o_mod_4/Madd_a[28]_GND_4_o_add_39_OUT_lut<17>
+                                                       clock_module/count[28]_PWR_2_o_mod_4/Madd_a[28]_GND_4_o_add_39_OUT_cy<19>
+    SLICE_X27Y33.D4      net (fanout=7)        0.789   clock_module/count[28]_PWR_2_o_mod_4/a[28]_GND_4_o_add_39_OUT<18>
+    SLICE_X27Y33.D       Tilo                  0.259   N649
+                                                       clock_module/count[28]_PWR_2_o_mod_4/Mmux_a[18]_a[28]_MUX_3088_o11_SW0_SW1
+    SLICE_X27Y33.C6      net (fanout=5)        0.139   N649
+    SLICE_X27Y33.C       Tilo                  0.259   N649
+                                                       clock_module/count[28]_PWR_2_o_mod_4/Mmux_a[18]_a[28]_MUX_3088_o11
+    SLICE_X29Y31.A3      net (fanout=6)        0.740   clock_module/count[28]_PWR_2_o_mod_4/a[18]_a[28]_MUX_3088_o
+    SLICE_X29Y31.A       Tilo                  0.259   clock_module/count[28]_PWR_2_o_mod_4/Mmux_a[23]_a[28]_MUX_3141_o111
+                                                       clock_module/count[28]_PWR_2_o_mod_4/BUS_0021_INV_2024_o22_1
+    SLICE_X31Y32.D6      net (fanout=5)        0.601   clock_module/count[28]_PWR_2_o_mod_4/BUS_0021_INV_2024_o22
+    SLICE_X31Y32.D       Tilo                  0.259   clock_module/count[28]_PWR_2_o_mod_4/a[17]_a[28]_MUX_3118_o
+                                                       clock_module/count[28]_PWR_2_o_mod_4/Mmux_a[0]_a[28]_MUX_3135_o181
+    SLICE_X31Y31.C2      net (fanout=9)        0.654   clock_module/count[28]_PWR_2_o_mod_4/a[17]_a[28]_MUX_3118_o
+    SLICE_X31Y31.C       Tilo                  0.259   clock_module/count[28]_PWR_2_o_mod_4/a[16]_a[28]_MUX_3119_o
+                                                       clock_module/count[28]_PWR_2_o_mod_4/BUS_0022_INV_2054_o23_1
+    SLICE_X25Y30.C6      net (fanout=1)        0.574   clock_module/count[28]_PWR_2_o_mod_4/BUS_0022_INV_2054_o23
+    SLICE_X25Y30.C       Tilo                  0.259   clock_module/count[28]_PWR_2_o_mod_4/BUS_0023_INV_2084_o2
+                                                       clock_module/count[28]_PWR_2_o_mod_4/BUS_0022_INV_2054_o24_1
+    SLICE_X19Y34.D6      net (fanout=5)        0.781   clock_module/count[28]_PWR_2_o_mod_4/BUS_0022_INV_2054_o24
+    SLICE_X19Y34.D       Tilo                  0.259   clock_module/count[28]_PWR_2_o_mod_4/BUS_0023_INV_2084_o221
+                                                       clock_module/count[28]_PWR_2_o_mod_4/BUS_0023_INV_2084_o22_1
+    SLICE_X27Y29.A5      net (fanout=2)        0.869   clock_module/count[28]_PWR_2_o_mod_4/BUS_0023_INV_2084_o221
+    SLICE_X27Y29.A       Tilo                  0.259   clock_module/count[28]_PWR_2_o_mod_4/a[24]_a[28]_MUX_3169_o
+                                                       clock_module/count[28]_PWR_2_o_mod_4/BUS_0023_INV_2084_o24_1
+    SLICE_X29Y28.B6      net (fanout=3)        0.339   clock_module/count[28]_PWR_2_o_mod_4/BUS_0023_INV_2084_o24
+    SLICE_X29Y28.B       Tilo                  0.259   N11
+                                                       clock_module/count[28]_PWR_2_o_mod_4/BUS_0024_INV_2114_o23
+    SLICE_X27Y28.D5      net (fanout=20)       0.477   clock_module/count[28]_PWR_2_o_mod_4/BUS_0024_INV_2114_o22
+    SLICE_X27Y28.D       Tilo                  0.259   N385
+                                                       clock_module/count[28]_PWR_2_o_mod_4/Mmux_a[28]_a[28]_MUX_3194_o11_SW0
+    SLICE_X29Y29.D6      net (fanout=15)       0.388   N385
+    SLICE_X29Y29.D       Tilo                  0.259   clock_module/count[28]_PWR_2_o_mod_4/a[27]_a[28]_MUX_3195_o
+                                                       clock_module/count[28]_PWR_2_o_mod_4/Mmux_a[27]_a[28]_MUX_3195_o11
+    SLICE_X29Y25.A1      net (fanout=4)        0.959   clock_module/count[28]_PWR_2_o_mod_4/a[27]_a[28]_MUX_3195_o
+    SLICE_X29Y25.A       Tilo                  0.259   N1005
+                                                       clock_module/count[28]_PWR_2_o_mod_4/BUS_0025_INV_2144_o21_2
+    SLICE_X28Y22.B3      net (fanout=12)       0.790   clock_module/count[28]_PWR_2_o_mod_4/BUS_0025_INV_2144_o212
+    SLICE_X28Y22.DMUX    Topbd                 0.537   clock_module/count[28]_PWR_2_o_mod_4/Madd_a[28]_GND_4_o_add_51_OUT_cy<13>
+                                                       clock_module/count[28]_PWR_2_o_mod_4/Madd_a[28]_GND_4_o_add_51_OUT_lut<11>
+                                                       clock_module/count[28]_PWR_2_o_mod_4/Madd_a[28]_GND_4_o_add_51_OUT_cy<13>
+    SLICE_X27Y25.D4      net (fanout=3)        0.729   clock_module/count[28]_PWR_2_o_mod_4/a[28]_GND_4_o_add_51_OUT<13>
+    SLICE_X27Y25.D       Tilo                  0.259   N996
+                                                       clock_module/count[28]_PWR_2_o_mod_4/Mmux_a[0]_a[28]_MUX_3280_o141_SW0_SW0
+    SLICE_X27Y22.A5      net (fanout=2)        0.585   N996
+    SLICE_X27Y22.A       Tilo                  0.259   N1144
+                                                       clock_module/count[28]_PWR_2_o_mod_4/Mmux_a[0]_a[28]_MUX_3280_o141
+    SLICE_X21Y23.A4      net (fanout=5)        0.720   clock_module/count[28]_PWR_2_o_mod_4/a[13]_a[28]_MUX_3267_o
+    SLICE_X21Y23.A       Tilo                  0.259   clock_module/count[28]_PWR_2_o_mod_4/BUS_0027_INV_2204_o31_SW1
+                                                       clock_module/count[28]_PWR_2_o_mod_4/BUS_0027_INV_2204_o34_1
+    SLICE_X19Y26.C3      net (fanout=19)       0.777   clock_module/count[28]_PWR_2_o_mod_4/BUS_0027_INV_2204_o34
+    SLICE_X19Y26.C       Tilo                  0.259   clock_module/count[28]_PWR_2_o_mod_4/a[27]_a[28]_MUX_3340_o
+                                                       clock_module/count[28]_PWR_2_o_mod_4/Mmux_a[27]_a[28]_MUX_3282_o11
+    SLICE_X18Y19.D2      net (fanout=2)        1.038   clock_module/count[28]_PWR_2_o_mod_4/a[27]_a[28]_MUX_3282_o
+    SLICE_X18Y19.COUT    Topcyd                0.274   clock_module/count[28]_PWR_2_o_mod_4/Mcompar_BUS_0028_INV_2234_o_cy<3>
+                                                       clock_module/count[28]_PWR_2_o_mod_4/Mcompar_BUS_0028_INV_2234_o_lutdi3
+                                                       clock_module/count[28]_PWR_2_o_mod_4/Mcompar_BUS_0028_INV_2234_o_cy<3>
+    SLICE_X18Y20.CIN     net (fanout=1)        0.003   clock_module/count[28]_PWR_2_o_mod_4/Mcompar_BUS_0028_INV_2234_o_cy<3>
+    SLICE_X18Y20.AMUX    Tcina                 0.212   clock_module/count[28]_PWR_2_o_mod_4/a[24]_a[28]_MUX_3314_o
+                                                       clock_module/count[28]_PWR_2_o_mod_4/Mcompar_BUS_0028_INV_2234_o_cy<4>
+    SLICE_X23Y22.A4      net (fanout=72)       0.841   clock_module/count[28]_PWR_2_o_mod_4/BUS_0028_INV_2234_o
+    SLICE_X23Y22.A       Tilo                  0.259   N1360
+                                                       clock_module/count[28]_PWR_2_o_mod_4/Mmux_a[0]_a[28]_MUX_3338_o1171
+    SLICE_X20Y17.A2      net (fanout=4)        0.850   clock_module/count[28]_PWR_2_o_mod_4/a[9]_a[28]_MUX_3329_o
+    SLICE_X20Y17.COUT    Topcya                0.409   clock_module/count[28]_PWR_2_o_mod_4/Mcompar_BUS_0029_INV_2264_o_cy<3>
+                                                       clock_module/count[28]_PWR_2_o_mod_4/Mcompar_BUS_0029_INV_2264_o_lutdi
+                                                       clock_module/count[28]_PWR_2_o_mod_4/Mcompar_BUS_0029_INV_2264_o_cy<3>
+    SLICE_X20Y18.CIN     net (fanout=1)        0.003   clock_module/count[28]_PWR_2_o_mod_4/Mcompar_BUS_0029_INV_2264_o_cy<3>
+    SLICE_X20Y18.AMUX    Tcina                 0.194   clock_module/count[28]_PWR_2_o_mod_4/a[14]_a[28]_MUX_3353_o
+                                                       clock_module/count[28]_PWR_2_o_mod_4/Mcompar_BUS_0029_INV_2264_o_cy<4>
+    SLICE_X22Y16.B4      net (fanout=34)       0.803   clock_module/count[28]_PWR_2_o_mod_4/BUS_0029_INV_2264_o
+    SLICE_X22Y16.COUT    Topcyb                0.380   clock_module/count[28]_PWR_2_o_mod_4/Madd_a[28]_GND_4_o_add_59_OUT_Madd_cy<9>
+                                                       clock_module/count[28]_PWR_2_o_mod_4/Madd_a[28]_GND_4_o_add_59_OUT_Madd_lut<7>
+                                                       clock_module/count[28]_PWR_2_o_mod_4/Madd_a[28]_GND_4_o_add_59_OUT_Madd_cy<9>
+    SLICE_X22Y17.CIN     net (fanout=1)        0.003   clock_module/count[28]_PWR_2_o_mod_4/Madd_a[28]_GND_4_o_add_59_OUT_Madd_cy<9>
+    SLICE_X22Y17.COUT    Tbyp                  0.076   clock_module/count[28]_PWR_2_o_mod_4/Madd_a[28]_GND_4_o_add_59_OUT_Madd_cy<13>
+                                                       clock_module/count[28]_PWR_2_o_mod_4/Madd_a[28]_GND_4_o_add_59_OUT_Madd_cy<13>
+    SLICE_X22Y18.CIN     net (fanout=1)        0.003   clock_module/count[28]_PWR_2_o_mod_4/Madd_a[28]_GND_4_o_add_59_OUT_Madd_cy<13>
+    SLICE_X22Y18.AMUX    Tcina                 0.202   clock_module/count[28]_PWR_2_o_mod_4/a[28]_GND_4_o_add_59_OUT<17>
+                                                       clock_module/count[28]_PWR_2_o_mod_4/Madd_a[28]_GND_4_o_add_59_OUT_Madd_xor<17>
+    SLICE_X23Y18.D1      net (fanout=1)        0.490   clock_module/count[28]_PWR_2_o_mod_4/a[28]_GND_4_o_add_59_OUT<14>
+    SLICE_X23Y18.D       Tilo                  0.259   N7
+                                                       clock_module/count[28]_reduce_nor_6_o6_SW1
+    SLICE_X21Y17.D6      net (fanout=1)        0.328   N7
+    SLICE_X21Y17.CLK     Tas                   0.322   clock_module/clk_faster
+                                                       clock_module/count[28]_reduce_nor_6_o6
+                                                       clock_module/clk_faster
+    -------------------------------------------------  ---------------------------
+    Total                                     27.549ns (9.361ns logic, 18.188ns route)
+                                                       (34.0% logic, 66.0% route)
+
+--------------------------------------------------------------------------------
+Slack (setup path):     -17.592ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               clock_module/count_1 (FF)
+  Destination:          clock_module/clk_faster (FF)
+  Requirement:          10.000ns
+  Data Path Delay:      27.544ns (Levels of Logic = 34)
+  Clock Path Skew:      -0.013ns (0.249 - 0.262)
+  Source Clock:         clk_BUFGP rising at 0.000ns
+  Destination Clock:    clk_BUFGP rising at 10.000ns
+  Clock Uncertainty:    0.035ns
+
+  Clock Uncertainty:          0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Total Input Jitter (TIJ):   0.000ns
+    Discrete Jitter (DJ):       0.000ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path at Slow Process Corner: clock_module/count_1 to clock_module/clk_faster
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X20Y29.BQ      Tcko                  0.408   clock_module/count<3>
+                                                       clock_module/count_1
+    SLICE_X22Y27.B4      net (fanout=2)        0.651   clock_module/count<1>
+    SLICE_X22Y27.COUT    Topcyb                0.380   clock_module/Madd__n0026_cy<3>
+                                                       clock_module/count<1>_rt
+                                                       clock_module/Madd__n0026_cy<3>
+    SLICE_X22Y28.CIN     net (fanout=1)        0.003   clock_module/Madd__n0026_cy<3>
+    SLICE_X22Y28.COUT    Tbyp                  0.076   clock_module/Madd__n0026_cy<7>
+                                                       clock_module/Madd__n0026_cy<7>
+    SLICE_X22Y29.CIN     net (fanout=1)        0.003   clock_module/Madd__n0026_cy<7>
+    SLICE_X22Y29.COUT    Tbyp                  0.076   clock_module/Madd__n0026_cy<11>
+                                                       clock_module/Madd__n0026_cy<11>
+    SLICE_X22Y30.CIN     net (fanout=1)        0.003   clock_module/Madd__n0026_cy<11>
+    SLICE_X22Y30.COUT    Tbyp                  0.076   clock_module/Madd__n0026_cy<15>
+                                                       clock_module/Madd__n0026_cy<15>
+    SLICE_X22Y31.CIN     net (fanout=1)        0.003   clock_module/Madd__n0026_cy<15>
+    SLICE_X22Y31.BMUX    Tcinb                 0.292   clock_module/Madd__n0026_cy<19>
+                                                       clock_module/Madd__n0026_cy<19>
+    SLICE_X29Y34.C1      net (fanout=22)       1.205   clock_module/_n0026<11>
+    SLICE_X29Y34.C       Tilo                  0.259   clock_module/count[28]_PWR_2_o_mod_4/a[28]_a[28]_MUX_3049_o
+                                                       clock_module/count[28]_PWR_2_o_mod_4/BUS_0019_INV_1964_o11_2
+    SLICE_X30Y31.B3      net (fanout=7)        1.047   clock_module/count[28]_PWR_2_o_mod_4/BUS_0019_INV_1964_o112
+    SLICE_X30Y31.CMUX    Topbc                 0.526   clock_module/count[28]_PWR_2_o_mod_4/Madd_a[28]_GND_4_o_add_39_OUT_cy<19>
+                                                       clock_module/count[28]_PWR_2_o_mod_4/Madd_a[28]_GND_4_o_add_39_OUT_lut<17>
+                                                       clock_module/count[28]_PWR_2_o_mod_4/Madd_a[28]_GND_4_o_add_39_OUT_cy<19>
+    SLICE_X27Y33.D4      net (fanout=7)        0.789   clock_module/count[28]_PWR_2_o_mod_4/a[28]_GND_4_o_add_39_OUT<18>
+    SLICE_X27Y33.D       Tilo                  0.259   N649
+                                                       clock_module/count[28]_PWR_2_o_mod_4/Mmux_a[18]_a[28]_MUX_3088_o11_SW0_SW1
+    SLICE_X27Y33.C6      net (fanout=5)        0.139   N649
+    SLICE_X27Y33.C       Tilo                  0.259   N649
+                                                       clock_module/count[28]_PWR_2_o_mod_4/Mmux_a[18]_a[28]_MUX_3088_o11
+    SLICE_X29Y31.A3      net (fanout=6)        0.740   clock_module/count[28]_PWR_2_o_mod_4/a[18]_a[28]_MUX_3088_o
+    SLICE_X29Y31.A       Tilo                  0.259   clock_module/count[28]_PWR_2_o_mod_4/Mmux_a[23]_a[28]_MUX_3141_o111
+                                                       clock_module/count[28]_PWR_2_o_mod_4/BUS_0021_INV_2024_o22_1
+    SLICE_X31Y32.D6      net (fanout=5)        0.601   clock_module/count[28]_PWR_2_o_mod_4/BUS_0021_INV_2024_o22
+    SLICE_X31Y32.D       Tilo                  0.259   clock_module/count[28]_PWR_2_o_mod_4/a[17]_a[28]_MUX_3118_o
+                                                       clock_module/count[28]_PWR_2_o_mod_4/Mmux_a[0]_a[28]_MUX_3135_o181
+    SLICE_X31Y31.C2      net (fanout=9)        0.654   clock_module/count[28]_PWR_2_o_mod_4/a[17]_a[28]_MUX_3118_o
+    SLICE_X31Y31.C       Tilo                  0.259   clock_module/count[28]_PWR_2_o_mod_4/a[16]_a[28]_MUX_3119_o
+                                                       clock_module/count[28]_PWR_2_o_mod_4/BUS_0022_INV_2054_o23_1
+    SLICE_X25Y30.C6      net (fanout=1)        0.574   clock_module/count[28]_PWR_2_o_mod_4/BUS_0022_INV_2054_o23
+    SLICE_X25Y30.C       Tilo                  0.259   clock_module/count[28]_PWR_2_o_mod_4/BUS_0023_INV_2084_o2
+                                                       clock_module/count[28]_PWR_2_o_mod_4/BUS_0022_INV_2054_o24_1
+    SLICE_X19Y34.D6      net (fanout=5)        0.781   clock_module/count[28]_PWR_2_o_mod_4/BUS_0022_INV_2054_o24
+    SLICE_X19Y34.D       Tilo                  0.259   clock_module/count[28]_PWR_2_o_mod_4/BUS_0023_INV_2084_o221
+                                                       clock_module/count[28]_PWR_2_o_mod_4/BUS_0023_INV_2084_o22_1
+    SLICE_X27Y29.A5      net (fanout=2)        0.869   clock_module/count[28]_PWR_2_o_mod_4/BUS_0023_INV_2084_o221
+    SLICE_X27Y29.A       Tilo                  0.259   clock_module/count[28]_PWR_2_o_mod_4/a[24]_a[28]_MUX_3169_o
+                                                       clock_module/count[28]_PWR_2_o_mod_4/BUS_0023_INV_2084_o24_1
+    SLICE_X29Y28.B6      net (fanout=3)        0.339   clock_module/count[28]_PWR_2_o_mod_4/BUS_0023_INV_2084_o24
+    SLICE_X29Y28.B       Tilo                  0.259   N11
+                                                       clock_module/count[28]_PWR_2_o_mod_4/BUS_0024_INV_2114_o23
+    SLICE_X27Y28.D5      net (fanout=20)       0.477   clock_module/count[28]_PWR_2_o_mod_4/BUS_0024_INV_2114_o22
+    SLICE_X27Y28.D       Tilo                  0.259   N385
+                                                       clock_module/count[28]_PWR_2_o_mod_4/Mmux_a[28]_a[28]_MUX_3194_o11_SW0
+    SLICE_X23Y28.C5      net (fanout=15)       0.598   N385
+    SLICE_X23Y28.C       Tilo                  0.259   clock_module/count[28]_PWR_2_o_mod_4/BUS_0025_INV_2144_o221
+                                                       clock_module/count[28]_PWR_2_o_mod_4/Mmux_a[25]_a[28]_MUX_3197_o11
+    SLICE_X29Y25.A4      net (fanout=5)        0.744   clock_module/count[28]_PWR_2_o_mod_4/a[25]_a[28]_MUX_3197_o
+    SLICE_X29Y25.A       Tilo                  0.259   N1005
+                                                       clock_module/count[28]_PWR_2_o_mod_4/BUS_0025_INV_2144_o21_2
+    SLICE_X28Y22.B3      net (fanout=12)       0.790   clock_module/count[28]_PWR_2_o_mod_4/BUS_0025_INV_2144_o212
+    SLICE_X28Y22.DMUX    Topbd                 0.537   clock_module/count[28]_PWR_2_o_mod_4/Madd_a[28]_GND_4_o_add_51_OUT_cy<13>
+                                                       clock_module/count[28]_PWR_2_o_mod_4/Madd_a[28]_GND_4_o_add_51_OUT_lut<11>
+                                                       clock_module/count[28]_PWR_2_o_mod_4/Madd_a[28]_GND_4_o_add_51_OUT_cy<13>
+    SLICE_X27Y25.D4      net (fanout=3)        0.729   clock_module/count[28]_PWR_2_o_mod_4/a[28]_GND_4_o_add_51_OUT<13>
+    SLICE_X27Y25.D       Tilo                  0.259   N996
+                                                       clock_module/count[28]_PWR_2_o_mod_4/Mmux_a[0]_a[28]_MUX_3280_o141_SW0_SW0
+    SLICE_X27Y22.A5      net (fanout=2)        0.585   N996
+    SLICE_X27Y22.A       Tilo                  0.259   N1144
+                                                       clock_module/count[28]_PWR_2_o_mod_4/Mmux_a[0]_a[28]_MUX_3280_o141
+    SLICE_X21Y23.A4      net (fanout=5)        0.720   clock_module/count[28]_PWR_2_o_mod_4/a[13]_a[28]_MUX_3267_o
+    SLICE_X21Y23.A       Tilo                  0.259   clock_module/count[28]_PWR_2_o_mod_4/BUS_0027_INV_2204_o31_SW1
+                                                       clock_module/count[28]_PWR_2_o_mod_4/BUS_0027_INV_2204_o34_1
+    SLICE_X19Y26.C3      net (fanout=19)       0.777   clock_module/count[28]_PWR_2_o_mod_4/BUS_0027_INV_2204_o34
+    SLICE_X19Y26.C       Tilo                  0.259   clock_module/count[28]_PWR_2_o_mod_4/a[27]_a[28]_MUX_3340_o
+                                                       clock_module/count[28]_PWR_2_o_mod_4/Mmux_a[27]_a[28]_MUX_3282_o11
+    SLICE_X18Y19.D2      net (fanout=2)        1.038   clock_module/count[28]_PWR_2_o_mod_4/a[27]_a[28]_MUX_3282_o
+    SLICE_X18Y19.COUT    Topcyd                0.274   clock_module/count[28]_PWR_2_o_mod_4/Mcompar_BUS_0028_INV_2234_o_cy<3>
+                                                       clock_module/count[28]_PWR_2_o_mod_4/Mcompar_BUS_0028_INV_2234_o_lutdi3
+                                                       clock_module/count[28]_PWR_2_o_mod_4/Mcompar_BUS_0028_INV_2234_o_cy<3>
+    SLICE_X18Y20.CIN     net (fanout=1)        0.003   clock_module/count[28]_PWR_2_o_mod_4/Mcompar_BUS_0028_INV_2234_o_cy<3>
+    SLICE_X18Y20.AMUX    Tcina                 0.212   clock_module/count[28]_PWR_2_o_mod_4/a[24]_a[28]_MUX_3314_o
+                                                       clock_module/count[28]_PWR_2_o_mod_4/Mcompar_BUS_0028_INV_2234_o_cy<4>
+    SLICE_X23Y22.A4      net (fanout=72)       0.841   clock_module/count[28]_PWR_2_o_mod_4/BUS_0028_INV_2234_o
+    SLICE_X23Y22.A       Tilo                  0.259   N1360
+                                                       clock_module/count[28]_PWR_2_o_mod_4/Mmux_a[0]_a[28]_MUX_3338_o1171
+    SLICE_X20Y17.A2      net (fanout=4)        0.850   clock_module/count[28]_PWR_2_o_mod_4/a[9]_a[28]_MUX_3329_o
+    SLICE_X20Y17.COUT    Topcya                0.409   clock_module/count[28]_PWR_2_o_mod_4/Mcompar_BUS_0029_INV_2264_o_cy<3>
+                                                       clock_module/count[28]_PWR_2_o_mod_4/Mcompar_BUS_0029_INV_2264_o_lutdi
+                                                       clock_module/count[28]_PWR_2_o_mod_4/Mcompar_BUS_0029_INV_2264_o_cy<3>
+    SLICE_X20Y18.CIN     net (fanout=1)        0.003   clock_module/count[28]_PWR_2_o_mod_4/Mcompar_BUS_0029_INV_2264_o_cy<3>
+    SLICE_X20Y18.AMUX    Tcina                 0.194   clock_module/count[28]_PWR_2_o_mod_4/a[14]_a[28]_MUX_3353_o
+                                                       clock_module/count[28]_PWR_2_o_mod_4/Mcompar_BUS_0029_INV_2264_o_cy<4>
+    SLICE_X22Y16.B4      net (fanout=34)       0.803   clock_module/count[28]_PWR_2_o_mod_4/BUS_0029_INV_2264_o
+    SLICE_X22Y16.COUT    Topcyb                0.380   clock_module/count[28]_PWR_2_o_mod_4/Madd_a[28]_GND_4_o_add_59_OUT_Madd_cy<9>
+                                                       clock_module/count[28]_PWR_2_o_mod_4/Madd_a[28]_GND_4_o_add_59_OUT_Madd_lut<7>
+                                                       clock_module/count[28]_PWR_2_o_mod_4/Madd_a[28]_GND_4_o_add_59_OUT_Madd_cy<9>
+    SLICE_X22Y17.CIN     net (fanout=1)        0.003   clock_module/count[28]_PWR_2_o_mod_4/Madd_a[28]_GND_4_o_add_59_OUT_Madd_cy<9>
+    SLICE_X22Y17.COUT    Tbyp                  0.076   clock_module/count[28]_PWR_2_o_mod_4/Madd_a[28]_GND_4_o_add_59_OUT_Madd_cy<13>
+                                                       clock_module/count[28]_PWR_2_o_mod_4/Madd_a[28]_GND_4_o_add_59_OUT_Madd_cy<13>
+    SLICE_X22Y18.CIN     net (fanout=1)        0.003   clock_module/count[28]_PWR_2_o_mod_4/Madd_a[28]_GND_4_o_add_59_OUT_Madd_cy<13>
+    SLICE_X22Y18.AMUX    Tcina                 0.202   clock_module/count[28]_PWR_2_o_mod_4/a[28]_GND_4_o_add_59_OUT<17>
+                                                       clock_module/count[28]_PWR_2_o_mod_4/Madd_a[28]_GND_4_o_add_59_OUT_Madd_xor<17>
+    SLICE_X23Y18.D1      net (fanout=1)        0.490   clock_module/count[28]_PWR_2_o_mod_4/a[28]_GND_4_o_add_59_OUT<14>
+    SLICE_X23Y18.D       Tilo                  0.259   N7
+                                                       clock_module/count[28]_reduce_nor_6_o6_SW1
+    SLICE_X21Y17.D6      net (fanout=1)        0.328   N7
+    SLICE_X21Y17.CLK     Tas                   0.322   clock_module/clk_faster
+                                                       clock_module/count[28]_reduce_nor_6_o6
+                                                       clock_module/clk_faster
+    -------------------------------------------------  ---------------------------
+    Total                                     27.544ns (9.361ns logic, 18.183ns route)
+                                                       (34.0% logic, 66.0% route)
+
+--------------------------------------------------------------------------------
+Slack (setup path):     -17.584ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               clock_module/count_1 (FF)
+  Destination:          clock_module/clk_faster (FF)
+  Requirement:          10.000ns
+  Data Path Delay:      27.536ns (Levels of Logic = 34)
+  Clock Path Skew:      -0.013ns (0.249 - 0.262)
+  Source Clock:         clk_BUFGP rising at 0.000ns
+  Destination Clock:    clk_BUFGP rising at 10.000ns
+  Clock Uncertainty:    0.035ns
+
+  Clock Uncertainty:          0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Total Input Jitter (TIJ):   0.000ns
+    Discrete Jitter (DJ):       0.000ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path at Slow Process Corner: clock_module/count_1 to clock_module/clk_faster
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X20Y29.BQ      Tcko                  0.408   clock_module/count<3>
+                                                       clock_module/count_1
+    SLICE_X22Y27.B4      net (fanout=2)        0.651   clock_module/count<1>
+    SLICE_X22Y27.COUT    Topcyb                0.380   clock_module/Madd__n0026_cy<3>
+                                                       clock_module/count<1>_rt
+                                                       clock_module/Madd__n0026_cy<3>
+    SLICE_X22Y28.CIN     net (fanout=1)        0.003   clock_module/Madd__n0026_cy<3>
+    SLICE_X22Y28.COUT    Tbyp                  0.076   clock_module/Madd__n0026_cy<7>
+                                                       clock_module/Madd__n0026_cy<7>
+    SLICE_X22Y29.CIN     net (fanout=1)        0.003   clock_module/Madd__n0026_cy<7>
+    SLICE_X22Y29.COUT    Tbyp                  0.076   clock_module/Madd__n0026_cy<11>
+                                                       clock_module/Madd__n0026_cy<11>
+    SLICE_X22Y30.CIN     net (fanout=1)        0.003   clock_module/Madd__n0026_cy<11>
+    SLICE_X22Y30.COUT    Tbyp                  0.076   clock_module/Madd__n0026_cy<15>
+                                                       clock_module/Madd__n0026_cy<15>
+    SLICE_X22Y31.CIN     net (fanout=1)        0.003   clock_module/Madd__n0026_cy<15>
+    SLICE_X22Y31.BMUX    Tcinb                 0.292   clock_module/Madd__n0026_cy<19>
+                                                       clock_module/Madd__n0026_cy<19>
+    SLICE_X29Y34.C1      net (fanout=22)       1.205   clock_module/_n0026<11>
+    SLICE_X29Y34.C       Tilo                  0.259   clock_module/count[28]_PWR_2_o_mod_4/a[28]_a[28]_MUX_3049_o
+                                                       clock_module/count[28]_PWR_2_o_mod_4/BUS_0019_INV_1964_o11_2
+    SLICE_X30Y31.B3      net (fanout=7)        1.047   clock_module/count[28]_PWR_2_o_mod_4/BUS_0019_INV_1964_o112
+    SLICE_X30Y31.CMUX    Topbc                 0.526   clock_module/count[28]_PWR_2_o_mod_4/Madd_a[28]_GND_4_o_add_39_OUT_cy<19>
+                                                       clock_module/count[28]_PWR_2_o_mod_4/Madd_a[28]_GND_4_o_add_39_OUT_lut<17>
+                                                       clock_module/count[28]_PWR_2_o_mod_4/Madd_a[28]_GND_4_o_add_39_OUT_cy<19>
+    SLICE_X27Y33.D4      net (fanout=7)        0.789   clock_module/count[28]_PWR_2_o_mod_4/a[28]_GND_4_o_add_39_OUT<18>
+    SLICE_X27Y33.D       Tilo                  0.259   N649
+                                                       clock_module/count[28]_PWR_2_o_mod_4/Mmux_a[18]_a[28]_MUX_3088_o11_SW0_SW1
+    SLICE_X27Y33.C6      net (fanout=5)        0.139   N649
+    SLICE_X27Y33.C       Tilo                  0.259   N649
+                                                       clock_module/count[28]_PWR_2_o_mod_4/Mmux_a[18]_a[28]_MUX_3088_o11
+    SLICE_X29Y31.A3      net (fanout=6)        0.740   clock_module/count[28]_PWR_2_o_mod_4/a[18]_a[28]_MUX_3088_o
+    SLICE_X29Y31.A       Tilo                  0.259   clock_module/count[28]_PWR_2_o_mod_4/Mmux_a[23]_a[28]_MUX_3141_o111
+                                                       clock_module/count[28]_PWR_2_o_mod_4/BUS_0021_INV_2024_o22_1
+    SLICE_X31Y32.D6      net (fanout=5)        0.601   clock_module/count[28]_PWR_2_o_mod_4/BUS_0021_INV_2024_o22
+    SLICE_X31Y32.D       Tilo                  0.259   clock_module/count[28]_PWR_2_o_mod_4/a[17]_a[28]_MUX_3118_o
+                                                       clock_module/count[28]_PWR_2_o_mod_4/Mmux_a[0]_a[28]_MUX_3135_o181
+    SLICE_X31Y31.C2      net (fanout=9)        0.654   clock_module/count[28]_PWR_2_o_mod_4/a[17]_a[28]_MUX_3118_o
+    SLICE_X31Y31.C       Tilo                  0.259   clock_module/count[28]_PWR_2_o_mod_4/a[16]_a[28]_MUX_3119_o
+                                                       clock_module/count[28]_PWR_2_o_mod_4/BUS_0022_INV_2054_o23_1
+    SLICE_X25Y30.C6      net (fanout=1)        0.574   clock_module/count[28]_PWR_2_o_mod_4/BUS_0022_INV_2054_o23
+    SLICE_X25Y30.C       Tilo                  0.259   clock_module/count[28]_PWR_2_o_mod_4/BUS_0023_INV_2084_o2
+                                                       clock_module/count[28]_PWR_2_o_mod_4/BUS_0022_INV_2054_o24_1
+    SLICE_X19Y34.D6      net (fanout=5)        0.781   clock_module/count[28]_PWR_2_o_mod_4/BUS_0022_INV_2054_o24
+    SLICE_X19Y34.D       Tilo                  0.259   clock_module/count[28]_PWR_2_o_mod_4/BUS_0023_INV_2084_o221
+                                                       clock_module/count[28]_PWR_2_o_mod_4/BUS_0023_INV_2084_o22_1
+    SLICE_X27Y29.A5      net (fanout=2)        0.869   clock_module/count[28]_PWR_2_o_mod_4/BUS_0023_INV_2084_o221
+    SLICE_X27Y29.A       Tilo                  0.259   clock_module/count[28]_PWR_2_o_mod_4/a[24]_a[28]_MUX_3169_o
+                                                       clock_module/count[28]_PWR_2_o_mod_4/BUS_0023_INV_2084_o24_1
+    SLICE_X29Y28.B6      net (fanout=3)        0.339   clock_module/count[28]_PWR_2_o_mod_4/BUS_0023_INV_2084_o24
+    SLICE_X29Y28.B       Tilo                  0.259   N11
+                                                       clock_module/count[28]_PWR_2_o_mod_4/BUS_0024_INV_2114_o23
+    SLICE_X27Y28.D5      net (fanout=20)       0.477   clock_module/count[28]_PWR_2_o_mod_4/BUS_0024_INV_2114_o22
+    SLICE_X27Y28.D       Tilo                  0.259   N385
+                                                       clock_module/count[28]_PWR_2_o_mod_4/Mmux_a[28]_a[28]_MUX_3194_o11_SW0
+    SLICE_X29Y29.D6      net (fanout=15)       0.388   N385
+    SLICE_X29Y29.D       Tilo                  0.259   clock_module/count[28]_PWR_2_o_mod_4/a[27]_a[28]_MUX_3195_o
+                                                       clock_module/count[28]_PWR_2_o_mod_4/Mmux_a[27]_a[28]_MUX_3195_o11
+    SLICE_X29Y25.A1      net (fanout=4)        0.959   clock_module/count[28]_PWR_2_o_mod_4/a[27]_a[28]_MUX_3195_o
+    SLICE_X29Y25.A       Tilo                  0.259   N1005
+                                                       clock_module/count[28]_PWR_2_o_mod_4/BUS_0025_INV_2144_o21_2
+    SLICE_X28Y22.B3      net (fanout=12)       0.790   clock_module/count[28]_PWR_2_o_mod_4/BUS_0025_INV_2144_o212
+    SLICE_X28Y22.DMUX    Topbd                 0.537   clock_module/count[28]_PWR_2_o_mod_4/Madd_a[28]_GND_4_o_add_51_OUT_cy<13>
+                                                       clock_module/count[28]_PWR_2_o_mod_4/Madd_a[28]_GND_4_o_add_51_OUT_lut<11>
+                                                       clock_module/count[28]_PWR_2_o_mod_4/Madd_a[28]_GND_4_o_add_51_OUT_cy<13>
+    SLICE_X27Y25.D4      net (fanout=3)        0.729   clock_module/count[28]_PWR_2_o_mod_4/a[28]_GND_4_o_add_51_OUT<13>
+    SLICE_X27Y25.D       Tilo                  0.259   N996
+                                                       clock_module/count[28]_PWR_2_o_mod_4/Mmux_a[0]_a[28]_MUX_3280_o141_SW0_SW0
+    SLICE_X27Y22.A5      net (fanout=2)        0.585   N996
+    SLICE_X27Y22.A       Tilo                  0.259   N1144
+                                                       clock_module/count[28]_PWR_2_o_mod_4/Mmux_a[0]_a[28]_MUX_3280_o141
+    SLICE_X21Y23.A4      net (fanout=5)        0.720   clock_module/count[28]_PWR_2_o_mod_4/a[13]_a[28]_MUX_3267_o
+    SLICE_X21Y23.A       Tilo                  0.259   clock_module/count[28]_PWR_2_o_mod_4/BUS_0027_INV_2204_o31_SW1
+                                                       clock_module/count[28]_PWR_2_o_mod_4/BUS_0027_INV_2204_o34_1
+    SLICE_X19Y26.C3      net (fanout=19)       0.777   clock_module/count[28]_PWR_2_o_mod_4/BUS_0027_INV_2204_o34
+    SLICE_X19Y26.C       Tilo                  0.259   clock_module/count[28]_PWR_2_o_mod_4/a[27]_a[28]_MUX_3340_o
+                                                       clock_module/count[28]_PWR_2_o_mod_4/Mmux_a[27]_a[28]_MUX_3282_o11
+    SLICE_X18Y19.D2      net (fanout=2)        1.038   clock_module/count[28]_PWR_2_o_mod_4/a[27]_a[28]_MUX_3282_o
+    SLICE_X18Y19.COUT    Topcyd                0.261   clock_module/count[28]_PWR_2_o_mod_4/Mcompar_BUS_0028_INV_2234_o_cy<3>
+                                                       clock_module/count[28]_PWR_2_o_mod_4/Mcompar_BUS_0028_INV_2234_o_lut<3>
+                                                       clock_module/count[28]_PWR_2_o_mod_4/Mcompar_BUS_0028_INV_2234_o_cy<3>
+    SLICE_X18Y20.CIN     net (fanout=1)        0.003   clock_module/count[28]_PWR_2_o_mod_4/Mcompar_BUS_0028_INV_2234_o_cy<3>
+    SLICE_X18Y20.AMUX    Tcina                 0.212   clock_module/count[28]_PWR_2_o_mod_4/a[24]_a[28]_MUX_3314_o
+                                                       clock_module/count[28]_PWR_2_o_mod_4/Mcompar_BUS_0028_INV_2234_o_cy<4>
+    SLICE_X23Y22.A4      net (fanout=72)       0.841   clock_module/count[28]_PWR_2_o_mod_4/BUS_0028_INV_2234_o
+    SLICE_X23Y22.A       Tilo                  0.259   N1360
+                                                       clock_module/count[28]_PWR_2_o_mod_4/Mmux_a[0]_a[28]_MUX_3338_o1171
+    SLICE_X20Y17.A2      net (fanout=4)        0.850   clock_module/count[28]_PWR_2_o_mod_4/a[9]_a[28]_MUX_3329_o
+    SLICE_X20Y17.COUT    Topcya                0.409   clock_module/count[28]_PWR_2_o_mod_4/Mcompar_BUS_0029_INV_2264_o_cy<3>
+                                                       clock_module/count[28]_PWR_2_o_mod_4/Mcompar_BUS_0029_INV_2264_o_lutdi
+                                                       clock_module/count[28]_PWR_2_o_mod_4/Mcompar_BUS_0029_INV_2264_o_cy<3>
+    SLICE_X20Y18.CIN     net (fanout=1)        0.003   clock_module/count[28]_PWR_2_o_mod_4/Mcompar_BUS_0029_INV_2264_o_cy<3>
+    SLICE_X20Y18.AMUX    Tcina                 0.194   clock_module/count[28]_PWR_2_o_mod_4/a[14]_a[28]_MUX_3353_o
+                                                       clock_module/count[28]_PWR_2_o_mod_4/Mcompar_BUS_0029_INV_2264_o_cy<4>
+    SLICE_X22Y16.B4      net (fanout=34)       0.803   clock_module/count[28]_PWR_2_o_mod_4/BUS_0029_INV_2264_o
+    SLICE_X22Y16.COUT    Topcyb                0.380   clock_module/count[28]_PWR_2_o_mod_4/Madd_a[28]_GND_4_o_add_59_OUT_Madd_cy<9>
+                                                       clock_module/count[28]_PWR_2_o_mod_4/Madd_a[28]_GND_4_o_add_59_OUT_Madd_lut<7>
+                                                       clock_module/count[28]_PWR_2_o_mod_4/Madd_a[28]_GND_4_o_add_59_OUT_Madd_cy<9>
+    SLICE_X22Y17.CIN     net (fanout=1)        0.003   clock_module/count[28]_PWR_2_o_mod_4/Madd_a[28]_GND_4_o_add_59_OUT_Madd_cy<9>
+    SLICE_X22Y17.COUT    Tbyp                  0.076   clock_module/count[28]_PWR_2_o_mod_4/Madd_a[28]_GND_4_o_add_59_OUT_Madd_cy<13>
+                                                       clock_module/count[28]_PWR_2_o_mod_4/Madd_a[28]_GND_4_o_add_59_OUT_Madd_cy<13>
+    SLICE_X22Y18.CIN     net (fanout=1)        0.003   clock_module/count[28]_PWR_2_o_mod_4/Madd_a[28]_GND_4_o_add_59_OUT_Madd_cy<13>
+    SLICE_X22Y18.AMUX    Tcina                 0.202   clock_module/count[28]_PWR_2_o_mod_4/a[28]_GND_4_o_add_59_OUT<17>
+                                                       clock_module/count[28]_PWR_2_o_mod_4/Madd_a[28]_GND_4_o_add_59_OUT_Madd_xor<17>
+    SLICE_X23Y18.D1      net (fanout=1)        0.490   clock_module/count[28]_PWR_2_o_mod_4/a[28]_GND_4_o_add_59_OUT<14>
+    SLICE_X23Y18.D       Tilo                  0.259   N7
+                                                       clock_module/count[28]_reduce_nor_6_o6_SW1
+    SLICE_X21Y17.D6      net (fanout=1)        0.328   N7
+    SLICE_X21Y17.CLK     Tas                   0.322   clock_module/clk_faster
+                                                       clock_module/count[28]_reduce_nor_6_o6
+                                                       clock_module/clk_faster
+    -------------------------------------------------  ---------------------------
+    Total                                     27.536ns (9.348ns logic, 18.188ns route)
+                                                       (33.9% logic, 66.1% route)
+
+--------------------------------------------------------------------------------
+
+Hold Paths: TS_sys_clk_pin = PERIOD TIMEGRP "sys_clk_pin" 100 MHz HIGH 50%;
+--------------------------------------------------------------------------------
+
+Paths for end point clock_module/count_28 (SLICE_X20Y36.A6), 1 path
+--------------------------------------------------------------------------------
+Slack (hold path):      0.464ns (requirement - (clock path skew + uncertainty - data path))
+  Source:               clock_module/count_28 (FF)
+  Destination:          clock_module/count_28 (FF)
+  Requirement:          0.000ns
+  Data Path Delay:      0.464ns (Levels of Logic = 1)
+  Clock Path Skew:      0.000ns
+  Source Clock:         clk_BUFGP rising at 10.000ns
+  Destination Clock:    clk_BUFGP rising at 10.000ns
+  Clock Uncertainty:    0.000ns
+
+  Minimum Data Path at Fast Process Corner: clock_module/count_28 to clock_module/count_28
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X20Y36.AQ      Tcko                  0.200   clock_module/count<28>
+                                                       clock_module/count_28
+    SLICE_X20Y36.A6      net (fanout=2)        0.026   clock_module/count<28>
+    SLICE_X20Y36.CLK     Tah         (-Th)    -0.238   clock_module/count<28>
+                                                       clock_module/count<28>_rt
+                                                       clock_module/Mcount_count_xor<28>
+                                                       clock_module/count_28
+    -------------------------------------------------  ---------------------------
+    Total                                      0.464ns (0.438ns logic, 0.026ns route)
+                                                       (94.4% logic, 5.6% route)
+
+--------------------------------------------------------------------------------
+
+Paths for end point clock_module/count_25 (SLICE_X20Y35.B5), 1 path
+--------------------------------------------------------------------------------
+Slack (hold path):      0.510ns (requirement - (clock path skew + uncertainty - data path))
+  Source:               clock_module/count_25 (FF)
+  Destination:          clock_module/count_25 (FF)
+  Requirement:          0.000ns
+  Data Path Delay:      0.510ns (Levels of Logic = 1)
+  Clock Path Skew:      0.000ns
+  Source Clock:         clk_BUFGP rising at 10.000ns
+  Destination Clock:    clk_BUFGP rising at 10.000ns
+  Clock Uncertainty:    0.000ns
+
+  Minimum Data Path at Fast Process Corner: clock_module/count_25 to clock_module/count_25
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X20Y35.BQ      Tcko                  0.200   clock_module/count<27>
+                                                       clock_module/count_25
+    SLICE_X20Y35.B5      net (fanout=2)        0.076   clock_module/count<25>
+    SLICE_X20Y35.CLK     Tah         (-Th)    -0.234   clock_module/count<27>
+                                                       clock_module/count<25>_rt.1
+                                                       clock_module/Mcount_count_cy<27>
+                                                       clock_module/count_25
+    -------------------------------------------------  ---------------------------
+    Total                                      0.510ns (0.434ns logic, 0.076ns route)
+                                                       (85.1% logic, 14.9% route)
+
+--------------------------------------------------------------------------------
+
+Paths for end point clock_module/count_1 (SLICE_X20Y29.B5), 1 path
+--------------------------------------------------------------------------------
+Slack (hold path):      0.513ns (requirement - (clock path skew + uncertainty - data path))
+  Source:               clock_module/count_1 (FF)
+  Destination:          clock_module/count_1 (FF)
+  Requirement:          0.000ns
+  Data Path Delay:      0.513ns (Levels of Logic = 1)
+  Clock Path Skew:      0.000ns
+  Source Clock:         clk_BUFGP rising at 10.000ns
+  Destination Clock:    clk_BUFGP rising at 10.000ns
+  Clock Uncertainty:    0.000ns
+
+  Minimum Data Path at Fast Process Corner: clock_module/count_1 to clock_module/count_1
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X20Y29.BQ      Tcko                  0.200   clock_module/count<3>
+                                                       clock_module/count_1
+    SLICE_X20Y29.B5      net (fanout=2)        0.079   clock_module/count<1>
+    SLICE_X20Y29.CLK     Tah         (-Th)    -0.234   clock_module/count<3>
+                                                       clock_module/count<1>_rt.1
+                                                       clock_module/Mcount_count_cy<3>
+                                                       clock_module/count_1
+    -------------------------------------------------  ---------------------------
+    Total                                      0.513ns (0.434ns logic, 0.079ns route)
+                                                       (84.6% logic, 15.4% route)
+
+--------------------------------------------------------------------------------
+
+Component Switching Limit Checks: TS_sys_clk_pin = PERIOD TIMEGRP "sys_clk_pin" 100 MHz HIGH 50%;
+--------------------------------------------------------------------------------
+Slack: 8.270ns (period - min period limit)
+  Period: 10.000ns
+  Min period limit: 1.730ns (578.035MHz) (Tbcper_I)
+  Physical resource: clk_BUFGP/BUFG/I0
+  Logical resource: clk_BUFGP/BUFG/I0
+  Location pin: BUFGMUX_X3Y13.I0
+  Clock network: clk_BUFGP/IBUFG
+--------------------------------------------------------------------------------
+Slack: 9.570ns (period - min period limit)
+  Period: 10.000ns
+  Min period limit: 0.430ns (2325.581MHz) (Tcp)
+  Physical resource: clock_module/count<3>/CLK
+  Logical resource: clock_module/count_0/CK
+  Location pin: SLICE_X20Y29.CLK
+  Clock network: clk_BUFGP
+--------------------------------------------------------------------------------
+Slack: 9.570ns (period - min period limit)
+  Period: 10.000ns
+  Min period limit: 0.430ns (2325.581MHz) (Tcp)
+  Physical resource: clock_module/count<3>/CLK
+  Logical resource: clock_module/count_1/CK
+  Location pin: SLICE_X20Y29.CLK
+  Clock network: clk_BUFGP
+--------------------------------------------------------------------------------
+
+
+1 constraint not met.
+
+
+Data Sheet report:
+-----------------
+All values displayed in nanoseconds (ns)
+
+Clock to Setup on destination clock clk
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+clk            |   28.379|         |         |         |
+---------------+---------+---------+---------+---------+
+
+
+Timing summary:
+---------------
+
+Timing errors: 13  Score: 139801  (Setup/Max: 139801, Hold: 0)
+
+Constraints cover 2167778194698104600 paths, 0 nets, and 5896 connections
+
+Design statistics:
+   Minimum period:  28.379ns{1}   (Maximum frequency:  35.237MHz)
+
+
+------------------------------------Footnotes-----------------------------------
+1)  The minimum period statistic assumes all single cycle delays.
+
+Analysis completed Fri May 08 14:51:44 2015 
+--------------------------------------------------------------------------------
+
+Trace Settings:
+-------------------------
+Trace Settings 
+
+Peak Memory Usage: 239 MB
+
+
+

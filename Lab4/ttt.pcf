@@ -1,0 +1,30 @@
+//! **************************************************************************
+// Written by: Map P.68d on Mon Jun 01 13:31:13 2015
+//! **************************************************************************
+
+SCHEMATIC START;
+COMP "clk" LOCATE = SITE "V10" LEVEL 1;
+COMP "swX<0>" LOCATE = SITE "T10" LEVEL 1;
+COMP "swX<1>" LOCATE = SITE "T9" LEVEL 1;
+COMP "vgaGreen<0>" LOCATE = SITE "P8" LEVEL 1;
+COMP "vgaGreen<1>" LOCATE = SITE "T6" LEVEL 1;
+COMP "vgaGreen<2>" LOCATE = SITE "V6" LEVEL 1;
+COMP "swY<0>" LOCATE = SITE "V9" LEVEL 1;
+COMP "swY<1>" LOCATE = SITE "M8" LEVEL 1;
+COMP "btnR" LOCATE = SITE "D9" LEVEL 1;
+COMP "btnS" LOCATE = SITE "B8" LEVEL 1;
+COMP "Hsync" LOCATE = SITE "N6" LEVEL 1;
+COMP "btnPress" LOCATE = SITE "U16" LEVEL 1;
+COMP "Vsync" LOCATE = SITE "P7" LEVEL 1;
+COMP "vgaBlue<0>" LOCATE = SITE "R7" LEVEL 1;
+COMP "vgaBlue<1>" LOCATE = SITE "T7" LEVEL 1;
+COMP "vgaRed<0>" LOCATE = SITE "U7" LEVEL 1;
+COMP "vgaRed<1>" LOCATE = SITE "V7" LEVEL 1;
+COMP "vgaRed<2>" LOCATE = SITE "N7" LEVEL 1;
+TIMEGRP sys_clk_pin = BEL "clk50/count_0" BEL "clk50/count_1" BEL
+        "renderer/RED_0" BEL "renderer/GREEN_0" BEL "renderer/BLUE_0" BEL
+        "clk_BUFGP/BUFG" BEL "renderer/RED_0_1" BEL "renderer/RED_0_2" BEL
+        "renderer/GREEN_0_1" BEL "renderer/GREEN_0_2" BEL "renderer/BLUE_0_1";
+TS_sys_clk_pin = PERIOD TIMEGRP "sys_clk_pin" 100 MHz HIGH 50%;
+SCHEMATIC END;
+

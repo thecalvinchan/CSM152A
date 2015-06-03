@@ -1,0 +1,805 @@
+Release 14.6 - xst P.68d (nt64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+--> Parameter TMPDIR set to xst/projnav.tmp
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.12 secs
+ 
+--> Parameter xsthdpdir set to xst
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.12 secs
+ 
+--> Reading design: ttt.prj
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Parsing
+  3) HDL Elaboration
+  4) HDL Synthesis
+       4.1) HDL Synthesis Report
+  5) Advanced HDL Synthesis
+       5.1) Advanced HDL Synthesis Report
+  6) Low Level Synthesis
+  7) Partition Report
+  8) Design Summary
+       8.1) Primitive and Black Box Usage
+       8.2) Device utilization summary
+       8.3) Partition Resource Summary
+       8.4) Timing Report
+            8.4.1) Clock Information
+            8.4.2) Asynchronous Control Signals Information
+            8.4.3) Timing Summary
+            8.4.4) Timing Details
+            8.4.5) Cross Clock Domains Report
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input File Name                    : "ttt.prj"
+Ignore Synthesis Constraint File   : NO
+
+---- Target Parameters
+Output File Name                   : "ttt"
+Output Format                      : NGC
+Target Device                      : xc6slx16-3-csg324
+
+---- Source Options
+Top Module Name                    : ttt
+Automatic FSM Extraction           : YES
+FSM Encoding Algorithm             : Auto
+Safe Implementation                : No
+FSM Style                          : LUT
+RAM Extraction                     : Yes
+RAM Style                          : Auto
+ROM Extraction                     : Yes
+Shift Register Extraction          : YES
+ROM Style                          : Auto
+Resource Sharing                   : YES
+Asynchronous To Synchronous        : NO
+Shift Register Minimum Size        : 2
+Use DSP Block                      : Auto
+Automatic Register Balancing       : No
+
+---- Target Options
+LUT Combining                      : Auto
+Reduce Control Sets                : Auto
+Add IO Buffers                     : YES
+Global Maximum Fanout              : 100000
+Add Generic Clock Buffer(BUFG)     : 16
+Register Duplication               : YES
+Optimize Instantiated Primitives   : NO
+Use Clock Enable                   : Auto
+Use Synchronous Set                : Auto
+Use Synchronous Reset              : Auto
+Pack IO Registers into IOBs        : Auto
+Equivalent register Removal        : YES
+
+---- General Options
+Optimization Goal                  : Speed
+Optimization Effort                : 1
+Power Reduction                    : NO
+Keep Hierarchy                     : No
+Netlist Hierarchy                  : As_Optimized
+RTL Output                         : Yes
+Global Optimization                : AllClockNets
+Read Cores                         : YES
+Write Timing Constraints           : NO
+Cross Clock Analysis               : NO
+Hierarchy Separator                : /
+Bus Delimiter                      : <>
+Case Specifier                     : Maintain
+Slice Utilization Ratio            : 100
+BRAM Utilization Ratio             : 100
+DSP48 Utilization Ratio            : 100
+Auto BRAM Packing                  : NO
+Slice Utilization Ratio Delta      : 5
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Parsing                                  *
+=========================================================================
+Analyzing Verilog file "C:\Users\152\Documents\MeghaCalvin\Lab4\vga.v" into library work
+Parsing module <vga>.
+Analyzing Verilog file "C:\Users\152\Documents\MeghaCalvin\Lab4\renderer.v" into library work
+Parsing module <renderer>.
+Analyzing Verilog file "C:\Users\152\Documents\MeghaCalvin\Lab4\gamecontroller.v" into library work
+Parsing module <gamecontroller>.
+Analyzing Verilog file "C:\Users\152\Documents\MeghaCalvin\Lab4\clk50.v" into library work
+Parsing module <clk50>.
+Analyzing Verilog file "C:\Users\152\Documents\MeghaCalvin\Lab4\ttt.v" into library work
+Parsing module <ttt>.
+
+=========================================================================
+*                            HDL Elaboration                            *
+=========================================================================
+
+Elaborating module <ttt>.
+
+Elaborating module <clk50>.
+WARNING:HDLCompiler:413 - "C:\Users\152\Documents\MeghaCalvin\Lab4\clk50.v" Line 38: Result of 3-bit expression is truncated to fit in 2-bit target.
+
+Elaborating module <vga>.
+WARNING:HDLCompiler:413 - "C:\Users\152\Documents\MeghaCalvin\Lab4\vga.v" Line 47: Result of 12-bit expression is truncated to fit in 11-bit target.
+WARNING:HDLCompiler:413 - "C:\Users\152\Documents\MeghaCalvin\Lab4\vga.v" Line 77: Result of 12-bit expression is truncated to fit in 11-bit target.
+WARNING:HDLCompiler:1127 - "C:\Users\152\Documents\MeghaCalvin\Lab4\ttt.v" Line 65: Assignment to vidon ignored, since the identifier is never used
+
+Elaborating module <gamecontroller>.
+"C:\Users\152\Documents\MeghaCalvin\Lab4\gamecontroller.v" Line 53. $display press
+
+Elaborating module <renderer>.
+WARNING:HDLCompiler:413 - "C:\Users\152\Documents\MeghaCalvin\Lab4\renderer.v" Line 100: Result of 6-bit expression is truncated to fit in 5-bit target.
+"C:\Users\152\Documents\MeghaCalvin\Lab4\renderer.v" Line 106. $display red
+"C:\Users\152\Documents\MeghaCalvin\Lab4\renderer.v" Line 113. $display green
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Synthesizing Unit <ttt>.
+    Related source file is "C:\Users\152\Documents\MeghaCalvin\Lab4\ttt.v".
+INFO:Xst:3210 - "C:\Users\152\Documents\MeghaCalvin\Lab4\ttt.v" line 58: Output port <vidon> of the instance <vga> is unconnected or connected to loadless signal.
+    Summary:
+	no macro.
+Unit <ttt> synthesized.
+
+Synthesizing Unit <clk50>.
+    Related source file is "C:\Users\152\Documents\MeghaCalvin\Lab4\clk50.v".
+    Found 2-bit register for signal <count>.
+    Found 2-bit adder for signal <count[1]_GND_2_o_add_2_OUT> created at line 38.
+    Summary:
+	inferred   1 Adder/Subtractor(s).
+	inferred   2 D-type flip-flop(s).
+	inferred   1 Multiplexer(s).
+Unit <clk50> synthesized.
+
+Synthesizing Unit <vga>.
+    Related source file is "C:\Users\152\Documents\MeghaCalvin\Lab4\vga.v".
+        TotalHorizontalPixels = 11'b10000010000
+        HorizontalSyncWidth = 11'b00001111000
+        VerticalSyncWidth = 11'b00000000110
+        TotalVerticalLines = 11'b01010011010
+        HorizontalBackPorchTime = 11'b00010111000
+        HorizontalFrontPorchTime = 11'b01111011000
+        VerticalBackPorchTime = 11'b00000101011
+        VerticalFrontPorchTime = 11'b01010000011
+    Found 1-bit register for signal <VerticalSyncEnable>.
+    Found 11-bit register for signal <VerticalCounter>.
+    Found 1-bit register for signal <vidon>.
+    Found 11-bit register for signal <PixelX>.
+    Found 11-bit register for signal <PixelY>.
+    Found 11-bit register for signal <HorizontalCounter>.
+    Found 11-bit subtractor for signal <HorizontalCounter[10]_GND_3_o_sub_24_OUT> created at line 96.
+    Found 11-bit subtractor for signal <VerticalCounter[10]_GND_3_o_sub_25_OUT> created at line 97.
+    Found 11-bit adder for signal <HorizontalCounter[10]_GND_3_o_add_3_OUT> created at line 47.
+    Found 11-bit adder for signal <VerticalCounter[10]_GND_3_o_add_12_OUT> created at line 77.
+    Found 11-bit comparator greater for signal <hsync> created at line 58
+    Found 11-bit comparator greater for signal <vsync> created at line 85
+    Found 11-bit comparator greater for signal <HorizontalCounter[10]_GND_3_o_LessThan_20_o> created at line 93
+    Found 11-bit comparator greater for signal <GND_3_o_HorizontalCounter[10]_LessThan_21_o> created at line 93
+    Found 11-bit comparator greater for signal <VerticalCounter[10]_GND_3_o_LessThan_22_o> created at line 93
+    Found 11-bit comparator greater for signal <GND_3_o_VerticalCounter[10]_LessThan_23_o> created at line 93
+    Summary:
+	inferred   4 Adder/Subtractor(s).
+	inferred  46 D-type flip-flop(s).
+	inferred   6 Comparator(s).
+Unit <vga> synthesized.
+
+Synthesizing Unit <gamecontroller>.
+    Related source file is "C:\Users\152\Documents\MeghaCalvin\Lab4\gamecontroller.v".
+WARNING:Xst:647 - Input <clk> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <btnR> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+    Found 5-bit adder for signal <n0078> created at line 54.
+    Found 2x2-bit multiplier for signal <PWR_5_o_swY[1]_MuLt_0_OUT> created at line 54.
+    Found 1-bit 9-to-1 multiplexer for signal <PWR_5_o_X_4_o_Mux_4_o> created at line 61.
+WARNING:Xst:737 - Found 1-bit latch for signal <GameMem<7>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <GameMem<6>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <GameMem<5>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <GameMem<4>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <GameMem<3>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <GameMem<2>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <GameMem<1>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <GameMem<0>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <GridActive<8>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <GridActive<7>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <GridActive<6>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <GridActive<5>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <GridActive<4>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <GridActive<3>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <GridActive<2>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <GridActive<1>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <GridActive<0>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <user_turn>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <GameMem<8>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+    Found 5-bit comparator lessequal for signal <n0008> created at line 63
+    Summary:
+	inferred   1 Multiplier(s).
+	inferred   1 Adder/Subtractor(s).
+	inferred  19 Latch(s).
+	inferred   1 Comparator(s).
+	inferred   1 Multiplexer(s).
+Unit <gamecontroller> synthesized.
+
+Synthesizing Unit <renderer>.
+    Related source file is "C:\Users\152\Documents\MeghaCalvin\Lab4\renderer.v".
+    Found 3-bit register for signal <GREEN>.
+    Found 2-bit register for signal <BLUE>.
+    Found 3-bit register for signal <RED>.
+    Found 5-bit adder for signal <n0055> created at line 100.
+    Found 2x3-bit multiplier for signal <n0067> created at line 100.
+    Found 1-bit 9-to-1 multiplexer for signal <PWR_7_o_X_24_o_Mux_21_o> created at line 102.
+    Found 1-bit 9-to-1 multiplexer for signal <PWR_7_o_X_24_o_Mux_22_o> created at line 104.
+    Found 11-bit comparator greater for signal <GND_25_o_PixelX[10]_LessThan_2_o> created at line 63
+    Found 11-bit comparator greater for signal <GND_25_o_PixelY[10]_LessThan_3_o> created at line 63
+    Found 11-bit comparator greater for signal <GND_25_o_PixelX[10]_LessThan_4_o> created at line 71
+    Found 11-bit comparator greater for signal <PixelX[10]_GND_25_o_LessThan_5_o> created at line 71
+    Found 11-bit comparator greater for signal <GND_25_o_PixelX[10]_LessThan_6_o> created at line 72
+    Found 11-bit comparator greater for signal <PixelX[10]_GND_25_o_LessThan_7_o> created at line 72
+    Found 11-bit comparator greater for signal <GND_25_o_PixelY[10]_LessThan_8_o> created at line 73
+    Found 11-bit comparator greater for signal <PixelY[10]_GND_25_o_LessThan_9_o> created at line 73
+    Found 11-bit comparator greater for signal <GND_25_o_PixelY[10]_LessThan_10_o> created at line 74
+    Found 11-bit comparator greater for signal <PixelY[10]_GND_25_o_LessThan_11_o> created at line 74
+    Found 11-bit comparator greater for signal <PixelX[10]_GND_25_o_LessThan_12_o> created at line 83
+    Found 11-bit comparator greater for signal <PixelX[10]_GND_25_o_LessThan_13_o> created at line 88
+    Found 11-bit comparator greater for signal <PixelY[10]_GND_25_o_LessThan_16_o> created at line 93
+    Found 11-bit comparator greater for signal <PixelY[10]_GND_25_o_LessThan_17_o> created at line 95
+    Summary:
+	inferred   1 Multiplier(s).
+	inferred   1 Adder/Subtractor(s).
+	inferred   8 D-type flip-flop(s).
+	inferred  14 Comparator(s).
+	inferred   6 Multiplexer(s).
+Unit <renderer> synthesized.
+
+=========================================================================
+HDL Synthesis Report
+
+Macro Statistics
+# Multipliers                                          : 2
+ 2x2-bit multiplier                                    : 1
+ 3x2-bit multiplier                                    : 1
+# Adders/Subtractors                                   : 7
+ 11-bit adder                                          : 2
+ 11-bit subtractor                                     : 2
+ 2-bit adder                                           : 1
+ 5-bit adder                                           : 2
+# Registers                                            : 10
+ 1-bit register                                        : 2
+ 11-bit register                                       : 4
+ 2-bit register                                        : 2
+ 3-bit register                                        : 2
+# Latches                                              : 19
+ 1-bit latch                                           : 19
+# Comparators                                          : 21
+ 11-bit comparator greater                             : 20
+ 5-bit comparator lessequal                            : 1
+# Multiplexers                                         : 8
+ 1-bit 9-to-1 multiplexer                              : 3
+ 2-bit 2-to-1 multiplexer                              : 1
+ 3-bit 2-to-1 multiplexer                              : 4
+
+=========================================================================
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+INFO:Xst:2261 - The FF/Latch <BLUE_0> in Unit <renderer> is equivalent to the following FF/Latch, which will be removed : <BLUE_1> 
+WARNING:Xst:1426 - The value init of the FF/Latch GridActive_0 hinder the constant cleaning in the block gamecontroller.
+   You should achieve better results by setting this init to 1.
+WARNING:Xst:1426 - The value init of the FF/Latch GridActive_1 hinder the constant cleaning in the block gamecontroller.
+   You should achieve better results by setting this init to 1.
+WARNING:Xst:1426 - The value init of the FF/Latch GridActive_2 hinder the constant cleaning in the block gamecontroller.
+   You should achieve better results by setting this init to 1.
+WARNING:Xst:1426 - The value init of the FF/Latch GridActive_3 hinder the constant cleaning in the block gamecontroller.
+   You should achieve better results by setting this init to 1.
+WARNING:Xst:1426 - The value init of the FF/Latch GridActive_4 hinder the constant cleaning in the block gamecontroller.
+   You should achieve better results by setting this init to 1.
+WARNING:Xst:1426 - The value init of the FF/Latch GridActive_5 hinder the constant cleaning in the block gamecontroller.
+   You should achieve better results by setting this init to 1.
+WARNING:Xst:1426 - The value init of the FF/Latch GridActive_6 hinder the constant cleaning in the block gamecontroller.
+   You should achieve better results by setting this init to 1.
+WARNING:Xst:1426 - The value init of the FF/Latch GridActive_7 hinder the constant cleaning in the block gamecontroller.
+   You should achieve better results by setting this init to 1.
+WARNING:Xst:1426 - The value init of the FF/Latch GridActive_8 hinder the constant cleaning in the block gamecontroller.
+   You should achieve better results by setting this init to 1.
+
+Synthesizing (advanced) Unit <clk50>.
+The following registers are absorbed into counter <count>: 1 register on signal <count>.
+Unit <clk50> synthesized (advanced).
+
+Synthesizing (advanced) Unit <gamecontroller>.
+	Multiplier <Mmult_PWR_5_o_swY[1]_MuLt_0_OUT> in block <gamecontroller> and adder/subtractor <Madd_n0078> in block <gamecontroller> are combined into a MAC<Maddsub_PWR_5_o_swY[1]_MuLt_0_OUT>.
+Unit <gamecontroller> synthesized (advanced).
+
+Synthesizing (advanced) Unit <renderer>.
+	Multiplier <Mmult_n0067> in block <renderer> and adder/subtractor <Madd_n0055_Madd> in block <renderer> are combined into a MAC<Maddsub_n0067>.
+Unit <renderer> synthesized (advanced).
+
+Synthesizing (advanced) Unit <vga>.
+The following registers are absorbed into counter <HorizontalCounter>: 1 register on signal <HorizontalCounter>.
+The following registers are absorbed into counter <VerticalCounter>: 1 register on signal <VerticalCounter>.
+Unit <vga> synthesized (advanced).
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Macro Statistics
+# MACs                                                 : 2
+ 2x2-to-5-bit MAC                                      : 1
+ 3x2-to-4-bit MAC                                      : 1
+# Adders/Subtractors                                   : 2
+ 11-bit subtractor                                     : 2
+# Counters                                             : 3
+ 11-bit up counter                                     : 2
+ 2-bit up counter                                      : 1
+# Registers                                            : 32
+ Flip-Flops                                            : 32
+# Comparators                                          : 21
+ 11-bit comparator greater                             : 20
+ 5-bit comparator lessequal                            : 1
+# Multiplexers                                         : 7
+ 1-bit 9-to-1 multiplexer                              : 3
+ 3-bit 2-to-1 multiplexer                              : 4
+
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+WARNING:Xst:1426 - The value init of the FF/Latch GridActive_0 hinder the constant cleaning in the block gamecontroller.
+   You should achieve better results by setting this init to 1.
+WARNING:Xst:1426 - The value init of the FF/Latch GridActive_1 hinder the constant cleaning in the block gamecontroller.
+   You should achieve better results by setting this init to 1.
+WARNING:Xst:1426 - The value init of the FF/Latch GridActive_2 hinder the constant cleaning in the block gamecontroller.
+   You should achieve better results by setting this init to 1.
+WARNING:Xst:1426 - The value init of the FF/Latch GridActive_3 hinder the constant cleaning in the block gamecontroller.
+   You should achieve better results by setting this init to 1.
+WARNING:Xst:1426 - The value init of the FF/Latch GridActive_4 hinder the constant cleaning in the block gamecontroller.
+   You should achieve better results by setting this init to 1.
+WARNING:Xst:1426 - The value init of the FF/Latch GridActive_5 hinder the constant cleaning in the block gamecontroller.
+   You should achieve better results by setting this init to 1.
+WARNING:Xst:1426 - The value init of the FF/Latch GridActive_6 hinder the constant cleaning in the block gamecontroller.
+   You should achieve better results by setting this init to 1.
+WARNING:Xst:1426 - The value init of the FF/Latch GridActive_7 hinder the constant cleaning in the block gamecontroller.
+   You should achieve better results by setting this init to 1.
+WARNING:Xst:1426 - The value init of the FF/Latch GridActive_8 hinder the constant cleaning in the block gamecontroller.
+   You should achieve better results by setting this init to 1.
+INFO:Xst:2261 - The FF/Latch <BLUE_0> in Unit <renderer> is equivalent to the following FF/Latch, which will be removed : <BLUE_1> 
+INFO:Xst:2261 - The FF/Latch <GREEN_0> in Unit <renderer> is equivalent to the following 2 FFs/Latches, which will be removed : <GREEN_1> <GREEN_2> 
+INFO:Xst:2261 - The FF/Latch <RED_0> in Unit <renderer> is equivalent to the following 2 FFs/Latches, which will be removed : <RED_1> <RED_2> 
+
+Optimizing unit <ttt> ...
+
+Optimizing unit <gamecontroller> ...
+
+Optimizing unit <renderer> ...
+
+Optimizing unit <vga> ...
+WARNING:Xst:2677 - Node <vga/vidon> of sequential type is unconnected in block <ttt>.
+WARNING:Xst:1710 - FF/Latch <vga/PixelY_10> (without init value) has a constant value of 0 in block <ttt>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <vga/PixelX_10> (without init value) has a constant value of 0 in block <ttt>. This FF/Latch will be trimmed during the optimization process.
+
+Mapping all equations...
+Building and optimizing final netlist ...
+Found area constraint ratio of 100 (+ 5) on block ttt, actual ratio is 2.
+FlipFlop renderer/RED_0 has been replicated 2 time(s) to handle iob=true attribute.
+FlipFlop renderer/GREEN_0 has been replicated 2 time(s) to handle iob=true attribute.
+FlipFlop renderer/BLUE_0 has been replicated 1 time(s) to handle iob=true attribute.
+
+Final Macro Processing ...
+
+=========================================================================
+Final Register Report
+
+Macro Statistics
+# Registers                                            : 53
+ Flip-Flops                                            : 53
+
+=========================================================================
+
+=========================================================================
+*                           Partition Report                            *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+=========================================================================
+*                            Design Summary                             *
+=========================================================================
+
+Top Level Output File Name         : ttt.ngc
+
+Primitive and Black Box Usage:
+------------------------------
+# BELS                             : 225
+#      GND                         : 1
+#      INV                         : 5
+#      LUT1                        : 21
+#      LUT2                        : 27
+#      LUT3                        : 16
+#      LUT4                        : 9
+#      LUT5                        : 16
+#      LUT6                        : 77
+#      MUXCY                       : 24
+#      MUXF7                       : 2
+#      VCC                         : 1
+#      XORCY                       : 26
+# FlipFlops/Latches                : 72
+#      FD                          : 44
+#      FDE                         : 1
+#      FDR                         : 8
+#      LD                          : 19
+# Clock Buffers                    : 2
+#      BUFG                        : 1
+#      BUFGP                       : 1
+# IO Buffers                       : 17
+#      IBUF                        : 6
+#      OBUF                        : 11
+
+Device utilization summary:
+---------------------------
+
+Selected Device : 6slx16csg324-3 
+
+
+Slice Logic Utilization: 
+ Number of Slice Registers:              64  out of  18224     0%  
+ Number of Slice LUTs:                  171  out of   9112     1%  
+    Number used as Logic:               171  out of   9112     1%  
+
+Slice Logic Distribution: 
+ Number of LUT Flip Flop pairs used:    186
+   Number with an unused Flip Flop:     122  out of    186    65%  
+   Number with an unused LUT:            15  out of    186     8%  
+   Number of fully used LUT-FF pairs:    49  out of    186    26%  
+   Number of unique control sets:        14
+
+IO Utilization: 
+ Number of IOs:                          18
+ Number of bonded IOBs:                  18  out of    232     7%  
+    IOB Flip Flops/Latches:               8
+
+Specific Feature Utilization:
+ Number of BUFG/BUFGCTRLs:                2  out of     16    12%  
+
+---------------------------
+Partition Resource Summary:
+---------------------------
+
+  No Partitions were found in this design.
+
+---------------------------
+
+
+=========================================================================
+Timing Report
+
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
+      GENERATED AFTER PLACE-and-ROUTE.
+
+Clock Information:
+------------------
+-----------------------------------------------------------------------------------+----------------------------------+-------+
+Clock Signal                                                                       | Clock buffer(FF name)            | Load  |
+-----------------------------------------------------------------------------------+----------------------------------+-------+
+clk                                                                                | BUFGP                            | 10    |
+gamecontroller/select_GND_4_o_AND_70_o(gamecontroller/select_GND_4_o_AND_70_o:O)   | NONE(*)(gamecontroller/GameMem_4)| 2     |
+gamecontroller/select_GND_4_o_AND_61_o(gamecontroller/select_GND_4_o_AND_61_o1:O)  | NONE(*)(gamecontroller/GameMem_7)| 2     |
+gamecontroller/select_GND_4_o_AND_79_o(gamecontroller/select_GND_4_o_AND_79_o1:O)  | NONE(*)(gamecontroller/GameMem_1)| 2     |
+gamecontroller/select_GND_4_o_AND_82_o(gamecontroller/select_GND_4_o_AND_82_o:O)   | NONE(*)(gamecontroller/GameMem_0)| 2     |
+gamecontroller/select_GND_4_o_AND_58_o(gamecontroller/select_GND_4_o_AND_58_o:O)   | NONE(*)(gamecontroller/GameMem_8)| 2     |
+gamecontroller/select_GND_4_o_AND_73_o(gamecontroller/select_GND_4_o_AND_73_o1:O)  | NONE(*)(gamecontroller/GameMem_3)| 2     |
+gamecontroller/select_GND_4_o_AND_64_o(gamecontroller/select_GND_4_o_AND_64_o1:O)  | NONE(*)(gamecontroller/GameMem_6)| 2     |
+gamecontroller/select_GND_4_o_AND_76_o(gamecontroller/select_GND_4_o_AND_76_o1:O)  | NONE(*)(gamecontroller/GameMem_2)| 2     |
+gamecontroller/select_GND_4_o_AND_67_o(gamecontroller/select_GND_4_o_AND_67_o1:O)  | NONE(*)(gamecontroller/GameMem_5)| 2     |
+gamecontroller/select_GND_4_o_AND_111_o(gamecontroller/select_GND_4_o_AND_111_o9:O)| NONE(*)(gamecontroller/user_turn)| 1     |
+clk50/count_1                                                                      | BUFG                             | 43    |
+-----------------------------------------------------------------------------------+----------------------------------+-------+
+(*) These 10 clock signal(s) are generated by combinatorial logic,
+and XST is not able to identify which are the primary clock signals.
+Please use the CLOCK_SIGNAL constraint to specify the clock signal(s) generated by combinatorial logic.
+INFO:Xst:2169 - HDL ADVISOR - Some clock signals were not automatically buffered by XST with BUFG/BUFR resources. Please use the buffer_type constraint in order to insert these buffers to the clock signals to help prevent skew problems.
+
+Asynchronous Control Signals Information:
+----------------------------------------
+No asynchronous control signals found in this design
+
+Timing Summary:
+---------------
+Speed Grade: -3
+
+   Minimum period: 4.128ns (Maximum Frequency: 242.254MHz)
+   Minimum input arrival time before clock: 4.015ns
+   Maximum output required time after clock: 6.564ns
+   Maximum combinational path delay: 4.476ns
+
+Timing Details:
+---------------
+All values displayed in nanoseconds (ns)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'clk'
+  Clock period: 1.950ns (frequency: 512.794MHz)
+  Total number of paths / destination ports: 3 / 2
+-------------------------------------------------------------------------
+Delay:               1.950ns (Levels of Logic = 1)
+  Source:            clk50/count_0 (FF)
+  Destination:       clk50/count_0 (FF)
+  Source Clock:      clk rising
+  Destination Clock: clk rising
+
+  Data Path: clk50/count_0 to clk50/count_0
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FD:C->Q               2   0.447   0.616  clk50/count_0 (clk50/count_0)
+     INV:I->O              1   0.206   0.579  clk50/Mcount_count_xor<0>11_INV_0 (clk50/Mcount_count)
+     FD:D                      0.102          clk50/count_0
+    ----------------------------------------
+    Total                      1.950ns (0.755ns logic, 1.195ns route)
+                                       (38.7% logic, 61.3% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'gamecontroller/select_GND_4_o_AND_111_o'
+  Clock period: 2.176ns (frequency: 459.601MHz)
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Delay:               2.176ns (Levels of Logic = 1)
+  Source:            gamecontroller/user_turn (LATCH)
+  Destination:       gamecontroller/user_turn (LATCH)
+  Source Clock:      gamecontroller/select_GND_4_o_AND_111_o falling
+  Destination Clock: gamecontroller/select_GND_4_o_AND_111_o falling
+
+  Data Path: gamecontroller/user_turn to gamecontroller/user_turn
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     LD:G->Q              10   0.498   0.856  gamecontroller/user_turn (gamecontroller/user_turn)
+     INV:I->O              1   0.206   0.579  gamecontroller/user_turn_INV_20_o1_INV_0 (gamecontroller/user_turn_INV_20_o)
+     LD:D                      0.037          gamecontroller/user_turn
+    ----------------------------------------
+    Total                      2.176ns (0.741ns logic, 1.435ns route)
+                                       (34.1% logic, 65.9% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'clk50/count_1'
+  Clock period: 4.128ns (frequency: 242.254MHz)
+  Total number of paths / destination ports: 1309 / 43
+-------------------------------------------------------------------------
+Delay:               4.128ns (Levels of Logic = 4)
+  Source:            vga/VerticalCounter_3 (FF)
+  Destination:       vga/PixelY_9 (FF)
+  Source Clock:      clk50/count_1 rising
+  Destination Clock: clk50/count_1 rising
+
+  Data Path: vga/VerticalCounter_3 to vga/PixelY_9
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FD:C->Q              12   0.447   1.253  vga/VerticalCounter_3 (vga/VerticalCounter_3)
+     LUT5:I0->O            3   0.203   0.995  vga/Msub_VerticalCounter[10]_GND_3_o_sub_25_OUT_xor<9>121 (vga/Msub_VerticalCounter[10]_GND_3_o_sub_25_OUT_xor<9>12)
+     LUT5:I0->O            1   0.203   0.000  vga/Msub_VerticalCounter[10]_GND_3_o_sub_25_OUT_xor<9>1_G (N55)
+     MUXF7:I1->O           1   0.140   0.580  vga/Msub_VerticalCounter[10]_GND_3_o_sub_25_OUT_xor<9>1 (vga/VerticalCounter[10]_GND_3_o_sub_25_OUT<9>)
+     LUT6:I5->O            1   0.205   0.000  vga/PixelY_9_rstpot (vga/PixelY_9_rstpot)
+     FD:D                      0.102          vga/PixelY_9
+    ----------------------------------------
+    Total                      4.128ns (1.300ns logic, 2.828ns route)
+                                       (31.5% logic, 68.5% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'clk50/count_1'
+  Total number of paths / destination ports: 23 / 23
+-------------------------------------------------------------------------
+Offset:              4.015ns (Levels of Logic = 3)
+  Source:            btnR (PAD)
+  Destination:       vga/HorizontalCounter_10 (FF)
+  Destination Clock: clk50/count_1 rising
+
+  Data Path: btnR to vga/HorizontalCounter_10
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O            13   1.222   1.297  btnR_IBUF (btnR_IBUF)
+     LUT6:I0->O           11   0.203   0.987  vga/Mcount_HorizontalCounter_val2 (vga/Mcount_HorizontalCounter_val)
+     LUT2:I0->O            1   0.203   0.000  vga/HorizontalCounter_10_rstpot (vga/HorizontalCounter_10_rstpot)
+     FD:D                      0.102          vga/HorizontalCounter_10
+    ----------------------------------------
+    Total                      4.015ns (1.730ns logic, 2.285ns route)
+                                       (43.1% logic, 56.9% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'clk'
+  Total number of paths / destination ports: 8 / 8
+-------------------------------------------------------------------------
+Offset:              3.597ns (Levels of Logic = 1)
+  Source:            renderer/RED_0_1 (FF)
+  Destination:       vgaRed<2> (PAD)
+  Source Clock:      clk rising
+
+  Data Path: renderer/RED_0_1 to vgaRed<2>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDR:C->Q              1   0.447   0.579  renderer/RED_0_1 (renderer/RED_0_1)
+     OBUF:I->O                 2.571          vgaRed_2_OBUF (vgaRed<2>)
+    ----------------------------------------
+    Total                      3.597ns (3.018ns logic, 0.579ns route)
+                                       (83.9% logic, 16.1% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'clk50/count_1'
+  Total number of paths / destination ports: 18 / 2
+-------------------------------------------------------------------------
+Offset:              6.564ns (Levels of Logic = 3)
+  Source:            vga/VerticalCounter_8 (FF)
+  Destination:       Vsync (PAD)
+  Source Clock:      clk50/count_1 rising
+
+  Data Path: vga/VerticalCounter_8 to Vsync
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FD:C->Q              10   0.447   1.201  vga/VerticalCounter_8 (vga/VerticalCounter_8)
+     LUT6:I1->O           21   0.203   1.361  vga/VerticalCounter[10]_GND_3_o_LessThan_22_o131 (vga/VerticalCounter[10]_GND_3_o_LessThan_22_o13)
+     LUT5:I1->O            1   0.203   0.579  Vsync1 (Vsync_OBUF)
+     OBUF:I->O                 2.571          Vsync_OBUF (Vsync)
+    ----------------------------------------
+    Total                      6.564ns (3.424ns logic, 3.140ns route)
+                                       (52.2% logic, 47.8% route)
+
+=========================================================================
+Timing constraint: Default path analysis
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Delay:               4.476ns (Levels of Logic = 2)
+  Source:            btnS (PAD)
+  Destination:       btnPress (PAD)
+
+  Data Path: btnS to btnPress
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O             4   1.222   0.683  btnS_IBUF (btnS_IBUF)
+     OBUF:I->O                 2.571          btnPress_OBUF (btnPress)
+    ----------------------------------------
+    Total                      4.476ns (3.793ns logic, 0.683ns route)
+                                       (84.7% logic, 15.3% route)
+
+=========================================================================
+
+Cross Clock Domains Report:
+--------------------------
+
+Clock to Setup on destination clock clk
+--------------------------------------+---------+---------+---------+---------+
+                                      | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock                          |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+--------------------------------------+---------+---------+---------+---------+
+clk                                   |    1.950|         |         |         |
+clk50/count_1                         |    8.597|         |         |         |
+gamecontroller/select_GND_4_o_AND_58_o|         |    2.600|         |         |
+gamecontroller/select_GND_4_o_AND_61_o|         |    3.621|         |         |
+gamecontroller/select_GND_4_o_AND_64_o|         |    3.797|         |         |
+gamecontroller/select_GND_4_o_AND_67_o|         |    3.461|         |         |
+gamecontroller/select_GND_4_o_AND_70_o|         |    3.671|         |         |
+gamecontroller/select_GND_4_o_AND_73_o|         |    3.638|         |         |
+gamecontroller/select_GND_4_o_AND_76_o|         |    3.814|         |         |
+gamecontroller/select_GND_4_o_AND_79_o|         |    3.393|         |         |
+gamecontroller/select_GND_4_o_AND_82_o|         |    3.569|         |         |
+--------------------------------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock clk50/count_1
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+clk50/count_1  |    4.128|         |         |         |
+---------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock gamecontroller/select_GND_4_o_AND_111_o
+---------------------------------------+---------+---------+---------+---------+
+                                       | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock                           |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------------------------------+---------+---------+---------+---------+
+gamecontroller/select_GND_4_o_AND_111_o|         |         |    2.176|         |
+---------------------------------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock gamecontroller/select_GND_4_o_AND_58_o
+---------------------------------------+---------+---------+---------+---------+
+                                       | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock                           |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------------------------------+---------+---------+---------+---------+
+gamecontroller/select_GND_4_o_AND_111_o|         |         |    1.391|         |
+---------------------------------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock gamecontroller/select_GND_4_o_AND_61_o
+---------------------------------------+---------+---------+---------+---------+
+                                       | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock                           |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------------------------------+---------+---------+---------+---------+
+gamecontroller/select_GND_4_o_AND_111_o|         |         |    1.391|         |
+---------------------------------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock gamecontroller/select_GND_4_o_AND_64_o
+---------------------------------------+---------+---------+---------+---------+
+                                       | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock                           |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------------------------------+---------+---------+---------+---------+
+gamecontroller/select_GND_4_o_AND_111_o|         |         |    1.391|         |
+---------------------------------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock gamecontroller/select_GND_4_o_AND_67_o
+---------------------------------------+---------+---------+---------+---------+
+                                       | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock                           |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------------------------------+---------+---------+---------+---------+
+gamecontroller/select_GND_4_o_AND_111_o|         |         |    1.391|         |
+---------------------------------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock gamecontroller/select_GND_4_o_AND_70_o
+---------------------------------------+---------+---------+---------+---------+
+                                       | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock                           |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------------------------------+---------+---------+---------+---------+
+gamecontroller/select_GND_4_o_AND_111_o|         |         |    1.391|         |
+---------------------------------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock gamecontroller/select_GND_4_o_AND_73_o
+---------------------------------------+---------+---------+---------+---------+
+                                       | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock                           |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------------------------------+---------+---------+---------+---------+
+gamecontroller/select_GND_4_o_AND_111_o|         |         |    1.391|         |
+---------------------------------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock gamecontroller/select_GND_4_o_AND_76_o
+---------------------------------------+---------+---------+---------+---------+
+                                       | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock                           |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------------------------------+---------+---------+---------+---------+
+gamecontroller/select_GND_4_o_AND_111_o|         |         |    1.391|         |
+---------------------------------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock gamecontroller/select_GND_4_o_AND_79_o
+---------------------------------------+---------+---------+---------+---------+
+                                       | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock                           |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------------------------------+---------+---------+---------+---------+
+gamecontroller/select_GND_4_o_AND_111_o|         |         |    1.391|         |
+---------------------------------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock gamecontroller/select_GND_4_o_AND_82_o
+---------------------------------------+---------+---------+---------+---------+
+                                       | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock                           |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------------------------------+---------+---------+---------+---------+
+gamecontroller/select_GND_4_o_AND_111_o|         |         |    1.391|         |
+---------------------------------------+---------+---------+---------+---------+
+
+=========================================================================
+
+
+Total REAL time to Xst completion: 8.00 secs
+Total CPU time to Xst completion: 8.39 secs
+ 
+--> 
+
+Total memory usage is 254864 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :   47 (   0 filtered)
+Number of infos    :    6 (   0 filtered)
+

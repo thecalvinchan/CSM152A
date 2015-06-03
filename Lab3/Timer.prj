@@ -1,0 +1,4 @@
+verilog work "display.v"
+verilog work "counter.v"
+verilog work "clk_module.v"
+verilog work "Timer.v"
