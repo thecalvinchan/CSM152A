@@ -33,8 +33,32 @@ reg user_turn;
 reg [4:0] index;
 
 wire select;
+wire aselect_i;
+reg [1:0] aselect_ff;
 
-assign select = btnS;
+wire reset;
+wire areset_i;
+reg [1:0] areset_ff;
+
+assign aselect_i = btnS;
+assign select = aselect_ff[0];
+
+assign areset_i = btnR;
+assign reset = areset_ff[0];
+
+always @ (posedge clk or posedge aselect_i)
+    if (aselect_i)
+        aselect_ff <= 2'b11;
+    else
+        aselect_ff <= {1'b0, aselect_ff[1]};
+
+always @ (posedge clk or posedge areset_i)
+    if (areset_i)
+        areset_ff <= 2'b11;
+    else
+        areset_ff <= {1'b0, areset_ff[1]};
+
+// LED indicator that button was pressed
 assign btnPress = btnS;
 
 initial
@@ -44,11 +68,11 @@ begin
     user_turn = 0;
 end
 
-always @(posedge clk or posedge select)
+always @(posedge clk)
 begin
-    //if (btnR)
-    //    GridActive = 0;
-    if (select)
+    if (reset)
+        GridActive = 0;
+    else if (select)
     begin
         $display("press");
         index = (3 * swY) + swX;
