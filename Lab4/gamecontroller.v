@@ -28,6 +28,7 @@ module gamecontroller(
     output reg [8:0] GameMem,
     output reg [8:0] GridActive
     );
+
     
 reg user_turn;
 reg [4:0] index;
@@ -71,11 +72,11 @@ end
 always @(posedge clk)
 begin
     if (reset)
-        GridActive = 0;
+        GridActive <= 0;
     else if (select)
     begin
         $display("press");
-        index = (3 * swY) + swX;
+        index <= (3 * swY) + swX;
         if (swY == 3 || swX == 3)
         begin
             // don't do anything
